@@ -33,7 +33,7 @@ class Spider(threading.Thread):
         with codecs.open('webBrowser.txt', 'rb', "utf-8") as f:
             # 获取文件行数
             for line in f:
-                agent.append(line.strip('User-Agent: ').strip('\n'))
+                agent.append(line.strip(' ').strip('"').strip('\n'))
         return agent
 
 
@@ -42,13 +42,13 @@ class Spider(threading.Thread):
         #使用代理
         proxys = self.getRandomAgent()
         random.seed(time.time())
-        index = random.randint(0, len(proxys)-2)
+        index = random.randint(0, len(proxys)-1)
         ipANDport  = proxys[index]
 
         # 使用随机头
         agent = self.getRandomWebBrowser()
         random.seed(time.time())
-        index = random.randint(0, len(agent)-2)
+        index = random.randint(0, len(agent)-1)
         broswerHead  = agent[index]
 
         print ipANDport
@@ -69,7 +69,6 @@ class Spider(threading.Thread):
             # return response.text
                 result = opener.open(targetUrl)
                 self.dealWithResult(result)
-                opener.close()
                 success = True
         # 捕获异常
             except urllib2.HTTPError, e:
@@ -77,9 +76,8 @@ class Spider(threading.Thread):
                     print e.code
                 if hasattr(e,"reason"):
                     print e.reason
-
                 attempts += 1
-                if attempts == 3:
+	            if attempts==3:
                     pass
         # # 捕获异常
         # except urllib2.URLError, e:
@@ -103,7 +101,7 @@ class Spider(threading.Thread):
             # 产品编号
             no = result[0].find('span').string.encode('utf-8')
             # 产品名称
-            name = result[1].find('a').string.encode('utf-8', 'ignore')
+            name = result[1].find('a').string.encode('utf-8')
             # 产品链接地址
             nameUrl = result[1].find('a')['href'].encode('utf-8')
             # 规格
@@ -113,18 +111,14 @@ class Spider(threading.Thread):
             self.writeToFile(no, name, nameUrl, category, price)
     # 写入文件
     def writeToFile(self, *args):
-        # arr = []
-        # for arg in args:
-        #     temp = arg.decode('utf-8').encode('gbk', 'ignore')
-        #     arr.append(temp)
-        #     print temp
-        # with codecs.open('test.csv', 'ab+', 'gbk') as file:
-        #     writer = csv.writer(file)
-        #     writer.writerow(args)
-        with open('test.txt', 'a') as file:
-            for arg in args:
-                file.write(arg + ',')
-            file.write('\n')
+        arr = []
+        for arg in args:
+            temp = arg.decode('utf-8').encode('gbk', 'ignore')
+            arr.append(temp)
+            print temp
+        with codecs.open('test.csv', 'a', 'gbk') as file:
+            writer = csv.writer(file)
+            writer.writerow(arr)
 
     # 开始方法
     def run(self):
@@ -146,8 +140,8 @@ for i in range(1025):
         url = baseUrl % i
     urlList.append(url)
 # 把地址分成20份
-for i in range(10):
-    t = Spider(urlList[((len(urlList)+9)/10)*i : ((len(urlList)+9)/10)*(i+1)])
+for i in range(20):
+    t = Spider(urlList[((len(urlList)+19)/20)*i : ((len(urlList)+19)/20)*(i+1)])
     getThreads.append(t)
 
 for i in getThreads:
