@@ -65,7 +65,6 @@ class XYWYSpider(Spider):
 
         # print len(links)
         for link in links:
-
             area = link.xpath("div[@class='zh-impor-area f18 fYaHei']/text()").extract()
             nextLinks = link.xpath("div[2]/ul[@class='clearfix']//li/a/@href").extract()
             # print len(nextLinks)

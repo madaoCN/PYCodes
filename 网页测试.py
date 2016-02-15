@@ -2,31 +2,47 @@
 import urllib
 import urllib2
 import re
-import json, thread, threading,time,random
+# import json, thread, threading,time,random
+import os,requests
+import subprocess
+# import tesseract
+# import pytesseract
+from PIL import Image
 import os
 
+from threading import Thread
+from Queue import Queue
+from time import sleep
+#q是任务队列
+#NUM是并发线程总数
+#JOBS是有多少任务
+q = Queue()
+NUM = 2
+JOBS = 10
+#具体的处理函数，负责处理单个任务
+def do_somthing_using(arguments):
+    print arguments
+#这个是工作进程，负责不断从队列取数据并处理
+def working():
+    while True:
+        arguments = q.get()
+        do_somthing_using(arguments)
+        sleep(1)
+        q.task_done()
+#fork NUM个线程等待队列
+for i in range(NUM):
+    t = Thread(target=working)
+    t.setDaemon(True)
+    t.start()
+#把JOBS排入队列
+for i in range(JOBS):
+    q.put(i)
+#等待所有JOBS完成
+q.join()
 
-# https://api.chunyuyisheng.com/api/v4/doctor_search?page=1&query=李&filter={"clinic_no":"1"}&sort_type=default
-string_1 = '''
-https://api.chunyuyisheng.com/api/v4/doctor_search?page=5&query%3D%E7%BA%A2&filter%3D%7B%22clinic_no%22%3A%221%22%7D&sort_type=default&app=0&platform=android&systemVer=4.1.2&version=7.5.2&app_ver=7.5.2&imei=867746015013717&device_id=867746015013717&mac=c4%3A6a%3Ab7%3A53%3A24%3A1a&secureId=96a94c7b3102faac&installId=1454148004339&phoneType=MI+1S_by_Xiaomi&vendor=anzhihd
 
-         '''
-string_2 = '''
-https://api.chunyuyisheng.com/api/v4/doctor_search?page=1&query=%E6%9D%8E&filter=%7B%22clinic_no%22%3A%223%22%7D&sort_type=default&app=0&platform=android&systemVer=4.1.2&version=7.5.2&app_ver=7.5.2&imei=867746015013717&device_id=867746015013717&mac=c4%3A6a%3Ab7%3A53%3A24%3A1a&secureId=96a94c7b3102faac&installId=1454148004339&phoneType=MI+1S_by_Xiaomi&vendor=anzhihd
 
-'''
 
-# print urllib.quote()
-print urllib.unquote(string_1)
-print urllib.unquote(string_2)
-
-time = [1,2,3,4,5,6,7]
-
-def youCan():
-    if len(time) == 7:
-        print 'time == 7'
-        return 0
-        print 'next'
 
 
 

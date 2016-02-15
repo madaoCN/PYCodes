@@ -1,3 +1,0 @@
-92919,Custom Human 12-plex LEGENDPlex Panel, Analytes: IFN-γ, IL-12, IL-4, IL-9, IL-17a, IL-22, IL-10, TNF-α, Granzyme-B, IL-6, GM-CSF and IL-27,/index.php/Product/conts/id/1523108,100 tests,32000,
-932302,Purified anti-Hepatitis B Surface Antigen (HBsAg),/index.php/Product/conts/id/1530454,100 ug,3185,
-custom-CCA090715,Ultra-LEAF™ Purified anti-mouse TCR Vy2,/index.php/Product/conts/id/1527073,1 mg,18000,
