@@ -1,0 +1,4 @@
+.idea/
+*.pyc
+*.xml
+question_json_data.txt

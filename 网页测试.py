@@ -1,57 +1,31 @@
 #coding=utf-8
-import urllib
-import urllib2
-import re
-# import json, thread, threading,time,random
-import os,requests
-import subprocess
-# import tesseract
-# import pytesseract
-from PIL import Image
-import os
+from multiprocessing import Process, Queue
+import os, time, random
+import pprint
 
-from threading import Thread
-from Queue import Queue
-from time import sleep
-#q是任务队列
-#NUM是并发线程总数
-#JOBS是有多少任务
-q = Queue()
-NUM = 2
-JOBS = 10
-#具体的处理函数，负责处理单个任务
-def do_somthing_using(arguments):
-    print arguments
-#这个是工作进程，负责不断从队列取数据并处理
-def working():
+# 写数据进程执行的代码:
+def write(q):
+    for value in ['A', 'B', 'C']:
+        print 'Put %s to queue...' % value
+        q.put(value)
+        time.sleep(random.random())
+
+# 读数据进程执行的代码:
+def read(q):
     while True:
-        arguments = q.get()
-        do_somthing_using(arguments)
-        sleep(1)
-        q.task_done()
-#fork NUM个线程等待队列
-for i in range(NUM):
-    t = Thread(target=working)
-    t.setDaemon(True)
-    t.start()
-#把JOBS排入队列
-for i in range(JOBS):
-    q.put(i)
-#等待所有JOBS完成
-q.join()
+        value = q.get(True)
+        print 'Get %s from queue.' % value
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if __name__=='__main__':
+    # 父进程创建Queue，并传给各个子进程：
+    q = Queue()
+    pw = Process(target=write, args=(q,))
+    pr = Process(target=read, args=(q,))
+    # 启动子进程pw，写入:
+    pw.start()
+    # 启动子进程pr，读取:
+    pr.start()
+    # 等待pw结束:
+    pw.join()
+    # pr进程里是死循环，无法等待其结束，只能强行终止:
+    pr.terminate()
