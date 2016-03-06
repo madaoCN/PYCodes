@@ -1,0 +1,5 @@
+try:
+p = subprocess.Popen(['tesseract', 'test.png', 'result'],stdout=subprocess.PIPE,
+stdin=subprocess.PIPE)
+except Exception, e:
+
