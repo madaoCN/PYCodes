@@ -1,15 +1,6 @@
 # coding=utf-8
-#导入pymysql的包
-import pymysql
-import subprocess
-import pytesseract
-import PIL
+import requests
 
-try:
-    p = subprocess.Popen(['tesseract', 'test.png', 'result'],stdout=subprocess.PIPE,
-                 stdin=subprocess.PIPE)
-except Exception, e:
-    print e
-p.wait()
-with open('result.txt', 'r') as f:
-    print f.read()
+HOST = 'http://app1.sfda.gov.cn/datasearch/face3/base.jsp?tableId=33&tableName=TABLE33&title=%E4%BA%92%E8%81%94%E7%BD%91%E8%8D%AF%E5%93%81%E4%BA%A4%E6%98%93%E6%9C%8D%E5%8A%A1&bcId=118715801943244717582221630944'
+
+requests =
