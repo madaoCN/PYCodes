@@ -31,7 +31,7 @@ class IndexHandler(tornado.web.RequestHandler):
 <div style="text-align: center">
     <div style="font-size: 72px">%s</div>
     <div style="font-size: 144px">%.02f</div>
-    <div style="font-size: 24px">tweets per second</div>
+    <div style="font-size: 24px">tweets_per_second</div>
 </div>""" % (query, tweets_per_second))
 
 if __name__ == "__main__":

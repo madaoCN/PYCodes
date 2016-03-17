@@ -37,6 +37,7 @@ class IndexHandler(tornado.web.RequestHandler):
     <div style="font-size: 144px">%.02f</div>
     <div style="font-size: 24px">tweets per second</div>
 </div>""" % (self.get_argument('q'), tweets_per_second))
+        # Tornado永远不会自己关闭连接。你必须在你的RequestHandler对象中调用finish方法来显式地告诉Tornado关闭连接
         self.finish()
 
 if __name__ == "__main__":

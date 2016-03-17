@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f738121b-5a80-437c-b473-08a8a57a4b4a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate_async.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate_gen.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/第四章数据库/burts_books_db.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/第四章数据库/definitions_readWrite.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/第五章异步web请求/shopping_cart.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/第五章异步web请求/webSocket/webSocketShopping_cart.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/第五章异步web请求/第六章编写安全应用/cookie_counter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/第五章异步web请求/第六章编写安全应用/用户验证.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Tornado/第五章异步web请求/长轮询/index.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tornado/第四章数据库/pymongo_.py" afterPath="$PROJECT_DIR$/Tornado/第四章数据库/pymongo_.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate.py" afterPath="$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate_async.py" afterPath="$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate_async.py" />
     </list>
     <ignored path="pythonCodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,29 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pymongo_.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tornado/第四章数据库/pymongo_.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
-              <folding>
-                <element signature="e#13#27#0" expanded="true" />
-                <marker date="1457834467000" expanded="true" signature="76:96" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelloTornado.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tornado/第一章引言/HelloTornado.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="definitions_readonly.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tornado/第四章数据库/definitions_readonly.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -64,35 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="definitions_readWrite.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tornado/第四章数据库/definitions_readWrite.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-              <folding>
-                <element signature="e#19#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="burts_books_db.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tornado/第四章数据库/burts_books_db.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-              <folding>
-                <element signature="e#19#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tweet_rate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -104,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate_async.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -112,14 +66,72 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tweet_rate_gen.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tweet_rate_gen.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate_gen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45454547">
-              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shopping_cart.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/shopping_cart.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
+              <folding>
+                <element signature="e#19#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webSocketShopping_cart.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/webSocket/webSocketShopping_cart.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cookie_counter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/第六章编写安全应用/cookie_counter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="用户验证.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/第六章编写安全应用/用户验证.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.0181818">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/长轮询/index.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,16 +141,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tornado/web.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="161" column="13" selection-start-line="161" selection-start-column="13" selection-end-line="161" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -160,10 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/示例代码/抓取网页模板(多线程代理agent池).py" />
-        <option value="$PROJECT_DIR$/西刺国内普通代理.py" />
-        <option value="$PROJECT_DIR$/test.csv" />
-        <option value="$PROJECT_DIR$/webBrowser.txt" />
         <option value="$PROJECT_DIR$/test.txt" />
         <option value="$PROJECT_DIR$/sql.py" />
         <option value="$PROJECT_DIR$/学习目录/SummaryData.py" />
@@ -207,14 +205,19 @@
         <option value="$PROJECT_DIR$/Tornado/第四章数据库/definitions_readWrite.py" />
         <option value="$PROJECT_DIR$/Tornado/第四章数据库/pymongo_.py" />
         <option value="$PROJECT_DIR$/Tornado/第四章数据库/burts_books_db.py" />
+        <option value="$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate_gen.py" />
         <option value="$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate.py" />
         <option value="$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate_async.py" />
-        <option value="$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate_gen.py" />
+        <option value="$PROJECT_DIR$/Tornado/第五章异步web请求/长轮询/index.py" />
+        <option value="$PROJECT_DIR$/Tornado/第五章异步web请求/shopping_cart.py" />
+        <option value="$PROJECT_DIR$/Tornado/第五章异步web请求/webSocket/webSocketShopping_cart.py" />
+        <option value="$PROJECT_DIR$/Tornado/第五章异步web请求/第六章编写安全应用/cookie_counter.py" />
+        <option value="$PROJECT_DIR$/Tornado/第五章异步web请求/第六章编写安全应用/用户验证.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="423" />
+    <option name="x" value="262" />
     <option name="y" value="23" />
     <option name="width" value="1667" />
     <option name="height" value="987" />
@@ -244,6 +247,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,10 +299,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tornado" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第五章异步web请求" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第六章编写安全应用" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,24 +338,7 @@
       <recent name="$PROJECT_DIR$/抓取工作目录" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pymongo">
-    <configuration default="false" name="React4Error (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tornado/第一章引言" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pythonCodes" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tornado/第一章引言/React4Error.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.cookie_counter">
     <configuration default="false" name="PoemMakerPro" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -395,6 +403,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonCodes" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tornado/第四章数据库/definitions_readWrite.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="cookie_counter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tornado/第五章异步web请求/第六章编写安全应用" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonCodes" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tornado/第五章异步web请求/第六章编写安全应用/cookie_counter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -522,19 +547,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.React4Error (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.PoemMakerPro" />
-      <item index="2" class="java.lang.String" itemvalue="Python.pymongo" />
-      <item index="3" class="java.lang.String" itemvalue="Python.definitions_readonly" />
-      <item index="4" class="java.lang.String" itemvalue="Python.definitions_readWrite" />
+      <item index="0" class="java.lang.String" itemvalue="Python.PoemMakerPro" />
+      <item index="1" class="java.lang.String" itemvalue="Python.pymongo" />
+      <item index="2" class="java.lang.String" itemvalue="Python.definitions_readonly" />
+      <item index="3" class="java.lang.String" itemvalue="Python.definitions_readWrite" />
+      <item index="4" class="java.lang.String" itemvalue="Python.cookie_counter" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.pymongo" />
-        <item index="1" class="java.lang.String" itemvalue="Python.definitions_readWrite" />
-        <item index="2" class="java.lang.String" itemvalue="Python.definitions_readonly" />
-        <item index="3" class="java.lang.String" itemvalue="Python.PoemMakerPro" />
-        <item index="4" class="java.lang.String" itemvalue="Python.React4Error (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.cookie_counter" />
+        <item index="1" class="java.lang.String" itemvalue="Python.pymongo" />
+        <item index="2" class="java.lang.String" itemvalue="Python.definitions_readWrite" />
+        <item index="3" class="java.lang.String" itemvalue="Python.definitions_readonly" />
+        <item index="4" class="java.lang.String" itemvalue="Python.PoemMakerPro" />
       </list>
     </recent_temporary>
   </component>
@@ -568,7 +593,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="423" y="23" width="1667" height="987" extended-state="0" />
+    <frame x="262" y="23" width="1667" height="987" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2455927" sideWeight="0.49542335" order="0" side_tool="false" content_ui="combo" />
@@ -576,7 +601,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27486032" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32849163" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23102678" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23102678" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24984802" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32849163" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2638298" sideWeight="0.5045767" order="2" side_tool="true" content_ui="tabs" />
@@ -618,41 +643,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/python网路编程/http/伺服HTTP请求.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="72" selection-start-line="33" selection-start-column="72" selection-end-line="33" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/示例代码/递归抓取整个站.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/示例代码/多线程示例.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/示例代码/抓取网页模板(多线程代理agent池).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="99" column="18" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons/multiprocessing/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/示例代码/codecs处理编码.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -853,7 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="537" column="4" selection-start-line="537" selection-start-column="4" selection-end-line="537" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -903,7 +892,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -919,10 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="57" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
-          <folding>
-            <element signature="e#13#27#0" expanded="true" />
-            <marker date="1457834467000" expanded="true" signature="76:96" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -931,24 +915,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tornado/httpclient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -985,7 +951,7 @@
     <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate_async.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -994,8 +960,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate_gen.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45454547">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/长轮询/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/tornado/httpclient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/shopping_cart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
+          <folding>
+            <element signature="e#19#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/tweet_rate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/webSocket/webSocketShopping_cart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/第六章编写安全应用/cookie_counter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tornado/第五章异步web请求/第六章编写安全应用/用户验证.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0181818">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
