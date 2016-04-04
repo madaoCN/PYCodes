@@ -1,11 +1,12 @@
+import textwrap
+
 import tornado.httpserver
 import tornado.ioloop
 import tornado.options
 import tornado.web
-import textwrap
 
 from tornado.options import define, options
-define('port', default=8000, type=int, help='run on the given port')
+define("port", default=8000, help="run on the given port", type=int)
 
 class ReverseHandler(tornado.web.RequestHandler):
     def get(self, input):
@@ -25,6 +26,6 @@ if __name__ == "__main__":
             (r"/wrap", WrapHandler)
         ]
     )
-    httpServer = tornado.httpserver.HTTPServer(app)
-    httpServer.listen(options.port)
+    http_server = tornado.httpserver.HTTPServer(app)
+    http_server.listen(options.port)
     tornado.ioloop.IOLoop.instance().start()
