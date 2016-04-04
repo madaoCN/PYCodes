@@ -1,6 +1,6 @@
 #coding=utf-8
 #!/usr/bin/nv python
-import argparse
+ import argparse
 import httplib
 
 REMOTE_HOST = 'www.python.org'

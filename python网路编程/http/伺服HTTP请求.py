@@ -5,7 +5,7 @@ import sys
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 
 DEFAULT_HOST = '127.0.0.1'
-DEFAULT_PORT = 8800
+DEFAULT_PORT = 8000
 
 class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
