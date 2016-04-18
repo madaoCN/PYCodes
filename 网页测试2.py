@@ -210,26 +210,26 @@ def prase(text):
 
 def writeTofile(*arr):
     print '录入中...'
-    path = os.path.expanduser(r'~/Desktop/test/test0-50000.txt')
+    path = os.path.expanduser(r'~/Desktop/test/test50000-100000.txt')
     print path
     f = open(path, "a")
     print arr
-    # if arr:
-    #     for rag in arr:
-    #         if isinstance(rag, int):
-    #             f.write(str(rag)+',')
-    #         else:
-    #             f.write(rag.encode('utf8')+',')
-    #     f.write('\n')
-    #     f.close()
+    if arr:
+        for rag in arr:
+            if isinstance(rag, int):
+                f.write(str(rag)+',')
+            else:
+                f.write(rag.encode('utf8')+',')
+        f.write('\n')
+        f.close()
 
 
 # if __name__ == '__name__':
 getTheRemoteAgent()
 pool = Pool(10)
-for index in range(1):
+for index in range(50000,100000):
     host = 'http://api.doctorpda.cn/api/u/profile?id=%s&follow=1&ext=true'
-    pool.apply_async(getNextUrl, args=(host, 236541))
+    pool.apply_async(getNextUrl, args=(host, index))
 pool.close()
 pool.join()
 print 'All subprocesses done.'
