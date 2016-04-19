@@ -59,6 +59,7 @@ def getCookies():
                'Content-Type': 'application/x-www-form-urlencoded',
                'Accept-Language': 'zh-Hans-CN;q=1',
                'Connection': 'keep - alive',
+               'Cookies':'JSESSIONID=; Hm_lvt_bc9d4fa6469686fe63002104880688b1=1460551175,1460717756; JSESSIONID=; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b',
                'Accept': '*/*',
                }
     prepare = Request('GET', HOST_3, headers=headers).prepare()
@@ -99,27 +100,30 @@ def getUrl(target_url, index):
     if index != 0:
         data = {
             "data": dataContent,
-            'source': 'app'
         }
     tempString = 'data=%s' % dataContent
     dataLen = len(tempString)
 
-    headers = {'User-Agent': 'new_doctorpda/4.2.2 (iPhone; iOS 9.3; Scale/2.00) doctorpda',
+    headers = {'User-Agent': 'new_doctorpda/4.2.2 (iPhone; iOS 9.2; Scale/2.00) doctorpda',
                'Accept': '''*/*''',
                 'Accept-Encoding': 'gzip, deflate',
-               'Cookie': 'JSESSIONID=CE1D48E03C95B4D5D841F79AEE55B895; Hm_lvt_bc9d4fa6469686fe63002104880688b1=1460551175,1460717756; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b; JSESSIONID=CE1D48E03C95B4D5D841F79AEE55B895;',
+               'Cookie': 'JSESSIONID=CBDF2C3A4B789C929AAEC38CE9E369B5; Hm_lvt_bc9d4fa6469686fe63002104880688b1=1460551175,1460717756; JSESSIONID=CBDF2C3A4B789C929AAEC38CE9E369B5; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b',
                'Connection': 'keep-alive',
                'Content - Type': 'application / x - www - form - urlencoded',
                'Accept - Language': 'zh - Hans - CN;q = 1',
                 'Content - Length': dataLen,
     }
+    print headers
     prepare = Request('POST', target_url, headers=headers, data=data).prepare()
     # try多次
     attempts = 0
     success = False
     while attempts < 3 and not success:
         try:
-            result = session.send(prepare,timeout=20)
+            index = random.randint(0, len(IPANDPORT) - 1)
+            proxy = {'http': 'http://%s' % IPANDPORT[index].strip()}
+            print proxy
+            result = session.send(prepare, timeout=20, proxies=proxy)
             success = True
         except Exception, e:
             print '请求失败, 重试...'
@@ -148,9 +152,11 @@ def praseJsonForOne(response):
 
 def getNextUrl(target_url, index):
     print index
-    headers = {'User-Agent':'Mozilla/5.0 (Linux; Android 4.4.2; HUAWEI P7-L09 Build/HuaweiP7-L09) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36 doctorpda',
+    headers = {
                'Accept-Encoding':'gzip',
-               'Cookie':'JSESSIONID=CE1D48E03C95B4D5D841F79AEE55B895; Hm_lvt_bc9d4fa6469686fe63002104880688b1=1460551175,1460717756; JSESSIONID=CE1D48E03C95B4D5D841F79AEE55B895; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b'
+                'Cookie':'JSESSIONID=ECE8F6449914723B84B828B1A6598DFE; Hm_lvt_bc9d4fa6469686fe63002104880688b1=1460551175,1460717756; JSESSIONID=ECE8F6449914723B84B828B1A6598DFE; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b',
+                'User - Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+
     }
     #拼接加密参数参数
     text = '''{"id":%s,"layer":"TwoLayer","type":"community_topic","p":1,"limit":10,"order":"like_count"}''' % index
@@ -302,7 +308,7 @@ getTheRemoteAgent()
 pool = Pool(10)
 # getCookies()
 for index in range(1):
-    pool.apply_async(getNextUrl, args=(HOST_2, 12509))
+    pool.apply_async(getUrl, args=(HOST_1, 12509))
 pool.close()
 pool.join()
 print 'All subprocesses done.'

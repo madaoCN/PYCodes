@@ -9,7 +9,7 @@ import chardet
 from Crypto.Cipher import AES
 
 
-string = '''WNgEMRz9FK9FZwB9H386XewawZ5ietk/ViG9tTLm0%2BIPDqNVwmzi7EKTTuBiQIqtN5JHxjuT9nwoMW2n39BCrijOsuhKaSePoLadF56ipoFuZsbbXm9utkKsYpU97bje'''
+string = '''QzTwayk3Mp1h2K0DyG9HrxjAF3oLK2c/3Zi4LKp%2B3K4%3D'''
 base =  urllib.unquote(string)
 print base
 
