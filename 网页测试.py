@@ -10,6 +10,7 @@ import urllib
 import ConfigParser
 import cookielib
 import json
+from ast import literal_eval
 
 class mycrypt():
     def __init__(self):
@@ -97,7 +98,6 @@ def getUrl(target_url, index, myCookie):
         data = {
             "data": entext_base64,
         }
-    print data
     headers = {'User-Agent': 'new_doctorpda/4.2.2 (iPhone; iOS 9.2; Scale/2.00) doctorpda',
                'Accept': '''*/*''',
                 'Accept-Encoding': 'gzip, deflate',
@@ -106,9 +106,9 @@ def getUrl(target_url, index, myCookie):
                'Accept-Language': 'zh-Hans-CN;q=1',
     }
     prepare = Request('POST', target_url, headers=headers, data=data, cookies=myCookie).prepare()
-    print prepare.headers
-    print prepare.body
-    print prepare._cookies
+    # print prepare.headers
+    # print prepare.body
+    # print prepare._cookies
     # try多次
     attempts = 0
     success = False
@@ -142,10 +142,62 @@ def praseJsonForOne(response):
     print detext
     print "#######################################"
     try:
-        jsonData = json.loads(detext)
+        jsonData = json.loads(detext.strip('\0'))
     except Exception, e:
         print e
     print jsonData
+    dataArr = []
+    #用户名
+    try:
+        username = jsonData['caseTopic']['author']
+        if username.strip() == '' or username is None:
+            username = u'No'
+    except Exception, e:
+        username = u'No'
+    dataArr.append(username)
+    #科室
+    try:
+        departArr = jsonData['depart']
+        if departArr.count > 0:
+            for item in departArr:
+                catName = item['cat_name'];
+                dataArr.append(catName)
+    except Exception, e:
+        dataArr.append(u'no')
+    #关注数
+    try:
+        followNum = jsonData['caseTopic']['follow_count']
+        if followNum is None:
+            followNum = 0
+    except Exception, e:
+        followNum = 0
+    dataArr.append(followNum)
+    #点赞数
+    try:
+        likeNum = jsonData['caseTopic']['like_count']
+        if likeNum is None:
+            likeNum = 0
+    except Exception, e:
+        likeNum = 0
+    dataArr.append(likeNum)
+    # 阅读数
+    try:
+        readNum = jsonData['caseTopic']['read_count']
+        if readNum is None:
+            readNum = 0
+    except Exception, e:
+        readNum = 0
+    dataArr.append(readNum)
+    #评论数
+    try:
+        commentNum = jsonData['caseTopic']['comments']
+        if commentNum is None:
+            commentNum = 0
+    except Exception, e:
+        commentNum = 0
+    dataArr.append(commentNum)
+    writeTofile(*dataArr)
+
 
 def getNextUrl(target_url, index):
     print index
@@ -192,118 +244,29 @@ def getNextUrl(target_url, index):
 def praseJson(response):
     result = json.loads(response)
 
-    # print result
-    #用户名
-    try:
-        username = result['username']
-        if username.strip() == '' or username is None:
-            username = u'no'
-    except Exception, e:
-        username = u'no'
-    #真实姓名
-    try:
-        name = result['name']
-        if name.strip() == '' or name is None:
-            name = u'no'
-    except Exception, e:
-        name = u'no'
-    #密码
-    try:
-        password = result['password'];
-        if password.strip() == '' or password is None:
-            password = u'no'
-    except Exception, e:
-        password = u'no'
-    #生日
-    try:
-        birth = result['birth']
-        if birth.strip() == '' or birth is None:
-            birth = u'no'
-    except Exception, e:
-        birth = 'no'
-    #医院/组织
-    try:
-        unit = result['unit']
-        if unit.strip() == '' or unit is None:
-            unit = u'no'
-    except Exception, e:
-        unit = u'no'
-    #科室
-    try:
-        depart = result['depart']
-        if depart.strip() == '' or depart is None:
-            depart = u'no'
-    except Exception, e:
-        depart = u'no'
-    # 职称
-    try:
-        title = result['title']
-        if title.strip() == '' or title is None:
-            title = u'no'
-    except Exception, e:
-        title = u'no'
-    #职位
-    try:
-        occupation = result['occupation']
-        if occupation.strip() == '' or occupation is None:
-            occupation = u'no'
-    except Exception, e:
-        occupation = u'no'
-    #粉丝数
-    try:
-        fanNum = result['fan_count']
-        if fanNum is None:
-            fanNum = 0
-    except Exception, e:
-        fanNum = 0
-    #关注数
-    try:
-        followNum = result['follow_count']
-        if followNum is None:
-            followNum = 0
-    except Exception, e:
-        followNum = 0
-    #电话
-    try:
-        phoneNum = result['mobile']
-        if phoneNum.strip() == '' or phoneNum is None:
-            phoneNum = u'no'
-    except Exception, e:
-        phoneNum = u'no'
-    #教育水平
-    try:
-        education = result['education']
-        if education.strip() == '' or education is None:
-            education = u'no'
-    except Exception, e:
-        education = u'no'
-
-    writeTofile(username, name, password, birth, unit, depart, title, occupation,
-                 education, phoneNum, fanNum, followNum,)
-
 
 def writeTofile(*arr):
     print '录入中...'
-    path = os.path.expanduser(r'~/Desktop/test/test0-50000.txt')
+    path = os.path.expanduser(r'~/Desktop/data/data100000-110000.txt')
     print path
     f = open(path, "a")
     print arr
-    # if arr:
-    #     for rag in arr:
-    #         if isinstance(rag, int):
-    #             f.write(str(rag)+',')
-    #         else:
-    #             f.write(rag.encode('utf8')+',')
-    #     f.write('\n')
-    #     f.close()
+    if arr:
+        for rag in arr:
+            if isinstance(rag, int):
+                f.write(str(rag)+',')
+            else:
+                f.write(rag.encode('utf8')+',')
+        f.write('\n')
+        f.close()
 
 
 # if __name__ == '__name__':
 getTheRemoteAgent()
 pool = Pool(10)
 myCookie = getCookies()
-for index in range(1):
-    pool.apply_async(getUrl, args=(HOST_1, 12509, myCookie))
+for index in range(100000,110000):
+    pool.apply_async(getUrl, args=(HOST_1, index, myCookie))
 pool.close()
 pool.join()
 print 'All subprocesses done.'
