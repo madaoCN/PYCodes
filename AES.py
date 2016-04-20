@@ -5,11 +5,10 @@ import urllib
 from StringIO import StringIO
 import base64
 import codecs
-import chardet
 from Crypto.Cipher import AES
 
 
-string = '''QzTwayk3Mp1h2K0DyG9HrxjAF3oLK2c/3Zi4LKp%2B3K4%3D'''
+string = '''sQh4bt25KD2cdxQlfrrOkFBPumJn2HZ44hqH7hAfubk%3D'''
 base =  urllib.unquote(string)
 print base
 

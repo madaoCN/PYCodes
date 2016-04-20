@@ -1,16 +1,15 @@
 #coding=utf8
 from multiprocessing import Process, Pool
 import os, threading
-from bs4 import BeautifulSoup
 import requests
 from requests import Request, Session
-import pymysql,random, selenium, re, json
 import ssl
 from Crypto.Cipher import AES
 import base64
 import urllib
 import ConfigParser
-
+import cookielib
+import json
 
 class mycrypt():
     def __init__(self):
@@ -42,7 +41,7 @@ IPANDPORT = []
 # 目标host
 HOST_1 = 'http://api.doctorpda.cn/api/v2/case/index?app_key=f1c18i2otirc0004&client_id=7c01ag7q3qcc0112&access_token=72ba7500-7562-40a0-a17e-f3cb465e3839&net=wifi&versionName=4.2.2&versionCode=85&source=app'
 HOST_2 = 'http://api.doctorpda.cn/api/v2/case/comments?app_key=f1c18i2otirc0004&client_id=7c01ag7q3qcc0112&access_token=72ba7500-7562-40a0-a17e-f3cb465e3839&net=wifi&versionName=4.2.2&versionCode=85&source=app '
-HOST_3 = 'http://api.doctorpda.cn/api/app/client/open?app_key=f1c18i2otirc0004&client_id=7c01ag7q3qcc0112&access_token=72ba7500-7562-40a0-a17e-f3cb465e3839&net=wifi&versionName=4.2.2&versionCode=85&loc=0&lon=0&lat=0&cur_channel=36e18idp80ct00e1 '
+HOST_3 = 'http://api.doctorpda.cn/api/app/client/open?app_key=f1c18i2otirc0004&client_id=0bd1agocekr6073a&access_token=c83ad482-b05c-4187-9c07-566454b0b168&net=wifi&versionName=4.2.2&versionCode=85&loc=0&lon=0&lat=0&cur_channel=36e18idp80ct00e'
 # session会话
 session = Session()
 
@@ -54,12 +53,12 @@ def getTheRemoteAgent():
     f.close()
 
 def getCookies():
-    headers = {'User-Agent': 'new_doctorpda/4.2.2 (iPhone; iOS 9.3; Scale/2.00) doctorpda',
+    headers = {'User-Agent': 'new_doctorpda/4.2.2 (iPhone; iOS 9.2; Scale/2.00) doctorpda',
                'Accept-Encoding': 'gzip, deflate',
                'Content-Type': 'application/x-www-form-urlencoded',
                'Accept-Language': 'zh-Hans-CN;q=1',
                'Connection': 'keep - alive',
-               'Cookies':'JSESSIONID=; Hm_lvt_bc9d4fa6469686fe63002104880688b1=1460551175,1460717756; JSESSIONID=; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b',
+               'Cookies':'login_id=15221131593',
                'Accept': '*/*',
                }
     prepare = Request('GET', HOST_3, headers=headers).prepare()
@@ -68,9 +67,6 @@ def getCookies():
     success = False
     while attempts < 3 and not success:
         try:
-            index = random.randint(0, len(IPANDPORT) - 1)
-            proxy = {'http': 'http://%s' % IPANDPORT[index].strip()}
-            print proxy
             result = session.send(prepare, timeout=20,)
             success = True
         except Exception, e:
@@ -81,13 +77,12 @@ def getCookies():
                 print '请求三次失败,跳过'
                 pass
 
-    myCookies = result.cookies
-    print myCookies
-    print result.text
-
+    # print result.text
+    print result.cookies
+    return result.cookies
 
 #第一级url
-def getUrl(target_url, index):
+def getUrl(target_url, index, myCookie):
     print target_url
     print index
 
@@ -97,33 +92,29 @@ def getUrl(target_url, index):
     entext = en.myencrypt(text)
     entext_base64 = base64.b64encode(entext)
     dataContent = urllib.quote(entext_base64)
+    print entext_base64
     if index != 0:
         data = {
-            "data": dataContent,
+            "data": entext_base64,
         }
-    tempString = 'data=%s' % dataContent
-    dataLen = len(tempString)
-
+    print data
     headers = {'User-Agent': 'new_doctorpda/4.2.2 (iPhone; iOS 9.2; Scale/2.00) doctorpda',
                'Accept': '''*/*''',
                 'Accept-Encoding': 'gzip, deflate',
-               'Cookie': 'JSESSIONID=CBDF2C3A4B789C929AAEC38CE9E369B5; Hm_lvt_bc9d4fa6469686fe63002104880688b1=1460551175,1460717756; JSESSIONID=CBDF2C3A4B789C929AAEC38CE9E369B5; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b',
                'Connection': 'keep-alive',
-               'Content - Type': 'application / x - www - form - urlencoded',
-               'Accept - Language': 'zh - Hans - CN;q = 1',
-                'Content - Length': dataLen,
+               'Content-Type': 'application/x-www-form-urlencoded',
+               'Accept-Language': 'zh-Hans-CN;q=1',
     }
-    print headers
-    prepare = Request('POST', target_url, headers=headers, data=data).prepare()
+    prepare = Request('POST', target_url, headers=headers, data=data, cookies=myCookie).prepare()
+    print prepare.headers
+    print prepare.body
+    print prepare._cookies
     # try多次
     attempts = 0
     success = False
     while attempts < 3 and not success:
         try:
-            index = random.randint(0, len(IPANDPORT) - 1)
-            proxy = {'http': 'http://%s' % IPANDPORT[index].strip()}
-            print proxy
-            result = session.send(prepare, timeout=20, proxies=proxy)
+            result = session.send(prepare, timeout=20)
             success = True
         except Exception, e:
             print '请求失败, 重试...'
@@ -133,28 +124,34 @@ def getUrl(target_url, index):
                 print '请求三次失败,跳过'
                 pass
 
-    print result.text
-    print result.cookies
+    # print result.text
     # prase(result.text)
-    # praseJsonForOne(result.text)
-
-
+    praseJsonForOne(result.text)
 
 #解析用户名,关注,点赞,阅读数
 def praseJsonForOne(response):
-    result = json.loads(response)
+    try:
+        result = json.loads(response)
+    except Exception, e:
+        print e
     data = result['data']
     #解密字符串
     en = mycrypt()
     detext_base64 = base64.b64decode(data)
     detext = en.mydecrypt(detext_base64).rstrip()
     print detext
+    print "#######################################"
+    try:
+        jsonData = json.loads(detext)
+    except Exception, e:
+        print e
+    print jsonData
 
 def getNextUrl(target_url, index):
     print index
     headers = {
                'Accept-Encoding':'gzip',
-                'Cookie':'JSESSIONID=ECE8F6449914723B84B828B1A6598DFE; Hm_lvt_bc9d4fa6469686fe63002104880688b1=1460551175,1460717756; JSESSIONID=ECE8F6449914723B84B828B1A6598DFE; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b',
+                'Cookie':'JSESSIONID=D4370E96E9F0E5BDF8295E58FA545D14; Hm_lvt_bc9d4fa6469686fe63002104880688b1=1460551175,1460717756; JSESSIONID=D4370E96E9F0E5BDF8295E58FA545D14; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b',
                 'User - Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
 
     }
@@ -169,26 +166,24 @@ def getNextUrl(target_url, index):
         data = {
             "data": dataContent
         }
+    print data
     prepare = Request('POST', target_url, headers=headers, data=data).prepare()
     # try多次
-    attempts = 0
-    success = False
-    while attempts < 3 and not success:
-        try:
-            index = random.randint(0, len(IPANDPORT)-1)
-            proxy = {'http':'http://%s' % IPANDPORT[index].strip()}
-            print proxy
-            result = session.send(prepare, timeout=20, proxies=proxy)
-            success = True
-        except Exception, e:
-            print '请求失败, 重试...'
-            print e
-            attempts += 1
-            if attempts==3:
-                print '请求三次失败,跳过'
-                pass
-
-    print result.text
+    # attempts = 0
+    # success = False
+    # while attempts < 3 and not success:
+    #     try:
+    #         result = session.send(prepare, timeout=20)
+    #         success = True
+    #     except Exception, e:
+    #         print '请求失败, 重试...'
+    #         print e
+    #         attempts += 1
+    #         if attempts==3:
+    #             print '请求三次失败,跳过'
+    #             pass
+    #
+    # print result.text
     # prase(result.text)
     # praseJsonForOne(result.text)
 
@@ -306,9 +301,9 @@ def writeTofile(*arr):
 # if __name__ == '__name__':
 getTheRemoteAgent()
 pool = Pool(10)
-# getCookies()
+myCookie = getCookies()
 for index in range(1):
-    pool.apply_async(getUrl, args=(HOST_1, 12509))
+    pool.apply_async(getUrl, args=(HOST_1, 12509, myCookie))
 pool.close()
 pool.join()
 print 'All subprocesses done.'
