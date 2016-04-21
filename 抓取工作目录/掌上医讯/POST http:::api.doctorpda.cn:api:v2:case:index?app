@@ -1,0 +1,43 @@
+POST http://api.doctorpda.cn/api/v2/case/index?app_key=f1c18i2otirc0004&client_id=7c01ag7q3qcc0112&access_token=72ba7500-7562-40a0-a17e-f3cb465e3839&net=wifi&versionName=4.2.2&versionCode=85&source=app HTTP/1.1
+Host: api.doctorpda.cn
+Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip, deflate
+Cookie: JSESSIONID=54429955BB0A12557F2F1446C40C7EED; Hm_lvt_bc9d4fa6469686fe63002104880688b1=1460551175,1460717756,1461165107; JSESSIONID=54429955BB0A12557F2F1446C40C7EED; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b
+Content-Type: application/x-www-form-urlencoded
+Accept-Language: zh-Hans-CN;q=1
+Content-Length: 51
+Connection: keep-alive
+User-Agent: new_doctorpda/4.2.2 (iPhone; iOS 9.3; Scale/2.00) doctorpda
+
+data=uy7tn/explFAheEmT1QRsh7BxjI7jR8X2dZgNXuOPG8%3D
+
+
+#########################评论请求
+POST http://api.doctorpda.cn/api/v2/case/comments?app_key=f1c18i2otirc0004&client_id=7c01ag7q3qcc0112&access_token=72ba7500-7562-40a0-a17e-f3cb465e3839&net=wifi&versionName=4.2.2&versionCode=85&source=app HTTP/1.1
+Host: api.doctorpda.cn
+Connection: keep-alive
+Accept: */*
+Accept-Encoding: gzip, deflate
+Cookie: JSESSIONID=54429955BB0A12557F2F1446C40C7EED; Hm_lvt_bc9d4fa6469686fe63002104880688b1=1460551175,1460717756,1461165107; JSESSIONID=54429955BB0A12557F2F1446C40C7EED; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b
+Content-Type: application/x-www-form-urlencoded
+Accept-Language: zh-Hans-CN;q=1
+Content-Length: 137
+Connection: keep-alive
+User-Agent: new_doctorpda/4.2.2 (iPhone; iOS 9.3; Scale/2.00) doctorpda
+
+data=hZNVsDKN%2Btr3v1YX1plCx%2BkQXAQBEuhe6/bIqY5EwzIYala07os1ITZP46FbH6lBpv7QQrEqKKlziimMQKDLo0WSPgauooONNxALcdHhC5wmNszFjayrJ9TEw4kXQ7zz
+
+
+#########################经典病例
+GET http://api.doctorpda.cn/c/38885?app_key=f1c18i2otirc0004&client_id=7c01ag7q3qcc0112&access_token=72ba7500-7562-40a0-a17e-f3cb465e3839&net=wifi&versionName=4.2.2&versionCode=85 HTTP/1.1
+Host: api.doctorpda.cn
+Connection: keep-alive
+Accept-Encoding: gzip, deflate
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Cookie: JSESSIONID=9EE8746A5356EF82E115EE7B920E9B31; Hm_lpvt_bc9d4fa6469686fe63002104880688b1=1461251153; Hm_lvt_bc9d4fa6469686fe63002104880688b1=1460551175,1460717756,1461165107,1461250897; JSESSIONID=9EE8746A5356EF82E115EE7B920E9B31; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b
+Connection: keep-alive
+Accept-Language: zh-cn
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13E233/doctorpda
+
+
