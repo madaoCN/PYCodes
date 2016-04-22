@@ -22,12 +22,12 @@ class mycrypt():
         cryptor = AES.new(self.key,self.mode, self.IV)
         plain_text  = cryptor.decrypt(text)
         return plain_text
-# text = '''{"id":12492,"layer":"TwoLayer","type":"community_topic","p":1,"limit":10,"order":"like_count"}'''
-# en = mycrypt()
-# entext = en.myencrypt(text)
-# entext_base64 = base64.b64encode(entext)
-# print entext_base64
-# print urllib.quote(entext_base64)
+text = '''{"id":12522,"layer":"TwoLayer","type":"community_topic","p":1,"limit":30,"order":"like_count"}'''
+en = mycrypt()
+entext = en.myencrypt(text)
+entext_base64 = base64.b64encode(entext)
+print entext_base64
+print urllib.quote(entext_base64)
 # #解密
 # detext_base64 = base64.b64decode(entext_base64)
 # detext = en.mydecrypt(detext_base64).rstrip()
