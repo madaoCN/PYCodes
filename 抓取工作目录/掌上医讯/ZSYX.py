@@ -200,7 +200,7 @@ def getNextUrl(target_url, index, myCookies):
     print index
     headers = {
                 'Host': 'api.doctorpda.cn',
-               'Content-Type': 'application/x-www-form-urlencoded',
+                'Content-Type': 'application/x-www-form-urlencoded',
                 'Accept': '''*/*''',
                 'Connection': 'keep-alive',
                 'Connection': 'keep-alive',
@@ -218,7 +218,7 @@ def getNextUrl(target_url, index, myCookies):
 
     if index != 0:
         data = {
-            "data":dataContent
+            "data":entext_base64
         }
     print data
     prepare = Request('POST', target_url, headers=headers, data=data, cookies=myCookies).prepare()
@@ -266,7 +266,7 @@ def writeTofile(*arr):
 pool = Pool(10)
 myCookie = getCookies()
 for index in range(1):
-    pool.apply_async(getNextUrl, args=(HOST_2, 12574, myCookie))
+    pool.apply_async(getNextUrl, args=(HOST_2, 12568, myCookie))
 pool.close()
 pool.join()
 print 'All subprocesses done.'
