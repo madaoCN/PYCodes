@@ -22,7 +22,7 @@ class mycrypt():
         cryptor = AES.new(self.key,self.mode, self.IV)
         plain_text  = cryptor.decrypt(text)
         return plain_text
-text = '''{"id":12522,"layer":"TwoLayer","type":"community_topic","p":1,"limit":30,"order":"like_count"}'''
+text = '''{"case_id":2369}'''
 en = mycrypt()
 entext = en.myencrypt(text)
 entext_base64 = base64.b64encode(entext)
