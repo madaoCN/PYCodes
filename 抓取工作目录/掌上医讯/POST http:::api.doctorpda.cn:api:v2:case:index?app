@@ -40,4 +40,14 @@ Connection: keep-alive
 Accept-Language: zh-cn
 User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 9_3 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13E233/doctorpda
 
+###############评论接口
+GET http://api.doctorpda.cn/api/comment/list?app_key=f1c18i2otirc0004&client_id=0bd1agocekr6073a&access_token=c83ad482-b05c-4187-9c07-566454b0b168&net=wifi&versionName=4.2.2&versionCode=85&id=39714&p=1&limit=20&layer=TwoLayer&type=content HTTP/1.1
+Host: api.doctorpda.cn
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=D483F04DB2684B892A58D896130BA12A; Hm_lpvt_bc9d4fa6469686fe63002104880688b1=1461341526; Hm_lvt_bc9d4fa6469686fe63002104880688b1=1461150815,1461341526; JSESSIONID=D483F04DB2684B892A58D896130BA12A; login_id=15221131593; secret_token=84bc894eada38d0b24fbcfd6163b914b
+User-Agent: new_doctorpda/4.2.2 (iPhone; iOS 9.2; Scale/2.00) doctorpda
+Accept-Language: zh-Hans-CN;q=1
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
 

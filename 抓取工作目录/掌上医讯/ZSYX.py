@@ -106,8 +106,6 @@ def getUrl(target_url, index, myCookie):
                'Accept-Language': 'zh-Hans-CN;q=1',
     }
     prepare = Request('POST', target_url, headers=headers, data=data, cookies=myCookie).prepare()
-    print prepare.headers
-    print prepare._cookies
     # print prepare.headers
     # print prepare.body
     # print prepare._cookies
@@ -128,11 +126,12 @@ def getUrl(target_url, index, myCookie):
 
     # print result.text
     # prase(result.text)
-    # praseJsonForOne(result.text)
+    praseJsonForOne(result.text, index, myCookie)
     # getNextUrl(target_url, index, prepare._cookies)
 
 #解析用户名,关注,点赞,阅读数
-def praseJsonForOne(response):
+def praseJsonForOne(response, index, myCookies):
+    print '################################praseJsonForOne'
     try:
         result = json.loads(response)
     except Exception, e:
@@ -142,8 +141,7 @@ def praseJsonForOne(response):
     en = mycrypt()
     detext_base64 = base64.b64decode(data)
     detext = en.mydecrypt(detext_base64).rstrip()
-    print detext
-    print "#######################################"
+    # print "#######################################"
     try:
         jsonData = json.loads(detext.strip('\0'))
     except Exception, e:
@@ -156,9 +154,9 @@ def praseJsonForOne(response):
     try:
         username = jsonData['caseTopic']['author']
         if username.strip() == '' or username is None:
-            username = u'No'
+            username = u'N/A'
     except Exception, e:
-        username = u'No'
+        username = u'N/A'
     dataArr.append(username)
     #关注数
     try:
@@ -184,20 +182,13 @@ def praseJsonForOne(response):
     except Exception, e:
         readNum = 0
     dataArr.append(readNum)
-    #评论数
-    try:
-        commentNum = jsonData['caseTopic']['comments']
-        if commentNum is None:
-            commentNum = 0
-    except Exception, e:
-        commentNum = 0
-    dataArr.append(commentNum)
     # writeTofile(*dataArr)
 
+    getNextUrl(index, myCookies, dataArr)
 
-def getNextUrl(target_url, index, myCookies):
-    print '################################'
-    print index
+
+def getNextUrl(index, myCookies, dataArr):
+    print '################################getNextUrl'
     headers = {
                 'Host': 'api.doctorpda.cn',
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -210,7 +201,7 @@ def getNextUrl(target_url, index, myCookies):
                 'Accept-Encoding': 'gzip, deflate',
     }
     #拼接加密参数参数
-    text = '''{"id":%s,"layer":"TwoLayer","type":"community_topic","p":1,"limit":10,"order":"like_count"}''' % index
+    text = '''{"id":%s,"layer":"TwoLayer","type":"community_topic","p":1,"limit":50,"order":"like_count"}''' % index
     en = mycrypt()
     entext = en.myencrypt(text)
     entext_base64 = base64.b64encode(entext)
@@ -221,9 +212,9 @@ def getNextUrl(target_url, index, myCookies):
             "data":entext_base64
         }
     print data
-    prepare = Request('POST', target_url, headers=headers, data=data, cookies=myCookies).prepare()
-    print prepare._cookies
-    print prepare.headers
+    prepare = Request('POST', HOST_2, headers=headers, data=data, cookies=myCookies).prepare()
+    # print prepare._cookies
+    # print prepare.headers
     #try多次
     attempts = 0
     success = False
@@ -239,34 +230,127 @@ def getNextUrl(target_url, index, myCookies):
                 print '请求三次失败,跳过'
                 pass
 
-    print result.text
+    praseJsonForTwo(result.text, dataArr)
 
 #解析json
-def praseJsonForTwo(response):
-    result = json.loads(response)
+def praseJsonForTwo(response, dataArr):
+    print '################################praseJsonForTwo'
+    try:
+        result = json.loads(response)
+    except Exception, e:
+        print e
+    data = result['data']
+    # 解密字符串
+    en = mycrypt()
+    detext_base64 = base64.b64decode(data)
+    detext = en.mydecrypt(detext_base64).rstrip()
+    print detext
+    # print "#######################################"
+    try:
+        jsonData = json.loads(detext.strip('\0'))
+    except Exception, e:
+        print e
+    #解析字符串
+    #评论数
+    try:
+        commentNum = jsonData['totalRow']
+        dataArr.append(commentNum)
+        if readNum is None:
+            commentNum = 0
+    except Exception, e:
+        commentNum = 0
+    #评论用户统计
+
+    myDic = {}
+    try:
+        comments = jsonData['list']
+        # 没有用户评论
+        if comments is None or len(comments) <=0:
+            myDic['N/A'] = 0
+        else:
+        #有用户评论,那么开始遍历
+            for comment in comments:
+                try:
+                    tempName = comment['username']
+                    if tempName is None:
+                        tempName = 'N/A'
+                    else:
+                        #若果已经有该用户名
+                        if myDic.has_key(tempName):
+                            count = myDic[tempName]
+                            myDic[tempName] = count + 1
+                        #如果没有该用户名
+                        else:
+                            myDic[tempName] = 1
+                except Exception, e:
+                    print e
+                    tempName = 'N/A'
+                    myDic[tempName] = 0
+                #遍历子评论
+                finally:
+                    try:
+                        childs = comment['children']
+                        # 没有子评论
+                        if childs is None or len(childs) <= 0:
+                            print '没有子评论'
+                        else:
+                            # 有用户子评论,那么开始遍历
+                            for child in childs:
+                                try:
+                                    childUser = child['username']
+                                    if childUser is None:
+                                        childUser = 'N/A'
+                                    else:
+                                        # 若果已经有该用户名
+                                        if myDic.has_key(childUser):
+                                            count = myDic[childUser]
+                                            myDic[childUser] = count + 1
+                                        # 如果没有该用户名
+                                        else:
+                                            myDic[childUser] = 1
+                                except Exception, e:
+                                    print e
+                    except Exception, e:
+                        print e
+    except Exception, e:
+        print e
+        myDic['N/A'] = 0
+
+    writeTofile(dataArr, myDic)
 
 
-def writeTofile(*arr):
+
+
+def writeTofile(dataArr, myDic):
+    print '##########################writeTofile'
+    print dataArr
+    print myDic
     print '录入中...'
+
     path = os.path.expanduser(r'~/Desktop/data/data.txt')
     print path
     f = open(path, "a")
-    print arr
-    if arr:
-        for rag in arr:
+    if dataArr:
+        for rag in dataArr:
             if isinstance(rag, int):
                 f.write(str(rag)+',')
             else:
                 f.write(rag.encode('utf8')+',')
-        f.write('\n')
-        f.close()
+    if myDic:
+        for key in myDic:
+            print key
+            write_str = key.encode('utf8') + ':' + str(myDic[key]) + ','
+            f.write(write_str)
+
+    f.write('\n')
+    f.close()
 
 
 # if __name__ == '__name__':
 pool = Pool(10)
 myCookie = getCookies()
 for index in range(1):
-    pool.apply_async(getNextUrl, args=(HOST_2, 12568, myCookie))
+    pool.apply_async(getUrl, args=(HOST_1, 12522, myCookie))
 pool.close()
 pool.join()
 print 'All subprocesses done.'
