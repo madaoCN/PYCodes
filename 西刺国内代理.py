@@ -11,7 +11,7 @@ checkedProxyList = []
 
 #抓取代{过}{滤}理网站
 targets = []
-for i in xrange(1,3):
+for i in xrange(1,2):
     if i != 1:
         target = r"http://www.xicidaili.com/nn/%d" % i
         targets.append(target)
@@ -39,9 +39,10 @@ class ProxyGet(threading.Thread):
         soup = BeautifulSoup(result, 'lxml')
         for child in soup.find_all('tr'):
             result = child.find_all('td')
+            print result
             proxy = []
             try:
-                proxy = [result[2].string.encode('utf8'),result[3].string.encode('utf8')]
+                proxy = [result[1].string.encode('utf8'),result[2].string.encode('utf8')]
             except:
                 pass
             #print proxy

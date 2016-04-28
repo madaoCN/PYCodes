@@ -337,7 +337,7 @@ def writeTofile(dataArr, myDic):
     print myDic
     print '录入中...'
 
-    path = os.path.expanduser(r'~/Desktop/data/data35000-40000.txt')
+    path = os.path.expanduser(r'~/Desktop/data/data20000-30000.txt')
     print path
     f = open(path, "a")
     if dataArr:
@@ -358,7 +358,7 @@ def writeTofile(dataArr, myDic):
 # if __name__ == '__name__':
 pool = Pool(10)
 myCookie = getCookies()
-for index in range(35000, 40000):
+for index in range(40000,50000):
     pool.apply_async(getUrl, args=(HOST_1, index, myCookie))
 pool.close()
 pool.join()
