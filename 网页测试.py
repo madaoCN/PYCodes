@@ -4,16 +4,17 @@ import os, threading
 import requests
 from requests import Request, Session
 import ssl
-from Crypto.Cipher import AES
-from bs4 import BeautifulSoup
+# from Crypto.Cipher import AES
+# from bs4 import BeautifulSoup
 import urllib, random
-import ConfigParser
-import cookielib
+# import ConfigParser
+# import cookielib
 import json
 from ast import literal_eval
-import chardet
 from pymongo import MongoClient
 import zlib
+import StringIO
+import gzip
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -49,14 +50,14 @@ def getUrl(target_url, index):
                'Accept-Language': 'zh-cn',
     }
 
-    s = r'''{\"device\":{\"platform\":\"android\",\"idfa\":\"e721e44d-ba72-3ec7-b90c-cd0d81bd8932\",\"macAddress\":\"9c:c1:72:6f:4d:59\",\"imei\":\"864036028378890\"},\"command\":\"message\\/notification\",\"user\":{\"uid\":\"302142\",\"nickname\":\"unicorn1369\",\"access_token\":\"y7NQT9BV8BB8F~nPdDjlf5ir7amkekGpjKpT7-QVn85sZ4FVertH-2w6EfgnPJIECwDGBGZbKqSAizFe\"},\"soft\":{\"coopId\":\"10020\",\"version\":\"2.1.4\",\"productId\":\"3001\"},\"request\":{\"user_id\":\"302142\"}}'''
-    c = zlib.compress(s.encode('utf8'))
+    s = '''{\"device\":{\"platform\":\"android\",\"idfa\":\"e721e44d-ba72-3ec7-b90c-cd0d81bd8932\",\"macAddress\":\"9c:c1:72:6f:4d:59\",\"imei\":\"864036028378890\"},\"command\":\"message\\/notification\",\"user\":{\"uid\":\"302142\",\"nickname\":\"unicorn1369\",\"access_token\":\"y7NQT9BV8BB8F~nPdDjlf5ir7amkekGpjKpT7-QVn85sZ4FVertH-2w6EfgnPJIECwDGBGZbKqSAizFe\"},\"soft\":{\"coopId\":\"10020\",\"version\":\"2.1.4\",\"productId\":\"3001\"},\"request\":{\"user_id\":\"302142\"}}'''
+    c = zlib.compress(s)
 
     byteStr = bytearray(c)
     for i in range(0, len(byteStr)):
         byteStr[i] = 0x5A ^ byteStr[i]
 
-    prepare = Request('POST', curentURL, headers=headers, data= byteStr).prepare()
+    prepare = Request('POST', curentURL, headers=headers, data = bytes(byteStr)).prepare()
     print prepare.headers
     print prepare.body
     # print prepare._cookies
@@ -80,13 +81,17 @@ def getUrl(target_url, index):
                 return
 
     print "====================="
+
     print result.text
 
-    arr = bytearray(result.text.encode('utf8'))
+    arr = bytearray(result.text, encoding='utf8')
     for i in range(0, len(arr)):
         arr[i] = 0x5A ^ arr[i]
 
-    print zlib.decompress(arr)
+    try:
+        print zlib.decompress(bytes(arr), -zlib.MAX_WBITS)
+    except Exception, e:
+        print e
 
 #解析用户名,关注,点赞,阅读数
 def praseJsonForOne(response, index):
@@ -97,15 +102,65 @@ def praseJsonForOne(response, index):
 
 
 # if __name__ == '__name__':
-getTheRemoteAgent()
+# getTheRemoteAgent()
 
-pool = Pool(10)
-for index in range(1):
-    pool.apply_async(getUrl, args=(HOST_1, index))
-pool.close()
-pool.join()
-print 'All subprocesses done.'
+# pool = Pool(10)
+# for index in range(1):
+#     pool.apply_async(getUrl, args=(HOST_1, index))
+# pool.close()
+# pool.join()
+# print 'All subprocesses done.'
 
+def decompress(infile, dst):
+    infile = open(infile, 'rb')
+    dst = open(dst, 'wb')
+    decompress = zlib.decompressobj()
+    data = infile.read(1024)
+    while data:
+        dst.write(decompress.decompress(data))
+        data = infile.read(1024)
+    dst.write(decompress.flush())
 
+client = MongoClient()
+myDB = client['qyyxDB']
+json =  myDB.web.find_one({'index': 0})
+print json
+data = json['data']
+print data
 
+from io import StringIO
+obj = StringIO()
+arr = bytearray(urllib.unquote(data), encoding='utf8')
+for i in range(0, len(arr)):
+    arr[i] = 0x5A ^ arr[i]
+    print chr(arr[i])
+    obj.write(unichr(arr[i]))
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+try:
+    # print zlib.decompress(obj.readline(), -zlib.MAX_WBITS)
+    zipObj = zlib.decompressobj(-zlib.MAX_WBITS)
+    print zipObj.decompress(obj.getvalue())
+except Exception, e:
+    print e
+
+# from io import StringIO
+#
+# str_1 = StringIO(data)
+# str_2 = StringIO()
+# for i in range(len(str_1.getvalue())):
+#     temp = ord(str_1.read(1)) ^ 0x5A
+#     print temp
+#     str_2.write(unichr(temp))
+#
+#
+# import sys
+# reload(sys)
+# sys.setdefaultencoding('utf8')
+#
+# try:
+#     print zlib.decompress(bytes(str_2.getvalue()), -zlib.MAX_WBITS)
+# except Exception, e:
+#     print e
