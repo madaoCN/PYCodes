@@ -15,6 +15,7 @@ from pymongo import MongoClient
 import zlib
 import StringIO
 import gzip
+import struct
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -44,7 +45,7 @@ def getUrl(target_url, index):
     curentURL = target_url
     headers = {'User-Agent': '%E8%BD%BB%E7%9B%88%E5%8C%BB%E5%AD%A6/2.1.4 CFNetwork/758.3.15 Darwin/15.4.0',
                'Accept': '''*/*''',
-                'Accept-Encoding': 'gzip, deflate',
+                # 'Accept-Encoding': 'gzip, deflate',
                'Connection': 'keep-alive',
                'Content-Type': 'application/x-www-form-urlencoded',
                'Accept-Language': 'zh-cn',
@@ -84,14 +85,21 @@ def getUrl(target_url, index):
 
     print result.text
 
-    arr = bytearray(result.text, encoding='utf8')
+    arr = bytearray(urllib.unquote(result.text), encoding='utf8')
     for i in range(0, len(arr)):
         arr[i] = 0x5A ^ arr[i]
+    print arr
+    print len(arr)
 
+    fio = StringIO.StringIO(arr)
+    print type(fio.getvalue())
     try:
-        print zlib.decompress(bytes(arr), -zlib.MAX_WBITS)
+        print zlib.decompress(fio.getvalue(), -zlib.MAX_WBITS)
+        # zipObj = zlib.decompressobj(-zlib.MAX_WBITS)
+        # print zipObj.decompress(bytes(arr))
     except Exception, e:
         print e
+
 
 #解析用户名,关注,点赞,阅读数
 def praseJsonForOne(response, index):
@@ -100,7 +108,7 @@ def praseJsonForOne(response, index):
     myDB = client['zsyxDB']
     print myDB.web.insert({'index':index, 'data':response})
 
-
+#
 # if __name__ == '__name__':
 # getTheRemoteAgent()
 
@@ -111,16 +119,6 @@ def praseJsonForOne(response, index):
 # pool.join()
 # print 'All subprocesses done.'
 
-def decompress(infile, dst):
-    infile = open(infile, 'rb')
-    dst = open(dst, 'wb')
-    decompress = zlib.decompressobj()
-    data = infile.read(1024)
-    while data:
-        dst.write(decompress.decompress(data))
-        data = infile.read(1024)
-    dst.write(decompress.flush())
-
 client = MongoClient()
 myDB = client['qyyxDB']
 json =  myDB.web.find_one({'index': 0})
@@ -128,21 +126,17 @@ print json
 data = json['data']
 print data
 
-from io import StringIO
-obj = StringIO()
-arr = bytearray(urllib.unquote(data), encoding='utf8')
+
+print '------------'
+arr = bytearray(data, encoding='utf8')
 for i in range(0, len(arr)):
     arr[i] = 0x5A ^ arr[i]
-    print chr(arr[i])
-    obj.write(unichr(arr[i]))
 
-import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
+fio = StringIO.StringIO(arr)
 try:
-    # print zlib.decompress(obj.readline(), -zlib.MAX_WBITS)
-    zipObj = zlib.decompressobj(-zlib.MAX_WBITS)
-    print zipObj.decompress(obj.getvalue())
+    print zlib.decompress(fio.getvalue(),)
+    # zipObj = zlib.decompressobj(8)
+    # print zipObj.decompress(bytes(arr))
 except Exception, e:
     print e
 
