@@ -16,6 +16,10 @@ import zlib
 import StringIO
 import gzip
 import struct
+import chardet
+import base64
+import bz2
+
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -45,22 +49,23 @@ def getUrl(target_url, index):
     curentURL = target_url
     headers = {'User-Agent': '%E8%BD%BB%E7%9B%88%E5%8C%BB%E5%AD%A6/2.1.4 CFNetwork/758.3.15 Darwin/15.4.0',
                'Accept': '''*/*''',
-                # 'Accept-Encoding': 'gzip, deflate',
+               # 'Accept-Encoding': 'gzip, deflate',
                'Connection': 'keep-alive',
                'Content-Type': 'application/x-www-form-urlencoded',
                'Accept-Language': 'zh-cn',
     }
 
-    s = '''{\"device\":{\"platform\":\"android\",\"idfa\":\"e721e44d-ba72-3ec7-b90c-cd0d81bd8932\",\"macAddress\":\"9c:c1:72:6f:4d:59\",\"imei\":\"864036028378890\"},\"command\":\"message\\/notification\",\"user\":{\"uid\":\"302142\",\"nickname\":\"unicorn1369\",\"access_token\":\"y7NQT9BV8BB8F~nPdDjlf5ir7amkekGpjKpT7-QVn85sZ4FVertH-2w6EfgnPJIECwDGBGZbKqSAizFe\"},\"soft\":{\"coopId\":\"10020\",\"version\":\"2.1.4\",\"productId\":\"3001\"},\"request\":{\"user_id\":\"302142\"}}'''
+    s = '''{\"device\":{\"platform\":\"android\",\"idfa\":\"e721e44d-ba72-3ec7-b90c-cd0d81bd8932\",\"macAddress\":\"9c:c1:72:6f:4d:59\",\"imei\":\"864036028378890\"},\"command\":\"message\\/notification\",\"user\":{\"uid\":\"302142\",\"nickname\":\"unicorn1369\",\"access_token\":\"y7NQT9BV8BB8F~nPdDjlf5ir7amkekGpjKpT7-QVn85sZ4FVertH-2w6EfgnPJIECwDGBGZbKqSAizFe\"},\"soft\":{\"coopId\":\"10020\",\"version\":\"2.1.4\",\"productId\":\"3001\"},\"request\":{\"user_id\":\"302143\"}}'''
     c = zlib.compress(s)
 
     byteStr = bytearray(c)
     for i in range(0, len(byteStr)):
         byteStr[i] = 0x5A ^ byteStr[i]
 
+
     prepare = Request('POST', curentURL, headers=headers, data = bytes(byteStr)).prepare()
-    print prepare.headers
-    print prepare.body
+    # print prepare.headers
+    # print prepare.body
     # print prepare._cookies
     # try多次
     attempts = 0
@@ -73,6 +78,7 @@ def getUrl(target_url, index):
             # result = session.send(prepare, timeout=20, proxies = proxy)
             result = session.send(prepare ,timeout=5)
             success = True
+            result.encoding = 'utf8'
         except Exception, e:
             print '请求失败, 重试...'
             print e
@@ -83,25 +89,17 @@ def getUrl(target_url, index):
 
     print "====================="
 
-    print result.text
-
-    arr = bytearray(urllib.unquote(result.text), encoding='utf8')
-    for i in range(0, len(arr)):
-        arr[i] = 0x5A ^ arr[i]
-    print arr
-    print len(arr)
-
-    fio = StringIO.StringIO(arr)
-    print type(fio.getvalue())
+    buf = StringIO.StringIO()
     try:
-        print zlib.decompress(fio.getvalue(), -zlib.MAX_WBITS)
-        # zipObj = zlib.decompressobj(-zlib.MAX_WBITS)
-        # print zipObj.decompress(bytes(arr))
+        arr = bytearray(urllib.unquote(result.text), 'utf8')
+        for i in range(0, len(arr)):
+            arr[i] = 0x5A ^ arr[i]
+            buf.write(chr(arr[i]))
+        print zlib.decompress(buf.getvalue(), -zlib.MAX_WBITS)
     except Exception, e:
         print e
 
-
-#解析用户名,关注,点赞,阅读数
+#解析用户名,关注,点赞,阅读数python bz2.decompress
 def praseJsonForOne(response, index):
     print '+++++++++++++++++++++++++++++++++++++'
     client = MongoClient()
@@ -112,33 +110,26 @@ def praseJsonForOne(response, index):
 # if __name__ == '__name__':
 # getTheRemoteAgent()
 
-# pool = Pool(10)
-# for index in range(1):
-#     pool.apply_async(getUrl, args=(HOST_1, index))
-# pool.close()
-# pool.join()
-# print 'All subprocesses done.'
+pool = Pool(10)
+for index in range(1):
+    pool.apply_async(getUrl, args=(HOST_1, index))
+pool.close()
+pool.join()
+print 'All subprocesses done.'
 
-client = MongoClient()
-myDB = client['qyyxDB']
-json =  myDB.web.find_one({'index': 0})
-print json
-data = json['data']
-print data
-
-
-print '------------'
-arr = bytearray(data, encoding='utf8')
-for i in range(0, len(arr)):
-    arr[i] = 0x5A ^ arr[i]
-
-fio = StringIO.StringIO(arr)
-try:
-    print zlib.decompress(fio.getvalue(),)
-    # zipObj = zlib.decompressobj(8)
-    # print zipObj.decompress(bytes(arr))
-except Exception, e:
-    print e
+# client = MongoClient()
+# myDB = client['zsyxDB']
+# json =  myDB.web.find_one({'index': 8})
+# print json
+# data = json['data']
+# print data
+#
+# print '------------'
+# arr = bytearray(data, encoding='utf8')
+# for i in range(0, len(arr)):
+#     arr[i] = 0x5A ^ arr[i]
+# print arr
+#
 
 # from io import StringIO
 #
