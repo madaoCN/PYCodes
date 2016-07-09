@@ -39,9 +39,10 @@ class ProxyGet(threading.Thread):
         soup = BeautifulSoup(result, 'lxml')
         for child in soup.find_all('tr'):
             result = child.find_all('td')
+            print result
             proxy = []
             try:
-                proxy = [result[2].string.encode('utf8'),result[3].string.encode('utf8')]
+                proxy = [result[1].string.encode('utf8'),result[2].string.encode('utf8')]
             except:
                 pass
             #print proxy
@@ -127,7 +128,7 @@ for i in checkThreads:
 print '.'*10+"总共有%s个代{过}{滤}理通过校验" %len(checkedProxyList) +'.'*10
 
 #持久化
-f= open("proxy_list.txt",'a')
+f= open("/Users/liangxiansong/Desktop/proxy_list.txt",'w+')
 for proxy in sorted(checkedProxyList,cmp=lambda x,y:cmp(x[2],y[2])):
     print "checked proxy is: %s:%s" %(proxy[0],proxy[1])
     f.write("%s:%s\n"%(proxy[0],proxy[1]))
