@@ -5,6 +5,7 @@ import re
 import threading
 import time
 from bs4 import BeautifulSoup
+import os
 
 rawProxyList = []
 checkedProxyList = []
@@ -101,22 +102,23 @@ if __name__ == "__main__":
     getThreads = []
     checkThreads = []
 
-#对每个目标网站开启一个线程负责抓取代{过}{滤}理
+
+# 对每个目标网站开启一个线程负责抓取代{过}{滤}理
 for i in targets:
     t = ProxyGet(i)
     getThreads.append(t)
 
 for i in getThreads:
     i.start()
-ƒ
+
 for i in getThreads:
     i.join()
 
-print '.'*10+"总共抓取了%s个代{过}{滤}理" %len(rawProxyList) +'.'*10
+print '.' * 10 + "总共抓取了%s个代{过}{滤}理" % len(rawProxyList) + '.' * 10
 
-#开启20个线程负责校验，将抓取到的代{过}{滤}理分成20份，每个线程校验一份
+# 开启20个线程负责校验，将抓取到的代{过}{滤}理分成20份，每个线程校验一份
 for i in range(20):
-    t = ProxyCheck(rawProxyList[((len(rawProxyList)+19)/20) * i:((len(rawProxyList)+19)/20) * (i+1)])
+    t = ProxyCheck(rawProxyList[((len(rawProxyList) + 19) / 20) * i:((len(rawProxyList) + 19) / 20) * (i + 1)])
     checkThreads.append(t)
 
 for i in checkThreads:
@@ -125,11 +127,12 @@ for i in checkThreads:
 for i in checkThreads:
     i.join()
 
-print '.'*10+"总共有%s个代{过}{滤}理通过校验" %len(checkedProxyList) +'.'*10
+print '.' * 10 + "总共有%s个代{过}{滤}理通过校验" % len(checkedProxyList) + '.' * 10
 
-#持久化
-f= open("/Users/liangxiansong/Desktop/proxy_list.txt",'w+')
-for proxy in sorted(checkedProxyList,cmp=lambda x,y:cmp(x[2],y[2])):
-    print "checked proxy is: %s:%s" %(proxy[0],proxy[1])
-    f.write("%s:%s\n"%(proxy[0],proxy[1]))
+# 持久化
+desktopPath = os.path.join(os.path.expanduser("~"), 'Desktop')
+f = open(desktopPath + "/proxy_list.txt", 'w+')
+for proxy in sorted(checkedProxyList, cmp=lambda x, y: cmp(x[2], y[2])):
+    print "checked proxy is: %s:%s" % (proxy[0], proxy[1])
+    f.write("%s:%s\n" % (proxy[0], proxy[1]))
 f.close()

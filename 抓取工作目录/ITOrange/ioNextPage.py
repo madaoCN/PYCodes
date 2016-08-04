@@ -45,8 +45,8 @@ def run_pro(target_url):
         conn.test.fails.insert({'url':target_url})
         return
 
-    # collections = conn.test.html
-    # print collections.insert({'html':result.text})
+    collections = conn.test.html
+    print collections.insert({'html':result.text})
     print 'prasing.......'
     prase(result.text, target_url)
 

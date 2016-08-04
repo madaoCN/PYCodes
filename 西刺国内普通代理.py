@@ -5,6 +5,7 @@ import re
 import threading
 import time
 from bs4 import BeautifulSoup
+import os
 
 rawProxyList = []
 checkedProxyList = []
@@ -128,7 +129,8 @@ for i in checkThreads:
 print '.'*10+"总共有%s个代{过}{滤}理通过校验" %len(checkedProxyList) +'.'*10
 
 #持久化
-f= open("/Users/liangxiansong/Desktop/proxy_list.txt",'w+')
+desktopPath = os.path.join(os.path.expanduser("~"), 'Desktop')
+f= open(desktopPath + "/proxy_list.txt",'w+')
 for proxy in sorted(checkedProxyList,cmp=lambda x,y:cmp(x[2],y[2])):
     print "checked proxy is: %s:%s" %(proxy[0],proxy[1])
     f.write("%s:%s\n"%(proxy[0],proxy[1]))
