@@ -61,7 +61,8 @@ def run_pro(target_url, page):
     except Exception, e:
         print '请求失败'
         print e
-        conn.test.fails.insert({'url': target_url})
+        if conn.test.DATA.find_one({'url': realUrl}) == None:
+            conn.test.fails.insert({'url': realUrl})
         return
 
 def prase(text, realUrl):
@@ -74,7 +75,8 @@ def prase(text, realUrl):
     except Exception, e:
         print e
         print "抓取网页失败"
-        conn.test.fails.insert({'url': realUrl})
+        if conn.test.DATA.find_one({'url': realUrl}) == None:
+            conn.test.fails.insert({'url': realUrl})
         return
 
     for item in feedItems:
@@ -137,7 +139,7 @@ def prase(text, realUrl):
 getTheRemoteAgent()
 # print IPANDPORT
 pool = Pool(5)
-for index in range(0, 1):
+for index in range(0, 10):
     pool.apply_async(run_pro, args=(TARGET_HOST, index))
 pool.close()
 pool.join()
