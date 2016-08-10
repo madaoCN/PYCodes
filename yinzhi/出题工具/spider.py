@@ -92,8 +92,18 @@ class Spider:
                 if pattern.match(value1) and pattern.match(value2):
                     try:
                         if abs(float(value1) - float(value2)) < precision:
+                            print value1, value2
                             #这里写插值函数
-                            self.xmlData[key1+'_'+k1] = key2 +'_'+k2
+                            if isinstance(self.xmlData[key1 + '_' + k1], list):
+                                self.xmlData[key1 + '_' + k1].append(key2 + '_' + k2)
+                            elif self.xmlData[key1 + '_' + k1] == '##':
+                                self.xmlData[key1 + '_' + k1] = key2 + '_' + k2
+                            else:
+                                tempList = []
+                                tempList.append(self.xmlData[key1 + '_' + k1])
+                                tempList.append(key2 + '_' + k2)
+                                self.xmlData[key1 + '_' + k1] = tempList
+
                     except Exception, e:
                         print '====='
                         print value1, value2
@@ -102,7 +112,18 @@ class Spider:
                 else:
                     if value1 == value2:
                         # 这里写插值函数
-                        self.xmlData[key1 + '_' + k1] = key2 + '_' + k2
+                        # 如果是list类型
+                        print "匹配成功。。。"
+                        print value1, value2
+                        if isinstance(self.xmlData[key1 + '_' + k1], list):
+                            self.xmlData[key1 + '_' + k1].append(key2 + '_' + k2)
+                        elif self.xmlData[key1 + '_' + k1] == '##':
+                            self.xmlData[key1 + '_' + k1] = key2 + '_' + k2
+                        else:
+                            tempList = []
+                            tempList.append(self.xmlData[key1 + '_' + k1])
+                            tempList.append(key2 + '_' + k2)
+                            self.xmlData[key1 + '_' + k1] = tempList
 
     def initXmlData(self):
         # keyNum = len(self.dataDic)
@@ -126,9 +147,9 @@ class Spider:
     def main(self, path):
         #获取目录下的文件名
         filePathList = self.getDirFile(dir=path)
+
         self.dealFilesWithPath(filePathList)
-        # pp = pprint.PrettyPrinter(indent=4)
-        # pp.pprint(self.dataDic)
+
         if len(self.dataDic) > 0:
             #将key由answer替换成T类型
             keyNum = len(self.dataDic) + 1
@@ -138,14 +159,23 @@ class Spider:
             self.initXmlData()
 
             #匹配
+            tempKey = []
             for key in self.dataDic:
-                if key != 'T'+str(keyNum):
-                    self.matchTheSame(self.dataDic,'T'+str(keyNum), key)
+                tempKey.append(key)
+            tempKey.sort()
+
+            if len(tempKey) > 1:
+                for i in  range(len(tempKey)):
+                    for j in range(i):
+                        self.matchTheSame(self.dataDic, tempKey[i], tempKey[j])
+
+            # for key in self.dataDic:
+            #     if key != 'T'+str(keyNum):
+            #         self.matchTheSame(self.dataDic,'T'+str(keyNum), key)
 
             # pp = pprint.PrettyPrinter(indent=4)
             # pp.pprint(self.xmlData)
-            # pp.pprint(self.formData)
-
+            # return
 
             import sys
             reload(sys)
@@ -157,9 +187,10 @@ class Spider:
 
 
 if __name__ == '__main__':
-    DIR = '/Users/lixiaorong/Desktop/2.2到3.2'
-
+    DIR = '/Users/liangxiansong/Desktop/ywd-产品出库'
     def func(args,dire,fis):
         spider = Spider()
         spider.main(dire)
-    os.path.walk(DIR,func, ())
+
+    os.path.walk(DIR, func, ())
+    print 'process ============'

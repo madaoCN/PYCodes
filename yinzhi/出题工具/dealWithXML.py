@@ -4,10 +4,9 @@ from bs4 import BeautifulSoup
 import codecs
 from xml.dom import minidom
 
-FILE = '/Users/lixiaorong/Desktop/编制转账支票_支付原材料价款（供应方，金额，口令）.xml'
-
 def getTitle(file):
     try:
+        print file
         file = codecs.open(file, encoding='utf8')
         soup = BeautifulSoup(file,'xml')
         tx = soup.TQuestion.Title.Text.text

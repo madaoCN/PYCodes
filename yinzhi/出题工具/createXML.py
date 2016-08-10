@@ -40,15 +40,28 @@ def initalXML(formData, xmlData, moreTag):
 
     #c节点
     for xml in xmlData:
-        c = doc.createElement('C')
-        if xmlData[xml] == '##':
-            c.setAttribute('expr', 'null')
-        else:
-            c.setAttribute('expr', 'equalTo(%s)' % xmlData[xml])
-        c.setAttribute('type', 'T')
-        c.setAttribute('name', xml)
+        if isinstance(xml, list):
+            for item in xml:
+                c = doc.createElement('C')
+                if xmlData[xml] == '##':
+                    c.setAttribute('expr', 'null')
+                else:
+                    c.setAttribute('expr', 'equalTo(%s)' % xmlData[xml])
+                c.setAttribute('type', 'T')
+                c.setAttribute('name', xml)
 
-        variables.appendChild(c)
+                variables.appendChild(c)
+        else:
+            c = doc.createElement('C')
+            if xmlData[xml] == '##':
+                c.setAttribute('expr', 'null')
+            else:
+                c.setAttribute('expr', 'equalTo(%s)' % xmlData[xml])
+            c.setAttribute('type', 'T')
+            c.setAttribute('name', xml)
+
+            variables.appendChild(c)
+
     #T1节点
     for xml in moreTag:
         name = xml.getAttribute('name')
