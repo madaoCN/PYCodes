@@ -50,10 +50,22 @@ class Spider:
         index = 2
         if len(pathList) > 0:
             for file in pathList:
+
                 #如果是xml文档
                 if os.path.splitext(file)[-1] == '.xml':
-                    self.formData['T1'] = dealWithXML.getTitle(file)
-                    self.moreTag = dealWithXML.getVarible(file)
+                    #获取当前目录名称
+                    currentDir = os.path.dirname(file).split('/')[-1]
+                    #如果已经带有结果 则过滤
+                    if not re.match(currentDir, os.path.basename(file)):
+                        # print currentDir
+                        # print os.path.basename(file)
+                        # print '++++++++++++++++++++'
+                        self.formData['T1'] = os.path.basename(file).rstrip('.xml')[1:].strip()
+                        self.moreTag = dealWithXML.getVarible(file)
+                    #T1改成文件名
+                    # self.formData['T1'] = dealWithXML.getTitle(file)
+                    # self.formData['T1'] = os.path.basename(file).rstrip('.xml')[1:].strip()
+                    # self.moreTag = dealWithXML.getVarible(file)
                 #如果是html文档
                 elif os.path.splitext(file)[-1] == '.html':
                     #如果是anwser类型文件
@@ -66,11 +78,11 @@ class Spider:
                         # fliterName = fileName.strip('answer-')
                         # print '过滤名', fliterName
                         self.dataDic['answer'] = args
-                        self.answerFileName = fileName.strip('.html')
+                        self.answerFileName = fileName.rstrip('.html')[1:]
                     else:
                         if len(args) > 0:
                             self.dataDic['T' + str(index)] = args
-                            self.formData['T' + str(index)] = fileName.strip('.html')
+                            self.formData['T' + str(index)] = fileName.rstrip('.html')[1:]
                             index += 1
 
 
@@ -92,7 +104,6 @@ class Spider:
                 if pattern.match(value1) and pattern.match(value2):
                     try:
                         if abs(float(value1) - float(value2)) < precision:
-                            print value1, value2
                             #这里写插值函数
                             if isinstance(self.xmlData[key1 + '_' + k1], list):
                                 self.xmlData[key1 + '_' + k1].append(key2 + '_' + k2)
@@ -113,8 +124,6 @@ class Spider:
                     if value1 == value2:
                         # 这里写插值函数
                         # 如果是list类型
-                        print "匹配成功。。。"
-                        print value1, value2
                         if isinstance(self.xmlData[key1 + '_' + k1], list):
                             self.xmlData[key1 + '_' + k1].append(key2 + '_' + k2)
                         elif self.xmlData[key1 + '_' + k1] == '##':
@@ -180,14 +189,13 @@ class Spider:
             import sys
             reload(sys)
             sys.setdefaultencoding('utf-8')
-
             #写入xml
             doc = createXML.initalXML(self.formData, self.xmlData, self.moreTag)
             createXML.writeXML(path, doc)
 
 
 if __name__ == '__main__':
-    DIR = '/Users/liangxiansong/Desktop/ywd-产品出库'
+    DIR = '/Users/liangxiansong/Desktop/4'
     def func(args,dire,fis):
         spider = Spider()
         spider.main(dire)

@@ -5,7 +5,7 @@ import codecs
 import chardet
 import pprint
 
-FILE = '/Users/lixiaorong/Desktop/jckj-data/6.2 利润表/利润表的编制实训（一）/利润表的编制1/answer-利润表的编制1.html'
+FILE = '/Users/liangxiansong/Desktop/ywd-完工产品成本结转/4answer-通用记账凭证1张_V6.html'
 
 def getArgs(file=FILE):
     '''
@@ -23,14 +23,14 @@ def getArgs(file=FILE):
                 # bTagPattern = re.compile('(\'.+\')')
                 # bIndexPattern = re.compile('\[.+\]')
                 tag = re.search('(\'.+?\')', item).group(0).strip('\'').strip()
-                index = re.search('\[.+\]', item).group(0).strip()
+                index = re.search('\[.+\]', item).group(0).strip('[]')
                 value = re.search('obj.value=.+\';', item).group(0).strip('obj.value=\';').strip()
                 # print tag, index, value
                 value = value.replace(',', '', )
 
                 #假如匹配b (数组)
                 if re.match('b', tag):
-                    LIST[tag+str(index)] = value
+                    LIST[tag+'_'+str(index)] = value
                 elif re.match('\w\d+', tag):
                     LIST[tag] = value
                 else:
@@ -45,5 +45,6 @@ def getArgs(file=FILE):
 
     return LIST
 
-# pp = pprint.PrettyPrinter(indent=4)
-# pp.pprint(getArgs())
+if __name__ == "__main__":
+    pp = pprint.PrettyPrinter(indent=4)
+    pp.pprint(getArgs())
