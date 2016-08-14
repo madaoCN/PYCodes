@@ -8,7 +8,7 @@ def getDirs(dir, func, arg):
     os.path.walk(dir, func, arg)
 
 def ls(arg, dirname, files):
-    print dirnamdowene, 'has the files', files
+    print dirname, 'has the files', files
 
 # os.path.walk('/Users/lixiaorong/Desktop/test', ls, None)
 #
