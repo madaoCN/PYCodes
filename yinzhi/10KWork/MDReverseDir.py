@@ -10,6 +10,7 @@ except ImportError:
 
 conn = pymongo.MongoClient("127.0.0.1", 27017, connect=False)
 consur = conn.temp
+SupportItem = ['unitRef', 'contextRef', 'import', 'appInfo']
 
 def praseXML(path):
     print path
@@ -23,26 +24,65 @@ def praseXML(path):
         nsmap = root.nsmap
 
 
-        nsmap['fileName'] = os.path.basename(path)
+        # nsmap['fileName'] = os.path.basename(path)
         print nsmap
-        try:
-            print nsmap.pop(None)
-        except Exception, e:
-            print e
 
-        consur.nameSpace.insert(nsmap)
+        # try:
+        #     print nsmap.pop(None)
+        # except Exception, e:
+        #     print e
+        #
+        # consur.nameSpace.insert(nsmap)
 
-        # for child in root:
-        #     nameSpace = str(child.tag).strip('{').split('}')[0]
-        #     for key in nsmap:
-        #         if nsmap[key] == nameSpace:
-        #             print child.tag, child.attrib
+        itemArr = []
+        for child in root:
+            nameSpace = str(child.tag).strip('{').split('}')[0]
+            #判断是否是存在namespace中间的
+            for key in nsmap:
+                if nsmap[key] == nameSpace and key == 'dei':
+                    attDic = child.attrib
+                    #去除辅助性元素
+                    for item in SupportItem:
+                        try:
+                            attDic.pop(item)
+                        except Exception, e:
+                            print e
+                            print 'praseXML 49'
+
+                    #拼接参数
+                    tag = child.tag
+                    text = child.text
+                    value = {}
+                    try:
+                        value['CONTENTTEXT'] = text
+                    except Exception,e:
+                        print e
+                        print  'praseXML 57'
+                    for attTemp in attDic:
+                        try:
+                            value[attTemp] = attDic[attTemp]
+                        except Exception, e:
+                            print e
+                            print 'praseXML 62'
+
+                    dic = {key +':'+ tag.split('}')[-1]:value}
+                    itemArr.append(dic)
+                    print dic
+                    print '-------------'
+                    #写入xml
 
     except Exception, e:
         print '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
         print e
         print '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 
+    import MDCreateXML
+    doc = MDCreateXML.initalXML(nsmap, itemArr)
+    print doc
+    MDCreateXML.writeXML('/Users/lixiaorong/Desktop/test.xml', doc)
+
+def dealWithTagAndContext(nameSpace, itemArr):
+    print ''
 
 
 def getDirFile(dir):
@@ -62,7 +102,7 @@ def getDirFile(dir):
     return fileList
 
 if __name__ == '__main__':
-    DIR = '/Users/lixiaorong/Desktop/10k'
+    DIR = '/Users/lixiaorong/Desktop/2007'
     pool = Pool(5)
 
     def func(args,dire,fis):

@@ -200,7 +200,7 @@ class Spider:
 
 
 if __name__ == '__main__':
-    DIR = '/Users/lixiaorong/Desktop/ywd-捐赠01'
+    DIR = '/Users/lixiaorong/Desktop/业务点xml'
     def func(args,dire,fis):
         spider = Spider()
         spider.main(dire)
