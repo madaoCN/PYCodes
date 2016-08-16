@@ -98,9 +98,9 @@ def praseXML(path):
         #原文件地址
         originPath = pathPattern[0] + 'Desktop/' + '10kOrgin' + pathPattern[1]
         #基本分类文档地址
-        elementPath = pathPattern[0] + 'Desktop/' + '10kBase' + pathPattern[1]
+        basePath = pathPattern[0] + 'Desktop/' + '10kBase' + pathPattern[1]
         # 拓展分类文档地址
-        instancePath = pathPattern[0] + 'Desktop/' + '10kExtend' + pathPattern[1]
+        extendPath = pathPattern[0] + 'Desktop/' + '10kExtend' + pathPattern[1]
 
         #写入原始文件
         writeToXML(nsmap, itemArr, originPath)
@@ -114,42 +114,43 @@ def praseXML(path):
         loadToDB(originDic, 'origin')
 
         #写入元素
-        element = []
-        instance = []
+        base = []
+        extend = []
         for item in itemArr:
-            for key in item:
+            for key in item.keys():
                 try:
-                    #首先匹配标准库表数据库
+                    # #匹配规则
                     searchKey = key.split(':')[0]
-                    row = baseStandard[__year].find_one({'prefix': searchKey})
-                    if row:#和标准库匹配成功
-                        element.append(item)
-                    else:
-                        # #匹配规则
-                        if MDRules.matchBaseCategory(searchKey, nsmap):#如果是标准
-                            element.append(item)
-                        else:#否则是拓展的分类
-                            instance.append(item)
+                    if MDRules.matchBaseCategory(searchKey, nsmap): #如果是base备选
+                        row = baseStandard[__year].find_one({'prefix': searchKey})
+                        if row:  # 和标准库匹配成功 为base标准
+                            item['categoryTag'] = 'Base'
+                        else:   #为待定base
+                            item['categoryTag'] = 'noSureBase'
+                        base.append(item)
+                    else:  # 否则是拓展备选
+                        extend.append(item)
+
                 except Exception, e:
                     print e
                     print '查找失败!'
 
-        writeToXML(nsmap, element, elementPath)
+        writeToXML(nsmap, base, basePath)
         elementDic = copy.deepcopy(originDic)
-        elementDic['tags'] = element
-        elementDic['filePath'] = elementPath
-        elementDic['fileName'] = os.path.basename(elementPath)
-        elementDic['fileSize'] = os.path.getsize(elementPath)
-        loadToDB(elementDic, 'element')
+        elementDic['tags'] = base
+        elementDic['filePath'] = basePath
+        elementDic['fileName'] = os.path.basename(basePath)
+        elementDic['fileSize'] = os.path.getsize(basePath)
+        loadToDB(elementDic, 'base')
 
         # 写入实例
-        writeToXML(nsmap, instance, instancePath)
+        writeToXML(nsmap, extend, extendPath)
         instanceDic = copy.deepcopy(originDic)
-        instanceDic['tags'] = instance
-        instanceDic['filePath'] = instancePath
-        instanceDic['fileName'] = os.path.basename(instancePath)
-        instanceDic['fileSize'] = os.path.getsize(instancePath)
-        loadToDB(instanceDic, 'instance')
+        instanceDic['tags'] = extend
+        instanceDic['filePath'] = extendPath
+        instanceDic['fileName'] = os.path.basename(extendPath)
+        instanceDic['fileSize'] = os.path.getsize(extendPath)
+        loadToDB(instanceDic, 'extend')
 
     except Exception, e:
         print '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'

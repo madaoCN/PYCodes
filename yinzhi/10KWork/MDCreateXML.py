@@ -27,6 +27,8 @@ def initalXML(nameSpace, tags):
         for dic in tags:
             #读取tag
             for tag in dic:
+                if tag == 'categoryTag':
+                    continue
                 item = doc.createElement(tag)
                 #设置属性和内容
                 for secTag in dic[tag]:
