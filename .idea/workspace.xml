@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e945be35-e33e-48c4-b0ed-a9410ae04206" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/10KWork/MDRules.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yinzhi/10KWork/MDCreateXML.py" afterPath="$PROJECT_DIR$/yinzhi/10KWork/MDCreateXML.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yinzhi/10KWork/MDReverseDir.py" afterPath="$PROJECT_DIR$/yinzhi/10KWork/MDReverseDir.py" />
@@ -25,15 +26,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MDPraseXML.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDPraseXML.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MDReverseDir.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDReverseDir.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+            <state relative-caret-position="195">
+              <caret line="125" column="44" selection-start-line="125" selection-start-column="44" selection-end-line="125" selection-end-column="44" />
               <folding>
                 <element signature="e#35#44#0" expanded="true" />
-                <marker date="1471317172000" expanded="true" signature="1875:1915" ph="..." />
+                <marker date="1471329000000" expanded="true" signature="1911:1951" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MDRules.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDRules.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+              <folding>
+                <element signature="e#35#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MDCreateXML.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDCreateXML.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="38" column="84" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,11 +93,12 @@
         <option value="$PROJECT_DIR$/yinzhi/出题工具/spider.py" />
         <option value="$PROJECT_DIR$/yinzhi/10KWork/MDCreateXML.py" />
         <option value="$PROJECT_DIR$/yinzhi/10KWork/MDReverseDir.py" />
+        <option value="$PROJECT_DIR$/yinzhi/10KWork/MDRules.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="179" />
+    <option name="x" value="33" />
     <option name="y" value="23" />
     <option name="width" value="1216" />
     <option name="height" value="704" />
@@ -80,7 +114,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -93,26 +127,64 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pyCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pyCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yinzhi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pyCode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yinzhi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="10KWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
   </component>
-  <component name="RunManager" selected="Python.MDReverseDir">
-    <configuration default="false" name="MDPraseXML" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yinzhi/10KWork" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pythonCodes" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/10KWork/MDPraseXML.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.MDRules">
     <configuration default="false" name="spider" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -177,6 +249,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonCodes" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/10KWork/MDCreateXML.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MDRules" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yinzhi/10KWork" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonCodes" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/10KWork/MDRules.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -316,19 +405,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.MDPraseXML" />
-      <item index="1" class="java.lang.String" itemvalue="Python.spider" />
-      <item index="2" class="java.lang.String" itemvalue="Python.MDReverseDir" />
-      <item index="3" class="java.lang.String" itemvalue="Python.MDDealDB" />
-      <item index="4" class="java.lang.String" itemvalue="Python.MDCreateXML" />
+      <item index="0" class="java.lang.String" itemvalue="Python.spider" />
+      <item index="1" class="java.lang.String" itemvalue="Python.MDReverseDir" />
+      <item index="2" class="java.lang.String" itemvalue="Python.MDDealDB" />
+      <item index="3" class="java.lang.String" itemvalue="Python.MDCreateXML" />
+      <item index="4" class="java.lang.String" itemvalue="Python.MDRules" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.MDReverseDir" />
-        <item index="1" class="java.lang.String" itemvalue="Python.MDCreateXML" />
-        <item index="2" class="java.lang.String" itemvalue="Python.spider" />
-        <item index="3" class="java.lang.String" itemvalue="Python.MDDealDB" />
-        <item index="4" class="java.lang.String" itemvalue="Python.MDPraseXML" />
+        <item index="0" class="java.lang.String" itemvalue="Python.MDRules" />
+        <item index="1" class="java.lang.String" itemvalue="Python.MDReverseDir" />
+        <item index="2" class="java.lang.String" itemvalue="Python.MDCreateXML" />
+        <item index="3" class="java.lang.String" itemvalue="Python.spider" />
+        <item index="4" class="java.lang.String" itemvalue="Python.MDDealDB" />
       </list>
     </recent_temporary>
   </component>
@@ -346,25 +435,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="179" y="23" width="1216" height="704" extended-state="0" />
-    <editor active="false" />
+    <frame x="33" y="23" width="1216" height="704" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24937238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24686192" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24592833" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24267101" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24937238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30456027" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40553746" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -373,19 +462,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="9" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="row" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/yinzhi/www.sec.gov/DownLoadFiles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/sns/snsLoadToExcel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -414,7 +499,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#35#44#0" expanded="true" />
-            <marker date="1471317172000" expanded="true" signature="1875:1915" ph="..." />
+            <marker date="1471329000000" expanded="true" signature="1911:1951" ph="..." />
           </folding>
         </state>
       </provider>
@@ -423,6 +508,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
           <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -540,7 +626,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#35#44#0" expanded="true" />
-            <marker date="1471317172000" expanded="true" signature="1875:1915" ph="..." />
+            <marker date="1471329000000" expanded="true" signature="1911:1951" ph="..." />
           </folding>
         </state>
       </provider>
@@ -649,6 +735,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
           <caret line="1016" column="8" selection-start-line="1016" selection-start-column="8" selection-end-line="1016" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -677,6 +764,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
           <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -736,29 +824,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDCreateXML.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="38" column="84" selection-start-line="38" selection-start-column="84" selection-end-line="38" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDPraseXML.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
+        <state relative-caret-position="36">
           <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDCreateXML.py">
+    <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDRules.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="247">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <element signature="e#35#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDReverseDir.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="68" column="65" selection-start-line="68" selection-start-column="65" selection-end-line="68" selection-end-column="65" />
+        <state relative-caret-position="195">
+          <caret line="125" column="44" selection-start-line="125" selection-start-column="44" selection-end-line="125" selection-end-column="44" />
           <folding>
             <element signature="e#35#44#0" expanded="true" />
-            <marker date="1471317172000" expanded="true" signature="1875:1915" ph="..." />
+            <marker date="1471329000000" expanded="true" signature="1911:1951" ph="..." />
           </folding>
         </state>
       </provider>

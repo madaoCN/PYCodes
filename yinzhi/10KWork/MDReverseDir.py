@@ -4,6 +4,7 @@ import os
 import pymongo
 import copy
 import codecs
+import MDRules
 import pprint
 from bs4 import BeautifulSoup
 from multiprocessing import Pool,Process
@@ -49,8 +50,8 @@ def praseXML(path):
 
             #判断 tag前命名引用 是否是存在namespace中间的
             if pamsn[nameSpace] != None:
+                #规则过滤
                 attDic = child.attrib
-
                 #拼接参数
                 tag = child.tag
                 text = child.text
@@ -118,15 +119,21 @@ def praseXML(path):
         for item in itemArr:
             for key in item:
                 try:
-                    searchKey = key.split(':')[1]
-                    row = baseStandard[__year].find_one({'name': searchKey})
-                    if row:
+                    #首先匹配标准库表数据库
+                    searchKey = key.split(':')[0]
+                    row = baseStandard[__year].find_one({'prefix': searchKey})
+                    if row:#和标准库匹配成功
                         element.append(item)
                     else:
-                        instance.append(item)
+                        # #匹配规则
+                        if MDRules.matchBaseCategory(searchKey, nsmap):#如果是标准
+                            element.append(item)
+                        else:#否则是拓展的分类
+                            instance.append(item)
                 except Exception, e:
                     print e
                     print '查找失败!'
+
         writeToXML(nsmap, element, elementPath)
         elementDic = copy.deepcopy(originDic)
         elementDic['tags'] = element

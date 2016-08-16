@@ -32,8 +32,12 @@ def initalXML(nameSpace, tags):
                 for secTag in dic[tag]:
                     if secTag == 'CONTENTTEXT':#设置内容
                         try:
-                            content = doc.createTextNode(dic[tag]['CONTENTTEXT'])
-                            item.appendChild(content)
+                            if dic[tag]['CONTENTTEXT'] == None:
+                                content = doc.createTextNode(' ')
+                                item.appendChild(content)
+                            else:
+                                content = doc.createTextNode(dic[tag]['CONTENTTEXT'])
+                                item.appendChild(content)
                         except Exception, e:
                             print e
                             print 'initalXML + 29 '
