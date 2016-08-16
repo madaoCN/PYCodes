@@ -5,13 +5,14 @@ import xml.dom.minidom as Dom
 # FILE = '/Users/lixiaorong/Desktop/'
 
 def initalXML(nameSpace, tags):
-
-    print tags
     doc = Dom.Document()
-    #生成根节点
+
+
+    # 获取当前使用到的tag值
     try:
+        # 生成根节点
         root_node = doc.createElement('xbrl')
-        for name in  nameSpace:
+        for name in nameSpace:
             if name == None:
                 root_node.setAttribute('xbrl', nameSpace[None])
             else:
@@ -46,7 +47,7 @@ def initalXML(nameSpace, tags):
 def writeXML(path, xml):
     '''创建xml'''
     currentDirName = path.split('/')[-1]
-    print '当前目录名称',currentDirName
+    print '当前目录名称============='
     print path
     try:
         file = open(path, mode='w')

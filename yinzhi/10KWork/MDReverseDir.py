@@ -2,6 +2,10 @@
 #coding=utf8
 import os
 import pymongo
+import copy
+import codecs
+import pprint
+from bs4 import BeautifulSoup
 from multiprocessing import Pool,Process
 try:
     import xml.etree.cElementTree as ET
@@ -9,11 +13,13 @@ except ImportError:
     import xml.etree.ElementTree as ET
 
 conn = pymongo.MongoClient("127.0.0.1", 27017, connect=False)
-consur = conn.temp
-SupportItem = ['unitRef', 'contextRef', 'import', 'appInfo']
+consur = conn.instance
+secCom = conn.secCom
+baseStandard = conn.baseStandard
+SupportItem = ['unit', 'context','schemaRef']
 
 def praseXML(path):
-    print path
+    itemArr = []
     try:
         # namespaces = {'us-gaap': 'http://xbrl.us/us-gaap/2009-01-31'}
         # xmlDoc = ET.parse(path)
@@ -22,67 +28,157 @@ def praseXML(path):
         tree = etree.parse(path)
         root = tree.getroot()
         nsmap = root.nsmap
+        #nsmap双向映射
+        pamsn = {v:k for k,v in nsmap.items()}
 
+        identifier = None
+        soup = BeautifulSoup(codecs.open(path),'xml')
+        try:
+            identifier = soup.find('identifier').text
+        except Exception, e:
+            print e
+            print '没有找到identifier'
 
-        # nsmap['fileName'] = os.path.basename(path)
-        print nsmap
-
-        # try:
-        #     print nsmap.pop(None)
-        # except Exception, e:
-        #     print e
-        #
-        # consur.nameSpace.insert(nsmap)
-
-        itemArr = []
+        #获取当前文件名年数
         for child in root:
+            # 去除辅助性元素
+            if child.tag.split('}')[-1] in SupportItem:
+                continue
+
             nameSpace = str(child.tag).strip('{').split('}')[0]
-            #判断是否是存在namespace中间的
-            for key in nsmap:
-                if nsmap[key] == nameSpace and key == 'dei':
-                    attDic = child.attrib
-                    #去除辅助性元素
-                    for item in SupportItem:
-                        try:
-                            attDic.pop(item)
-                        except Exception, e:
-                            print e
-                            print 'praseXML 49'
 
-                    #拼接参数
-                    tag = child.tag
-                    text = child.text
-                    value = {}
+            #判断 tag前命名引用 是否是存在namespace中间的
+            if pamsn[nameSpace] != None:
+                attDic = child.attrib
+
+                #拼接参数
+                tag = child.tag
+                text = child.text
+                value = {}
+                try:
+                    value['CONTENTTEXT'] = text
+                except Exception,e:
+                    print e
+                    print  'praseXML 57'
+                #处理tag属性
+                for attTemp in attDic:
                     try:
-                        value['CONTENTTEXT'] = text
-                    except Exception,e:
-                        print e
-                        print  'praseXML 57'
-                    for attTemp in attDic:
-                        try:
+                        temp = attTemp.split('}')
+                        # 判断属性中是否带有命名空间
+                        if len(temp) > 1:
+                            if pamsn[temp[0].strip('{')] != None:
+                                value[pamsn[temp[0].strip('{')] + ':' + temp[-1]] = attDic[attTemp]
+                        else:
                             value[attTemp] = attDic[attTemp]
-                        except Exception, e:
-                            print e
-                            print 'praseXML 62'
+                    except Exception, e:
+                        print e
+                        print 'praseXML 62'
 
-                    dic = {key +':'+ tag.split('}')[-1]:value}
-                    itemArr.append(dic)
-                    print dic
-                    print '-------------'
-                    #写入xml
+                dic = {pamsn[nameSpace] +':'+ tag.split('}')[-1]:value}
+                itemArr.append(dic)
+
+
+        #根据fileName查找对象
+        __name = os.path.basename(path)
+        __year = '2008'
+
+        try:
+            row = secCom.xmltest.find_one({'files.fileName': __name})
+            try:
+                __year = row['period'][:4]
+            except:
+                print '查不到该条数据 设置为2008年'
+        except Exception, e:
+            print e
+            print '查找失败!'
+
+        pathPattern = path.split('Desktop')
+
+        #原文件地址
+        originPath = pathPattern[0] + 'Desktop/' + '10kOrgin' + pathPattern[1]
+        #基本分类文档地址
+        elementPath = pathPattern[0] + 'Desktop/' + '10kBase' + pathPattern[1]
+        # 拓展分类文档地址
+        instancePath = pathPattern[0] + 'Desktop/' + '10kExtend' + pathPattern[1]
+
+        #写入原始文件
+        writeToXML(nsmap, itemArr, originPath)
+        originDic = {'filePath': path, 'tags': itemArr,
+                     'fileName': os.path.basename(originPath),
+                     'fileSize': os.path.getsize(originPath),
+                     'identifier':identifier}
+
+        # pp = pprint.PrettyPrinter(indent=4)
+        # pp.pprint(itemArr)
+        loadToDB(originDic, 'origin')
+
+        #写入元素
+        element = []
+        instance = []
+        for item in itemArr:
+            for key in item:
+                try:
+                    searchKey = key.split(':')[1]
+                    row = baseStandard[__year].find_one({'name': searchKey})
+                    if row:
+                        element.append(item)
+                    else:
+                        instance.append(item)
+                except Exception, e:
+                    print e
+                    print '查找失败!'
+        writeToXML(nsmap, element, elementPath)
+        elementDic = copy.deepcopy(originDic)
+        elementDic['tags'] = element
+        elementDic['filePath'] = elementPath
+        elementDic['fileName'] = os.path.basename(elementPath)
+        elementDic['fileSize'] = os.path.getsize(elementPath)
+        loadToDB(elementDic, 'element')
+
+        # 写入实例
+        writeToXML(nsmap, instance, instancePath)
+        instanceDic = copy.deepcopy(originDic)
+        instanceDic['tags'] = instance
+        instanceDic['filePath'] = instancePath
+        instanceDic['fileName'] = os.path.basename(instancePath)
+        instanceDic['fileSize'] = os.path.getsize(instancePath)
+        loadToDB(instanceDic, 'instance')
 
     except Exception, e:
         print '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
         print e
+        print consur.fails.insert({'failPath':path})
         print '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 
-    import MDCreateXML
-    doc = MDCreateXML.initalXML(nsmap, itemArr)
-    print doc
-    MDCreateXML.writeXML('/Users/lixiaorong/Desktop/test.xml', doc)
 
-def dealWithTagAndContext(nameSpace, itemArr):
-    print ''
+def writeToXML(nameSpace, itemArr, path):
+    # 写入xml
+    fileDir =  os.path.dirname(path)
+    if not os.path.exists(fileDir):
+        print '创建目录'
+        print fileDir
+        os.makedirs(fileDir)
+    try:
+        import MDCreateXML
+        doc = MDCreateXML.initalXML(nameSpace, itemArr)
+        MDCreateXML.writeXML(path, doc)
+    except Exception, e:
+        print e
+        print '生成xml失败'
+
+def loadToDB(dic, collectionName):
+    '''
+    写入数据库
+    '''
+    try:
+        # 写入fileUrl地址
+        col = consur[collectionName]
+        col.insert(dic)
+        print '录入数据库==============='
+    except Exception, e:
+        print e
+        print '插入数据库失败==============='
+
 
 
 def getDirFile(dir):
@@ -102,7 +198,7 @@ def getDirFile(dir):
     return fileList
 
 if __name__ == '__main__':
-    DIR = '/Users/lixiaorong/Desktop/2007'
+    DIR = '/Users/lixiaorong/Desktop/test'
     pool = Pool(5)
 
     def func(args,dire,fis):
