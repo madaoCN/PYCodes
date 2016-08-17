@@ -33,13 +33,15 @@ def praseXML(path):
         #nsmap双向映射
         pamsn = {v:k for k,v in nsmap.items()}
 
-        # identifier = None
-        # soup = BeautifulSoup(codecs.open(path),'xml')
-        # try:
-        #     identifier = soup.find('identifier').text
-        # except Exception, e:
-        #     print e
-        #     print '没有找到identifier'
+        #xsd文件
+        xsdPath = path[:-4]+'.xsd'
+        xsdNsmap = None
+        xsdPamsn = None
+        if os.path.exists(xsdPath):
+            xsdTree = etree.parse(xsdPath)
+            xsdRoot = xsdTree.getroot()
+            xsdNsmap = xsdRoot.nsmap
+            xsdPamsn = {v: k for k, v in xsdNsmap.items()}
 
         #获取usgaap版本号
         __year = None
@@ -151,6 +153,8 @@ def praseXML(path):
         for item in itemArr:
             for key in item.keys():
                 try:
+                    if key == None:
+                        continue
                     # #匹配规则
                     searchKey = key.split(':')[0]
                     if MDRules.matchBaseCategory(searchKey, nsmap): #如果是base备选
@@ -159,28 +163,36 @@ def praseXML(path):
                         if row:  # 和标准库匹配成功 为base标准
                             baseSure.append(item)
                             # item['categoryTag'] = 'Base'
-                        else:   #为待定base
-                            baseNotSure.append(item)
+                        else:   #为拓展
+                            extend.append(item)
+                            # baseNotSure.append(item)
                             # item['categoryTag'] = 'noBase'
                     else:  # 否则是拓展备选
                         extend.append(item)
-
+                        #判断是否是拓展和未确认
+                        # if MDRules.matchExtCategory({searchKey:nsmap[searchKey]}, xsdNsmap):
+                        #     extendSure.append(item)
+                        # else:
+                        #     extendNotSure.append(item)
                 except Exception, e:
                     print e
+                    print path
                     print '查找失败!'
 
         writeToXML(nsmap, base, basePath)
+        # writeToXML(nsmap, baseSure, baseSurePath)
+        # writeToXML(nsmap, baseNotSure, baseNotSurePath)
         # elementDic = copy.deepcopy(originDic)
         # elementDic['tags'] = base
         # elementDic['filePath'] = basePath
         # elementDic['fileName'] = os.path.basename(basePath)
         # elementDic['fileSize'] = os.path.getsize(basePath)
         # loadToDB(elementDic, 'base')
-        writeToXML(nsmap, baseSure, baseSurePath)
-        writeToXML(nsmap, baseNotSure, baseNotSurePath)
+
 
         # 写入实例
         writeToXML(nsmap, extend, extendPath)
+
         # writeToXML(nsmap, extendSure, extendSurePath)
         # writeToXML(nsmap, extendNotSure, extendNotSurePath)
         # instanceDic = copy.deepcopy(originDic)
