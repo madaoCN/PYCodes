@@ -30,11 +30,17 @@ def getVarible(file):
     #     print e
     #
     # return List
-    doc = minidom.parse(file)
-    root = doc.documentElement
-    # var = root.getElementsByTagName("Variables")
-    for c in root.getElementsByTagName('C'):
-        List.append(c)
-    for r in  root.getElementsByTagName('R'):
-        List.append(r)
+    try:
+        doc = minidom.parse(file)
+        root = doc.documentElement
+        # var = root.getElementsByTagName("Variables")
+        for c in root.getElementsByTagName('C'):
+            List.append(c)
+        for r in  root.getElementsByTagName('R'):
+            List.append(r)
+        return List
+    except Exception, e:
+        print 'error at getVarible+++++++++++++++'
+        print e
+        print 'error at getVarible---------------'
     return List

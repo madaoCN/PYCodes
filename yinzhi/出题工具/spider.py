@@ -162,8 +162,11 @@ class Spider:
         if len(self.dataDic) > 0:
             #将key由answer替换成T类型
             keyNum = len(self.dataDic) + 1
-            self.dataDic['T'+str(keyNum)] = self.dataDic.pop('answer')
-            self.formData['T'+str(keyNum)] = self.answerFileName
+            try:
+                self.dataDic['T'+str(keyNum)] = self.dataDic.pop('answer')
+                self.formData['T'+str(keyNum)] = self.answerFileName
+            except Exception, e:
+                print e
             #修改key
             self.initXmlData()
 
@@ -195,7 +198,7 @@ class Spider:
 
 
 if __name__ == '__main__':
-    DIR = '/Users/liangxiansong/Desktop/4'
+    DIR = '/Users/liangxiansong/Desktop/1.1'
     def func(args,dire,fis):
         spider = Spider()
         spider.main(dire)
