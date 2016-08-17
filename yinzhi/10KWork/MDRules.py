@@ -27,3 +27,7 @@ def matchBaseCategory(searchKey, nameSpace):
 
 if __name__  == '__main__':
     print matchBaseCategory('gaap', {'gaap':'http://gaap.or.com'})
+    string = '----201-415-16'
+    result = re.search(r'[0-9]{4}', string)
+    if result:
+        print result.group(0)
