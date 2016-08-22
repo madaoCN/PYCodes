@@ -150,6 +150,8 @@ def prase(text, realUrl, page, startTime):
                     dic['answerID'] = answerID.encode('utf8')
                 if answerContent:
                     dic['answerContent'] = answerContent.encode('utf8')
+                import reverseDay
+                dic['spiderTime'] = reverseDay.splitTimeStr(startTime)
             except Exception, e:
                 print e
                 print 'eror at dic[]'

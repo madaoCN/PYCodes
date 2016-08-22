@@ -72,7 +72,7 @@ def run_pro(target_url, page):
     except Exception, e:
         print '请求失败'
         print e
-        if conn.test.DATA.find_one({'url': realUrl}) == None:
+        if conn.test.data.find_one({'url': realUrl}) == None:
             conn.test.fails.insert({'url': realUrl})
         return
 
@@ -86,7 +86,7 @@ def prase(text, realUrl, page):
     except Exception, e:
         print e
         print "抓取网页失败"
-        if conn.test.DATA.find_one({'url': realUrl}) == None:
+        if conn.test.data.find_one({'url': realUrl}) == None:
             conn.test.fails.insert({'url': realUrl})
         return
 
@@ -157,7 +157,7 @@ def prase(text, realUrl, page):
             if len(dic) > 0:
                 try:
                     db = conn.test
-                    collections = db.DATA
+                    collections = db.data
                     collections.insert(dic)
                 except Exception as e:
                     print 'prase 数据库录入失败'

@@ -28,8 +28,8 @@ def run_pro(target_url, page):
     realUrl = target_url + '&lastid=-1&show=1&page=%s' % (page+1,)
 
     print realUrl
-    index = random.randint(0, len(IPANDPORT)-1)
-    proxy = {'http':'http://%s' % IPANDPORT[index].strip()}
+    # index = random.randint(0, len(IPANDPORT)-1)
+    # proxy = {'http':'http://%s' % IPANDPORT[index].strip()}
     headers = {
         'Accept':'*/*',
         'Accept-Encoding': 'gzip, deflate, sdch',
@@ -44,7 +44,6 @@ def run_pro(target_url, page):
                # 'Cookie':'''SSESNSXMLSID=da203d75-3d85-4f7c-bfc5-50eef8e78878; JSESSIONID=ozpp6s9j8e6cpu405s2prqn3'''
     }
     data = {}
-    print proxy
 
     prepare = Request('GET', realUrl, headers=headers).prepare()
     try:
@@ -61,7 +60,7 @@ def run_pro(target_url, page):
     except Exception, e:
         print '请求失败'
         print e
-        if conn.test.DATA.find_one({'url': realUrl}) == None:
+        if conn.test.fails.find_one({'url': realUrl}) == None:
             conn.test.fails.insert({'url': realUrl})
         return
 
@@ -75,7 +74,7 @@ def prase(text, realUrl):
     except Exception, e:
         print e
         print "抓取网页失败"
-        if conn.test.DATA.find_one({'url': realUrl}) == None:
+        if conn.test.fails.find_one({'url': realUrl}) == None:
             conn.test.fails.insert({'url': realUrl})
         return
 
@@ -106,21 +105,22 @@ def prase(text, realUrl):
             # time = item.find('div',{'class':'m_feed_from'}).span.text
             #点赞数
             # praiseNum = item.find('div',{'class':'m_feed_handle'}).a.text.strip(r'"()"')
+
             try:
                 dic = {'askMan': askMan.encode('utf8'),
                        'askContent': askContent.encode('utf8'),
-                       'askTime': askTime.encode('utf8'),
+                       'askTime': judgeTime(askTime),
                        'answerMan': answerMan.encode('utf8'),
                        'answerID':answerID.encode('utf8'),
                        'answerContent': answerContent.encode('utf8'),
-                       'answerTime': answerTime.encode('utf8')}
+                       'answerTime': judgeTime(answerTime)}
             except Exception, e:
                 print e
 
             print '数据录入mongo...'
             try:
                 db = conn.test
-                collections = db.DATA
+                collections = db.data
                 collections.insert(dic)
             except Exception as e:
                 print 'prase 数据库录入失败'
@@ -134,12 +134,29 @@ def prase(text, realUrl):
 
     print 'load to db.....'
 
+def judgeTime(str):
+    stri = str.encode('utf8')
+    # 判断是否是 XXX 小时前
+    hourPat = re.compile(r'小时前')
+    # 判断是否是有 昨天
+    yesterPat = re.compile(r'昨天')
+    # 判断是否有 xxx分钟前
+    minutePat = re.compile(r'分钟前')
+
+    if hourPat.search(stri):
+        return '2016年08月05日'
+    elif yesterPat.search(stri):
+        return '2016年08月04日'
+    elif minutePat.search(stri):
+        return '2016年08月05日'
+    else:
+        return stri
 
 # if __name__ == '__name__':
-getTheRemoteAgent()
+# getTheRemoteAgent()
 # print IPANDPORT
 pool = Pool(5)
-for index in range(0, 10):
+for index in range(0, 150000):
     pool.apply_async(run_pro, args=(TARGET_HOST, index))
 pool.close()
 pool.join()

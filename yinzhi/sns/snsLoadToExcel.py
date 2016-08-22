@@ -6,7 +6,9 @@ import xlwt
 
 conn = pymongo.MongoClient("127.0.0.1", 27017, connect=False)
 path = os.path.join(os.path.expanduser("~"), 'Desktop')
-
+path1 = path +'/'+ 'sns_1.xls'
+path2 = path +'/'+ 'sns_2.xls'
+path3 = path +'/'+ 'sns_3.xls'
 
 
 
@@ -30,13 +32,14 @@ writeHead(sheet1)
 writeHead(sheet2)
 writeHead(sheet3)
 
-data = conn.test.DATA.find()
+data = conn.test.data.find()
 sheet = sheet1
 row = 1
 tag = 0
 for item in data:
     print item
-    sheet.write(row, 1, item['answerTime'])
+    # 提示时间
+    sheet.write(row, 1, item['askTime'])
     # 提问内容
     sheet.write(row, 2, item['askContent'])
     # 上市公司
@@ -47,6 +50,8 @@ for item in data:
     sheet.write(row, 5, item['answerContent'])
     # 上市公司回答时间
     sheet.write(row, 6, item['answerTime'])
+    # #搜索时间
+    # sheet.write(row, 7, item['spiderTime'])
     try:
         # 提问人
         sheet.write(row, 0, item['askMan'])
@@ -57,10 +62,10 @@ for item in data:
     finally:
 
         row += 1
-        if row == 60000:
+        if row == 50000:
             tag = 2
             row = 1
-        if row == 120000:
+        if row == 100000:
             tag = 3
             row = 1
         if tag == 2:
@@ -70,8 +75,8 @@ for item in data:
 
 
 
-workBook1.save('sns_1.xls')
-workBook2.save('sns_2.xls')
-workBook3.save('sns_3.xls')
+workBook1.save(path1)
+workBook2.save(path2)
+workBook3.save(path3)
 
 print 'process completed'
