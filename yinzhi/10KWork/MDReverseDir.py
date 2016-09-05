@@ -6,8 +6,6 @@ import copy
 import codecs
 import MDRules
 import re
-import pprint
-from bs4 import BeautifulSoup
 from multiprocessing import Pool,Process
 try:
     import xml.etree.cElementTree as ET
@@ -15,7 +13,6 @@ except ImportError:
     import xml.etree.ElementTree as ET
 
 conn = pymongo.MongoClient("127.0.0.1", 27017, connect=False)
-consur = conn.instance
 secCom = conn.secCom
 baseStandard = conn.baseStandard
 SupportItem = ['unit', 'context','schemaRef']
@@ -116,24 +113,23 @@ def praseXML(path):
         #     print e
         #     print '查找失败!'
 
-        pathPattern = path.split('Desktop')
+        pathPattern = path.split('home')
         #原文件地址
-        originPath = pathPattern[0] + 'Desktop/' + '10kDeal' + pathPattern[1]
+        originPath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')
+
         #基本分类文档地址(基本待定)
-        basePath = pathPattern[0] + 'Desktop/' + '10kDeal' + pathPattern[1][:-4] + '_base' + pathPattern[1][-4:]
+        basePath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')[:-4] + '_base' + pathPattern[1][-4:]
         # 基本分类文档地址(确认)
-        baseSurePath = pathPattern[0] + 'Desktop/' + '10kDeal' + pathPattern[1][:-4] + '_baseSure' + pathPattern[1][-4:]
+        baseSurePath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')[:-4] + '_baseSure' + pathPattern[1][-4:]
         # 基本分类文档地址(未确认)
-        baseNotSurePath = pathPattern[0] + 'Desktop/' + '10kDeal' + pathPattern[1][:-4] + '_baseNotSure' + pathPattern[1][-4:]
+        baseNotSurePath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')[:-4] + '_baseNotSure' + pathPattern[1][-4:]
 
         # 拓展分类文档地址(基本待定)
-        extendPath = pathPattern[0] + 'Desktop/' + '10kDeal' + pathPattern[1][:-4] + '_ext' + pathPattern[1][-4:]
+        extendPath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')[:-4] + '_ext' + pathPattern[1][-4:]
         # 拓展分类文档地址(确认)
-        extendSurePath = pathPattern[0] + 'Desktop/' + '10kDeal' + pathPattern[1][:-4] + '_extSure' + pathPattern[1][-4:]
+        extendSurePath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')[:-4] + '_extSure' + pathPattern[1][-4:]
         # 拓展分类文档地址(未确认)
-        extendNotSurePath = pathPattern[0] + 'Desktop/' + '10kDeal' + pathPattern[1][:-4] + '_extNotSure' + pathPattern[1][-4:]
-
-
+        extendNotSurePath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')[:-4] + '_extNotSure' + pathPattern[1][-4:]
         #写入原始文件
         writeToXML(nsmap, itemArr, originPath)
         # originDic = {'filePath': path, 'tags': itemArr,
@@ -205,7 +201,7 @@ def praseXML(path):
     except Exception, e:
         print '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
         print e
-        print consur.fails.insert({'failPath':path})
+        print secCom.fails.insert({'failPath':path})
         print '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 
 
@@ -230,7 +226,7 @@ def loadToDB(dic, collectionName):
     '''
     try:
         # 写入fileUrl地址
-        col = consur[collectionName]
+        col = secCom[collectionName]
         col.insert(dic)
         print '录入数据库==============='
     except Exception, e:
@@ -256,9 +252,10 @@ def getDirFile(dir):
     return fileList
 
 if __name__ == '__main__':
-    DIR = '/Users/lixiaorong/Desktop/2016'
+    # DIR = '/Users/lixiaorong/Desktop/2016'
+    DIR = os.path.join(os.path.expanduser("~"), 'Desktop/20140630#iMedicor')
+    print DIR
     pool = Pool(5)
-
     def func(args,dire,fis):
         fileList = getDirFile(dire)
         if fileList > 0:

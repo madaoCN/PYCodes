@@ -50,7 +50,7 @@ def loadToDB(dic):
         print e
 
 if __name__ == '__main__':
-    myDic =  praseXML('/Users/lixiaorong/Desktop/bdx-20090930.xml')
+    myDic =  praseXML('/Users/liangxiansong/Desktop/msft-20100630.xml')
     print myDic
     # loadToDB(dic)
 

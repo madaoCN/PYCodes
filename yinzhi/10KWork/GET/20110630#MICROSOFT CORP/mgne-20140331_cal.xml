@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<!-- Produced by EDGARsuite software, Advanced Computer Innovations, Inc., Copyright (C) 2008-2015 [PPXCRNPC214X4NPK3ER7]. www.edgarsuite.com -->
+<link:linkbase xmlns="http://www.xbrl.org/2003/linkbase"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd"
+		xmlns:fil="http://mgne/20140331"
+		xmlns:link="http://www.xbrl.org/2003/linkbase"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		xmlns:xbrldt="http://xbrl.org/2005/xbrldt"
+		xmlns:xbrli="http://www.xbrl.org/2003/instance">
+	<link:roleRef roleURI="http://mgne/20140331/role/idr_BALANCESHEETS" xlink:type="simple" xlink:href="mgne-20140331.xsd#idr_BALANCESHEETS"/>
+	<link:calculationLink xlink:type="extended" xlink:role="http://mgne/20140331/role/idr_BALANCESHEETS">
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_Assets' xlink:label='us-gaap_Assets'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_PropertyPlantAndEquipmentNet' xlink:label='us-gaap_PropertyPlantAndEquipmentNet'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_Assets' xlink:to='us-gaap_PropertyPlantAndEquipmentNet' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_AssetsCurrent' xlink:label='us-gaap_AssetsCurrent'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_Assets' xlink:to='us-gaap_AssetsCurrent' use='optional' order='2.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_LiabilitiesAndStockholdersEquity' xlink:label='us-gaap_LiabilitiesAndStockholdersEquity'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_Liabilities' xlink:label='us-gaap_Liabilities'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_LiabilitiesAndStockholdersEquity' xlink:to='us-gaap_Liabilities' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_LiabilitiesCurrent' xlink:label='us-gaap_LiabilitiesCurrent'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_Liabilities' xlink:to='us-gaap_LiabilitiesCurrent' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_AccountsPayableAndAccruedLiabilitiesCurrent' xlink:label='us-gaap_AccountsPayableAndAccruedLiabilitiesCurrent'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_LiabilitiesCurrent' xlink:to='us-gaap_AccountsPayableAndAccruedLiabilitiesCurrent' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_DueToOfficersOrStockholdersCurrent' xlink:label='us-gaap_DueToOfficersOrStockholdersCurrent'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_LiabilitiesCurrent' xlink:to='us-gaap_DueToOfficersOrStockholdersCurrent' use='optional' order='2.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_StockholdersEquity' xlink:label='us-gaap_StockholdersEquity'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_LiabilitiesAndStockholdersEquity' xlink:to='us-gaap_StockholdersEquity' use='optional' order='2.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_RetainedEarningsAccumulatedDeficit' xlink:label='us-gaap_RetainedEarningsAccumulatedDeficit'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_StockholdersEquity' xlink:to='us-gaap_RetainedEarningsAccumulatedDeficit' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_AdditionalPaidInCapital' xlink:label='us-gaap_AdditionalPaidInCapital'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_StockholdersEquity' xlink:to='us-gaap_AdditionalPaidInCapital' use='optional' order='2.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_CommonStockValueOutstanding' xlink:label='us-gaap_CommonStockValueOutstanding'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_StockholdersEquity' xlink:to='us-gaap_CommonStockValueOutstanding' use='optional' order='3.0' weight='1.0'/>
+	</link:calculationLink>
+	<link:roleRef roleURI="http://mgne/20140331/role/idr_STATEMENTSOFOPERATIONSUnaudited" xlink:type="simple" xlink:href="mgne-20140331.xsd#idr_STATEMENTSOFOPERATIONSUnaudited"/>
+	<link:calculationLink xlink:type="extended" xlink:role="http://mgne/20140331/role/idr_STATEMENTSOFOPERATIONSUnaudited">
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_ProfitLoss' xlink:label='us-gaap_ProfitLoss'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest' xlink:label='us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_ProfitLoss' xlink:to='us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_OperatingIncomeLoss' xlink:label='us-gaap_OperatingIncomeLoss'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest' xlink:to='us-gaap_OperatingIncomeLoss' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_GrossProfit' xlink:label='us-gaap_GrossProfit'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_OperatingIncomeLoss' xlink:to='us-gaap_GrossProfit' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_Revenues' xlink:label='us-gaap_Revenues'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_GrossProfit' xlink:to='us-gaap_Revenues' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_CostOfRevenue' xlink:label='us-gaap_CostOfRevenue'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_GrossProfit' xlink:to='us-gaap_CostOfRevenue' use='optional' order='2.0' weight='-1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_OperatingExpenses' xlink:label='us-gaap_OperatingExpenses'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_OperatingIncomeLoss' xlink:to='us-gaap_OperatingExpenses' use='optional' order='2.0' weight='-1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_LaborAndRelatedExpense' xlink:label='us-gaap_LaborAndRelatedExpense'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_OperatingExpenses' xlink:to='us-gaap_LaborAndRelatedExpense' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_Depreciation' xlink:label='us-gaap_Depreciation'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_OperatingExpenses' xlink:to='us-gaap_Depreciation' use='optional' order='2.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_GeneralAndAdministrativeExpense' xlink:label='us-gaap_GeneralAndAdministrativeExpense'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_OperatingExpenses' xlink:to='us-gaap_GeneralAndAdministrativeExpense' use='optional' order='3.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_LeaseAndRentalExpense' xlink:label='us-gaap_LeaseAndRentalExpense'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_OperatingExpenses' xlink:to='us-gaap_LeaseAndRentalExpense' use='optional' order='4.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_InterestExpense' xlink:label='us-gaap_InterestExpense'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest' xlink:to='us-gaap_InterestExpense' use='optional' order='2.0' weight='-1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_IncomeTaxExpenseBenefit' xlink:label='us-gaap_IncomeTaxExpenseBenefit'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_ProfitLoss' xlink:to='us-gaap_IncomeTaxExpenseBenefit' use='optional' order='2.0' weight='-1.0'/>
+	</link:calculationLink>
+	<link:roleRef roleURI="http://mgne/20140331/role/idr_STATEMENTSOFCASHFLOWSUnaudited" xlink:type="simple" xlink:href="mgne-20140331.xsd#idr_STATEMENTSOFCASHFLOWSUnaudited"/>
+	<link:calculationLink xlink:type="extended" xlink:role="http://mgne/20140331/role/idr_STATEMENTSOFCASHFLOWSUnaudited">
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_NetCashProvidedByUsedInOperatingActivities' xlink:label='us-gaap_NetCashProvidedByUsedInOperatingActivities'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_Depreciation' xlink:label='us-gaap_Depreciation'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_NetCashProvidedByUsedInOperatingActivities' xlink:to='us-gaap_Depreciation' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_InterestExpenseRelatedParty' xlink:label='us-gaap_InterestExpenseRelatedParty'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_NetCashProvidedByUsedInOperatingActivities' xlink:to='us-gaap_InterestExpenseRelatedParty' use='optional' order='2.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_IncreaseDecreaseInAccountsPayableAndAccruedLiabilities' xlink:label='us-gaap_IncreaseDecreaseInAccountsPayableAndAccruedLiabilities'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_NetCashProvidedByUsedInOperatingActivities' xlink:to='us-gaap_IncreaseDecreaseInAccountsPayableAndAccruedLiabilities' use='optional' order='3.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_ProfitLoss' xlink:label='us-gaap_ProfitLoss'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_NetCashProvidedByUsedInOperatingActivities' xlink:to='us-gaap_ProfitLoss' use='optional' order='4.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_IncreaseDecreaseInPrepaidExpense' xlink:label='us-gaap_IncreaseDecreaseInPrepaidExpense'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_NetCashProvidedByUsedInOperatingActivities' xlink:to='us-gaap_IncreaseDecreaseInPrepaidExpense' use='optional' order='5.0' weight='-1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_NetCashProvidedByUsedInFinancingActivities' xlink:label='us-gaap_NetCashProvidedByUsedInFinancingActivities'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_ProceedsFromRelatedPartyDebt' xlink:label='us-gaap_ProceedsFromRelatedPartyDebt'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_NetCashProvidedByUsedInFinancingActivities' xlink:to='us-gaap_ProceedsFromRelatedPartyDebt' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_RepaymentsOfRelatedPartyDebt' xlink:label='us-gaap_RepaymentsOfRelatedPartyDebt'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_NetCashProvidedByUsedInFinancingActivities' xlink:to='us-gaap_RepaymentsOfRelatedPartyDebt' use='optional' order='2.0' weight='-1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_NetCashProvidedByUsedInInvestingActivities' xlink:label='us-gaap_NetCashProvidedByUsedInInvestingActivities'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_PaymentsToAcquirePropertyPlantAndEquipment' xlink:label='us-gaap_PaymentsToAcquirePropertyPlantAndEquipment'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_NetCashProvidedByUsedInInvestingActivities' xlink:to='us-gaap_PaymentsToAcquirePropertyPlantAndEquipment' use='optional' order='1.0' weight='-1.0'/>
+	</link:calculationLink>
+	<link:roleRef roleURI="http://mgne/20140331/role/idr_Disclosure4PropertyAndEquipmentNetPropertyPlantAndEquipmentDetails" xlink:type="simple" xlink:href="mgne-20140331.xsd#idr_Disclosure4PropertyAndEquipmentNetPropertyPlantAndEquipmentDetails"/>
+	<link:calculationLink xlink:type="extended" xlink:role="http://mgne/20140331/role/idr_Disclosure4PropertyAndEquipmentNetPropertyPlantAndEquipmentDetails">
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_PropertyPlantAndEquipmentNet' xlink:label='us-gaap_PropertyPlantAndEquipmentNet'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_PropertyPlantAndEquipmentGross' xlink:label='us-gaap_PropertyPlantAndEquipmentGross'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_PropertyPlantAndEquipmentNet' xlink:to='us-gaap_PropertyPlantAndEquipmentGross' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment' xlink:label='us-gaap_AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_PropertyPlantAndEquipmentNet' xlink:to='us-gaap_AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment' use='optional' order='2.0' weight='-1.0'/>
+	</link:calculationLink>
+	<link:roleRef roleURI="http://mgne/20140331/role/idr_Disclosure5AccountsPayableAndAccruedLiabilitiesScheduleOfAccountsPayableAndAccruedLiabilitiesDetails" xlink:type="simple" xlink:href="mgne-20140331.xsd#idr_Disclosure5AccountsPayableAndAccruedLiabilitiesScheduleOfAccountsPayableAndAccruedLiabilitiesDetails"/>
+	<link:calculationLink xlink:type="extended" xlink:role="http://mgne/20140331/role/idr_Disclosure5AccountsPayableAndAccruedLiabilitiesScheduleOfAccountsPayableAndAccruedLiabilitiesDetails">
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_AccountsPayableAndAccruedLiabilitiesCurrent' xlink:label='us-gaap_AccountsPayableAndAccruedLiabilitiesCurrent'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_AccountsPayableCurrent' xlink:label='us-gaap_AccountsPayableCurrent'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_AccountsPayableAndAccruedLiabilitiesCurrent' xlink:to='us-gaap_AccountsPayableCurrent' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_AccruedSalariesCurrent' xlink:label='us-gaap_AccruedSalariesCurrent'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_AccountsPayableAndAccruedLiabilitiesCurrent' xlink:to='us-gaap_AccruedSalariesCurrent' use='optional' order='2.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_AccruedPayrollTaxesCurrent' xlink:label='us-gaap_AccruedPayrollTaxesCurrent'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_AccountsPayableAndAccruedLiabilitiesCurrent' xlink:to='us-gaap_AccruedPayrollTaxesCurrent' use='optional' order='3.0' weight='1.0'/>
+	</link:calculationLink>
+	<link:roleRef roleURI="http://mgne/20140331/role/idr_Disclosure8IncomeTaxDisclosureScheduleOfNetDeferredTaxAssetsDetails" xlink:type="simple" xlink:href="mgne-20140331.xsd#idr_Disclosure8IncomeTaxDisclosureScheduleOfNetDeferredTaxAssetsDetails"/>
+	<link:calculationLink xlink:type="extended" xlink:role="http://mgne/20140331/role/idr_Disclosure8IncomeTaxDisclosureScheduleOfNetDeferredTaxAssetsDetails">
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_DeferredTaxAssetsNet' xlink:label='us-gaap_DeferredTaxAssetsNet'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_DeferredTaxAssetsOther' xlink:label='us-gaap_DeferredTaxAssetsOther'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_DeferredTaxAssetsNet' xlink:to='us-gaap_DeferredTaxAssetsOther' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_DeferredTaxAssetsOperatingLossCarryforwards' xlink:label='us-gaap_DeferredTaxAssetsOperatingLossCarryforwards'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_DeferredTaxAssetsNet' xlink:to='us-gaap_DeferredTaxAssetsOperatingLossCarryforwards' use='optional' order='2.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_DeferredTaxAssetsTaxDeferredExpenseReservesAndAccruals' xlink:label='us-gaap_DeferredTaxAssetsTaxDeferredExpenseReservesAndAccruals'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_DeferredTaxAssetsNet' xlink:to='us-gaap_DeferredTaxAssetsTaxDeferredExpenseReservesAndAccruals' use='optional' order='3.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_DeferredTaxAssetsTaxDeferredExpenseReservesAndAccrualsAccruedLiabilities' xlink:label='us-gaap_DeferredTaxAssetsTaxDeferredExpenseReservesAndAccrualsAccruedLiabilities'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_DeferredTaxAssetsNet' xlink:to='us-gaap_DeferredTaxAssetsTaxDeferredExpenseReservesAndAccrualsAccruedLiabilities' use='optional' order='4.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_DeferredTaxAssetsValuationAllowance' xlink:label='us-gaap_DeferredTaxAssetsValuationAllowance'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_DeferredTaxAssetsNet' xlink:to='us-gaap_DeferredTaxAssetsValuationAllowance' use='optional' order='5.0' weight='-1.0'/>
+	</link:calculationLink>
+	<link:roleRef roleURI="http://mgne/20140331/role/idr_Disclosure8IncomeTaxDisclosureScheduleOfEffectiveIncomeTaxRateReconciliationDetails" xlink:type="simple" xlink:href="mgne-20140331.xsd#idr_Disclosure8IncomeTaxDisclosureScheduleOfEffectiveIncomeTaxRateReconciliationDetails"/>
+	<link:calculationLink xlink:type="extended" xlink:role="http://mgne/20140331/role/idr_Disclosure8IncomeTaxDisclosureScheduleOfEffectiveIncomeTaxRateReconciliationDetails">
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_IncomeTaxExpenseBenefit' xlink:label='us-gaap_IncomeTaxExpenseBenefit'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_IncomeTaxReconciliationNondeductibleExpenseOther' xlink:label='us-gaap_IncomeTaxReconciliationNondeductibleExpenseOther'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_IncomeTaxExpenseBenefit' xlink:to='us-gaap_IncomeTaxReconciliationNondeductibleExpenseOther' use='optional' order='1.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_IncomeTaxReconciliationNondeductibleExpenseMealsAndEntertainment' xlink:label='us-gaap_IncomeTaxReconciliationNondeductibleExpenseMealsAndEntertainment'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_IncomeTaxExpenseBenefit' xlink:to='us-gaap_IncomeTaxReconciliationNondeductibleExpenseMealsAndEntertainment' use='optional' order='2.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_IncomeTaxReconciliationOtherReconcilingItems' xlink:label='us-gaap_IncomeTaxReconciliationOtherReconcilingItems'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_IncomeTaxExpenseBenefit' xlink:to='us-gaap_IncomeTaxReconciliationOtherReconcilingItems' use='optional' order='3.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_IncomeTaxReconciliationNondeductibleExpenseDepreciation' xlink:label='us-gaap_IncomeTaxReconciliationNondeductibleExpenseDepreciation'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_IncomeTaxExpenseBenefit' xlink:to='us-gaap_IncomeTaxReconciliationNondeductibleExpenseDepreciation' use='optional' order='4.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_IncomeTaxReconciliationOtherAdjustments' xlink:label='us-gaap_IncomeTaxReconciliationOtherAdjustments'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_IncomeTaxExpenseBenefit' xlink:to='us-gaap_IncomeTaxReconciliationOtherAdjustments' use='optional' order='5.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd#us-gaap_IncomeTaxReconciliationChangeInDeferredTaxAssetsValuationAllowance' xlink:label='us-gaap_IncomeTaxReconciliationChangeInDeferredTaxAssetsValuationAllowance'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_IncomeTaxExpenseBenefit' xlink:to='us-gaap_IncomeTaxReconciliationChangeInDeferredTaxAssetsValuationAllowance' use='optional' order='6.0' weight='1.0'/>
+		<link:loc xlink:type='locator' xlink:href='mgne-20140331.xsd#fil_PreTaxBookIncomeLoss' xlink:label='fil_PreTaxBookIncomeLoss'/>
+		<link:calculationArc xlink:type='arc' xlink:arcrole='http://www.xbrl.org/2003/arcrole/summation-item' xlink:from='us-gaap_IncomeTaxExpenseBenefit' xlink:to='fil_PreTaxBookIncomeLoss' use='optional' order='7.0' weight='-1.0'/>
+	</link:calculationLink>
+</link:linkbase>

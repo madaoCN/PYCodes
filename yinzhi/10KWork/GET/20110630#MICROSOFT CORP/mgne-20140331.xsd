@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<!-- Produced by EDGARsuite software, Advanced Computer Innovations, Inc., Copyright (C) 2008-2015 [PPXCRNPC214X4NPK3ER7]. www.edgarsuite.com -->
+<schema xmlns:nonnum='http://www.xbrl.org/dtr/type/non-numeric' xmlns='http://www.w3.org/2001/XMLSchema' xmlns:us-gaap='http://fasb.org/us-gaap/2015-01-31' xmlns:xbrldt='http://xbrl.org/2005/xbrldt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:dei='http://xbrl.sec.gov/dei/2014-01-31' xmlns:fil='http://mgne/20140331' targetNamespace='http://mgne/20140331' xmlns:num='http://www.xbrl.org/dtr/type/numeric' xmlns:link='http://www.xbrl.org/2003/linkbase' attributeFormDefault='unqualified' xmlns:xbrli='http://www.xbrl.org/2003/instance' elementFormDefault='qualified'>
+	<annotation>
+		<appinfo>
+			<link:linkbaseRef xlink:type="simple" xlink:href="mgne-20140331_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+			<link:linkbaseRef xlink:type="simple" xlink:href="mgne-20140331_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+			<link:linkbaseRef xlink:type="simple" xlink:href="mgne-20140331_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+			<link:linkbaseRef xlink:type="simple" xlink:href="mgne-20140331_cal.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure9SubsequentEventsDetails" id="idr_Disclosure9SubsequentEventsDetails">
+				<link:definition>000320 - Disclosure - 9. Subsequent Events (Details)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure4PropertyAndEquipmentNetDetails" id="idr_Disclosure4PropertyAndEquipmentNetDetails">
+				<link:definition>000250 - Disclosure - 4. Property and Equipment, Net (Details)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure1DescriptionOfBusinessAndHistoryDetails" id="idr_Disclosure1DescriptionOfBusinessAndHistoryDetails">
+				<link:definition>000210 - Disclosure - 1. Description of Business and History (Details)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure4PropertyAndEquipmentNetPropertyPlantAndEquipmentDetails" id="idr_Disclosure4PropertyAndEquipmentNetPropertyPlantAndEquipmentDetails">
+				<link:definition>000200 - Disclosure - 4. Property and Equipment, Net: Property, Plant and Equipment (Details)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_BALANCESHEETSParenthetical" id="idr_BALANCESHEETSParenthetical">
+				<link:definition>000030 - Statement - BALANCE SHEETS (Parenthetical)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_STATEMENTSOFOPERATIONSUnaudited" id="idr_STATEMENTSOFOPERATIONSUnaudited">
+				<link:definition>000040 - Statement - STATEMENTS OF OPERATIONS (Unaudited)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_STATEMENTSOFSTOCKHOLDERSEQUITYDEFICIT" id="idr_STATEMENTSOFSTOCKHOLDERSEQUITYDEFICIT">
+				<link:definition>000060 - Statement - STATEMENTS OF STOCKHOLDERS&apos; EQUITY (DEFICIT)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure4PropertyAndEquipmentNetScheduleOfPropertyAndEquipmentDetails" id="idr_Disclosure4PropertyAndEquipmentNetScheduleOfPropertyAndEquipmentDetails">
+				<link:definition>000240 - Disclosure - 4. Property and Equipment, Net: Schedule of Property and Equipment (Details)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure5AccountsPayableAndAccruedLiabilitiesScheduleOfAccountsPayableAndAccruedLiabilitiesDetails" id="idr_Disclosure5AccountsPayableAndAccruedLiabilitiesScheduleOfAccountsPayableAndAccruedLiabilitiesDetails">
+				<link:definition>000260 - Disclosure - 5. Accounts Payable and Accrued Liabilities: Schedule of Accounts Payable and Accrued Liabilities (Details)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure9SubsequentEvents" id="idr_Disclosure9SubsequentEvents">
+				<link:definition>000150 - Disclosure - 9. Subsequent Events</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_STATEMENTSOFCASHFLOWS" id="idr_STATEMENTSOFCASHFLOWS">
+				<link:definition>000050 - Statement - STATEMENTS OF CASH FLOWS</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_STATEMENTSOFOPERATIONS" id="idr_STATEMENTSOFOPERATIONS">
+				<link:definition>000040 - Statement - STATEMENTS OF OPERATIONS</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure2SummaryOfSignificantPoliciesPropertyAndEquipmentDetails" id="idr_Disclosure2SummaryOfSignificantPoliciesPropertyAndEquipmentDetails">
+				<link:definition>000220 - Disclosure - 2. Summary of Significant Policies: Property and Equipment (Details)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure2SummaryOfSignificantPoliciesPolicies" id="idr_Disclosure2SummaryOfSignificantPoliciesPolicies">
+				<link:definition>000160 - Disclosure - 2. Summary of Significant Policies (Policies)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure4PropertyAndEquipmentNet" id="idr_Disclosure4PropertyAndEquipmentNet">
+				<link:definition>000100 - Disclosure - 4. Property and Equipment, Net</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure8IncomeTaxDisclosureScheduleOfEffectiveIncomeTaxRateReconciliationTables" id="idr_Disclosure8IncomeTaxDisclosureScheduleOfEffectiveIncomeTaxRateReconciliationTables">
+				<link:definition>000200 - Disclosure - 8. Income Tax Disclosure: Schedule of Effective Income Tax Rate Reconciliation (Tables)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_BALANCESHEETS" id="idr_BALANCESHEETS">
+				<link:definition>000020 - Statement - BALANCE SHEETS</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure5AccountsPayableAndAccruedLiabilitiesScheduleOfAccountsPayableAndAccruedLiabilitiesTables" id="idr_Disclosure5AccountsPayableAndAccruedLiabilitiesScheduleOfAccountsPayableAndAccruedLiabilitiesTables">
+				<link:definition>000180 - Disclosure - 5. Accounts Payable and Accrued Liabilities: Schedule of Accounts Payable and Accrued Liabilities (Tables)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure8IncomeTaxDisclosureDetails" id="idr_Disclosure8IncomeTaxDisclosureDetails">
+				<link:definition>000310 - Disclosure - 8. Income Tax Disclosure (Details)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure3GoingConcernDetails" id="idr_Disclosure3GoingConcernDetails">
+				<link:definition>000230 - Disclosure - 3. Going Concern (Details)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_STATEMENTSOFCASHFLOWSUnaudited" id="idr_STATEMENTSOFCASHFLOWSUnaudited">
+				<link:definition>000050 - Statement - STATEMENTS OF CASH FLOWS (Unaudited)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_DocumentDocumentAndEntityInformation" id="idr_DocumentDocumentAndEntityInformation">
+				<link:definition>000010 - Document - Document and Entity Information</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure6OperatingLeaseDetails" id="idr_Disclosure6OperatingLeaseDetails">
+				<link:definition>000270 - Disclosure - 6. Operating Lease (Details)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure7RelatedPartyTransactions" id="idr_Disclosure7RelatedPartyTransactions">
+				<link:definition>000130 - Disclosure - 7. Related Party Transactions</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure8IncomeTaxDisclosureScheduleOfNetDeferredTaxAssetsDetails" id="idr_Disclosure8IncomeTaxDisclosureScheduleOfNetDeferredTaxAssetsDetails">
+				<link:definition>000290 - Disclosure - 8. Income Tax Disclosure: Schedule of Net Deferred Tax Assets (Details)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure8IncomeTaxDisclosureScheduleOfNetDeferredTaxAssetsTables" id="idr_Disclosure8IncomeTaxDisclosureScheduleOfNetDeferredTaxAssetsTables">
+				<link:definition>000190 - Disclosure - 8. Income Tax Disclosure: Schedule of Net Deferred Tax Assets (Tables)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure7RelatedPartyTransactionsDetails" id="idr_Disclosure7RelatedPartyTransactionsDetails">
+				<link:definition>000280 - Disclosure - 7. Related Party Transactions (Details)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure6OperatingLease" id="idr_Disclosure6OperatingLease">
+				<link:definition>000120 - Disclosure - 6. Operating Lease</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure5AccountsPayableAndAccruedLiabilities" id="idr_Disclosure5AccountsPayableAndAccruedLiabilities">
+				<link:definition>000110 - Disclosure - 5. Accounts Payable and Accrued Liabilities</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure1DescriptionOfBusinessAndHistory" id="idr_Disclosure1DescriptionOfBusinessAndHistory">
+				<link:definition>000070 - Disclosure - 1. Description of Business and History</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure4PropertyAndEquipmentNetScheduleOfPropertyAndEquipmentTables" id="idr_Disclosure4PropertyAndEquipmentNetScheduleOfPropertyAndEquipmentTables">
+				<link:definition>000170 - Disclosure - 4. Property and Equipment, Net: Schedule of Property and Equipment (Tables)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure8IncomeTaxDisclosureScheduleOfEffectiveIncomeTaxRateReconciliationDetails" id="idr_Disclosure8IncomeTaxDisclosureScheduleOfEffectiveIncomeTaxRateReconciliationDetails">
+				<link:definition>000300 - Disclosure - 8. Income Tax Disclosure: Schedule of Effective Income Tax Rate Reconciliation (Details)</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure8IncomeTaxDisclosure" id="idr_Disclosure8IncomeTaxDisclosure">
+				<link:definition>000140 - Disclosure - 8. Income Tax Disclosure</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure2SummaryOfSignificantPolicies" id="idr_Disclosure2SummaryOfSignificantPolicies">
+				<link:definition>000080 - Disclosure - 2. Summary of Significant Policies</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+			<link:roleType roleURI="http://mgne/20140331/role/idr_Disclosure3GoingConcern" id="idr_Disclosure3GoingConcern">
+				<link:definition>000090 - Disclosure - 3. Going Concern</link:definition>
+				<link:usedOn>link:presentationLink</link:usedOn>
+				<link:usedOn>link:definitionLink</link:usedOn>
+				<link:usedOn>link:calculationLink</link:usedOn>
+			</link:roleType>
+		</appinfo>
+	</annotation>
+	<import schemaLocation='http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd' namespace='http://www.xbrl.org/2003/instance'/>
+	<import schemaLocation='http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd' namespace='http://www.xbrl.org/dtr/type/numeric'/>
+	<import schemaLocation='http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd' namespace='http://www.xbrl.org/dtr/type/non-numeric'/>
+	<import schemaLocation='http://www.xbrl.org/2005/xbrldt-2005.xsd' namespace='http://xbrl.org/2005/xbrldt'/>
+	<import namespace='http://fasb.org/us-gaap/2015-01-31' schemaLocation='http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd' />
+	<import namespace='http://xbrl.sec.gov/dei/2014-01-31' schemaLocation='http://xbrl.sec.gov/dei/2014/dei-2014-01-31.xsd' />
+	<element abstract='true' nillable='true' type='xbrli:stringItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' id='fil_DocumentAndEntityInformationAbstract' name='DocumentAndEntityInformationAbstract' />
+	<element nillable='true' type='num:percentItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' id='fil_SalesCommissionsRate' name='SalesCommissionsRate' />
+	<element nillable='true' type='xbrli:monetaryItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' xbrli:balance='credit' id='fil_PreTaxBookIncomeLoss' name='PreTaxBookIncomeLoss' />
+	<element nillable='true' type='nonnum:domainItemType' substitutionGroup='xbrli:item' xbrli:periodType='duration' id='fil_AccruedInterestMember' name='AccruedInterestMember' />
+</schema>

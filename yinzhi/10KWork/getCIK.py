@@ -13,10 +13,9 @@ try:
     import xml.etree.cElementTree as ET
 except ImportError:
     import xml.etree.ElementTree as ET
-conn = pymongo.MongoClient("127.0.0.1", 27017, connect=False)
-consur = conn.CIK
 
-conn = pymongo.MongoClient("127.0.0.1", 27017, connect=False)
+
+conn = pymongo.MongoClient("10.189.2.229", 27017, connect=False)
 consur = conn.instance
 secCom = conn.secCom
 baseStandard = conn.baseStandard
@@ -25,10 +24,6 @@ CIKSet = set()
 def praseXML():
     itemArr = []
     try:
-        # namespaces = {'us-gaap': 'http://xbrl.us/us-gaap/2009-01-31'}
-        # xmlDoc = ET.parse(path)
-        # root = xmlDoc.getroot()
-
         ciks = secCom.xmltest.find({})
         for cik in ciks:
             print cik['cikNumber']
@@ -54,16 +49,11 @@ def writeTofile():
         print e
 
 
-
-# if __name__ == '__main__':
-
 if __name__ == '__main__':
-    DIR = '/Users/lixiaorong/Desktop/10k'
-    # praseXML()
-    string = 'www.baidu.com'
-    print string[:-4] + '_pre' + string[-4:]
+    praseXML()
 
-writeTofile()
+
+# writeTofile()
 # print 'processed ============'
 
 

@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="US-ASCII" ?>
+    <!-- Field: Doc-Info; Name: Generator; Value: QXInteractive; Version: 4.4a -->
+    <!-- Field: Doc-Info; Name: Source; Value: 157714 06302014 10K.xfr; Date: 2015%2D12%2D09T19:57:39 -->
+    <!-- Field: Doc-Info; Name: Status; Value: 0x80020002 -->
+    <!-- Field: Doc-Info; Name: Misc; Value: 8qlZs7xRiXgen8uLaXFcWa+PSbPtyZx3uZkxsm98HTkqbyYgvJqDFC4IoULWEeMD -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:dei="http://xbrl.sec.gov/dei/2014-01-31" xmlns:us-gaap="http://fasb.org/us-gaap/2015-01-31" xmlns:us-roles="http://fasb.org/us-roles/2015-01-31" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:num="http://www.xbrl.org/dtr/type/numeric" xmlns:us-types="http://fasb.org/us-types/2015-01-31" xmlns:vmci="http://imedicor.com/20140630" elementFormDefault="qualified" targetNamespace="http://imedicor.com/20140630">
+    <annotation>
+      <appinfo>
+	<link:roleType roleURI="http://imedicor.com/role/DocumentAndEntityInformation" id="DocumentAndEntityInformation">
+	  <link:definition>00000001 - Disclosure - Document And Entity Information</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ConsolidatedBalanceSheet" id="ConsolidatedBalanceSheet">
+	  <link:definition>00000002 - Statement - CONSOLIDATED BALANCE SHEETS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ConsolidatedBalanceSheetsParenthetical" id="ConsolidatedBalanceSheetsParenthetical">
+	  <link:definition>00000003 - Statement - CONSOLIDATED BALANCE SHEETS (Parenthetical)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ConsolidatedIncomeStatement" id="ConsolidatedIncomeStatement">
+	  <link:definition>00000004 - Statement - CONSOLIDATED STATEMENTS OF OPERATIONS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ConsolidatedStatementOfChangesInStockholderEquityDeficit" id="ConsolidatedStatementOfChangesInStockholderEquityDeficit">
+	  <link:definition>00000005 - Statement - CONSOLIDATED STATEMENT OF CHANGES IN STOCKHOLDER EQUITY (DEFICIT)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ConsolidatedCashFlow" id="ConsolidatedCashFlow">
+	  <link:definition>00000006 - Statement - CONSOLIDATED STATEMENTS OF CASH FLOWS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/NatureOfOperations" id="NatureOfOperations">
+	  <link:definition>00000007 - Disclosure - 1. NATURE OF OPERATIONS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/GoingConcern" id="GoingConcern">
+	  <link:definition>00000008 - Disclosure - 2. GOING CONCERN</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/SummaryOfSignificantAccountingPolicies" id="SummaryOfSignificantAccountingPolicies">
+	  <link:definition>00000009 - Disclosure - 3. SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/CommonStockAndPreferredStock" id="CommonStockAndPreferredStock">
+	  <link:definition>00000010 - Disclosure - 4. COMMON STOCK AND PREFERRED STOCK</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/PropertyAndEquipment" id="PropertyAndEquipment">
+	  <link:definition>00000011 - Disclosure - 5. PROPERTY AND EQUIPMENT</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/SoftwareDevelopmentCosts" id="SoftwareDevelopmentCosts">
+	  <link:definition>00000012 - Disclosure - 6. SOFTWARE DEVELOPMENT COSTS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/TechnologyAndMedicalSoftware" id="TechnologyAndMedicalSoftware">
+	  <link:definition>00000013 - Disclosure - 7. TECHNOLOGY AND MEDICAL SOFTWARE</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ConsultingAgreement" id="ConsultingAgreement">
+	  <link:definition>00000014 - Disclosure - 8. CONSULTING AGREEMENT</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/Acquisitions" id="Acquisitions">
+	  <link:definition>00000015 - Disclosure - 9. ACQUISITIONS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/LineOfCredit" id="LineOfCredit">
+	  <link:definition>00000016 - Disclosure - 10. LINE OF CREDIT</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/Long-termDebt" id="Long-termDebt">
+	  <link:definition>00000017 - Disclosure - 11. LONG-TERM DEBT</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/DerivativeFinancialInstruments" id="DerivativeFinancialInstruments">
+	  <link:definition>00000018 - Disclosure - 12. DERIVATIVE FINANCIAL INSTRUMENTS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/IncomeTaxes" id="IncomeTaxes">
+	  <link:definition>00000019 - Disclosure - 13. INCOME TAXES</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ConcentrationOfCreditRisk" id="ConcentrationOfCreditRisk">
+	  <link:definition>00000020 - Disclosure - 14. CONCENTRATION OF CREDIT RISK</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/CommitmentsAndContingencies" id="CommitmentsAndContingencies">
+	  <link:definition>00000021 - Disclosure - 15. COMMITMENTS AND CONTINGENCIES</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodError" id="ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodError">
+	  <link:definition>00000022 - Disclosure - 16. CHANGE IN ACCOUNTING POLICY AND ACCOUNTING ESTIMATES, AND CORRECTION OF A PRIOR PERIOD ERROR</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/RelatedPartyTransactions" id="RelatedPartyTransactions">
+	  <link:definition>00000023 - Disclosure - 17. RELATED PARTY TRANSACTIONS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/FourthQuarterAdjustment" id="FourthQuarterAdjustment">
+	  <link:definition>00000024 - Disclosure - 18. FOURTH QUARTER ADJUSTMENT</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/SubsequentEvents" id="SubsequentEvents">
+	  <link:definition>00000025 - Disclosure - 19. SUBSEQUENT EVENTS</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/SummaryOfSignificantAccountingPoliciesPolicies" id="SummaryOfSignificantAccountingPoliciesPolicies">
+	  <link:definition>00000026 - Disclosure - 3. SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Policies)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/SummaryOfSignificantAccountingPoliciesTables" id="SummaryOfSignificantAccountingPoliciesTables">
+	  <link:definition>00000027 - Disclosure - 3. SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/CommonStockAndPreferredStockTables" id="CommonStockAndPreferredStockTables">
+	  <link:definition>00000028 - Disclosure - 4. COMMON STOCK AND PREFERRED STOCK (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/PropertyAndEquipmentTables" id="PropertyAndEquipmentTables">
+	  <link:definition>00000029 - Disclosure - 5. PROPERTY AND EQUIPMENT (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/SoftwareDevelopmentCostsTables" id="SoftwareDevelopmentCostsTables">
+	  <link:definition>00000030 - Disclosure - 6. SOFTWARE DEVELOPMENT COSTS (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/Long-termDebtTables" id="Long-termDebtTables">
+	  <link:definition>00000031 - Disclosure - 11. LONG-TERM DEBT (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/DerivativeFinancialInstrumentsTables" id="DerivativeFinancialInstrumentsTables">
+	  <link:definition>00000032 - Disclosure - 12. DERIVATIVE FINANCIAL INSTRUMENTS (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/IncomeTaxesTables" id="IncomeTaxesTables">
+	  <link:definition>00000033 - Disclosure - 13. INCOME TAXES (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ConcentrationOfCreditRiskTables" id="ConcentrationOfCreditRiskTables">
+	  <link:definition>00000034 - Disclosure - 14. CONCENTRATION OF CREDIT RISK (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/CommitmentsAndContingenciesTables" id="CommitmentsAndContingenciesTables">
+	  <link:definition>00000035 - Disclosure - 15. COMMITMENTS AND CONTINGENCIES (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodErrorTables" id="ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodErrorTables">
+	  <link:definition>00000036 - Disclosure - 16. CHANGE IN ACCOUNTING POLICY AND ACCOUNTING ESTIMATES, AND CORRECTION OF A PRIOR PERIOD ERROR (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/FourthQuarterAdjustmentTables" id="FourthQuarterAdjustmentTables">
+	  <link:definition>00000037 - Disclosure - 18. FOURTH QUARTER ADJUSTMENT (Tables)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/GoingConcernDetails" id="GoingConcernDetails">
+	  <link:definition>00000038 - Disclosure - 2. GOING CONCERN (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ScheduleofFairValueMeasurementsSignificantInputsTable" id="ScheduleofFairValueMeasurementsSignificantInputsTable">
+	  <link:definition>00000039 - Disclosure - 3. SUMMARY OF SIGNIFICANT ACCOUNTING POLICIES (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/CommonStockAndPreferredStockDetails" id="CommonStockAndPreferredStockDetails">
+	  <link:definition>00000040 - Disclosure - 4. COMMON STOCK AND PREFERRED STOCK (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ScheduleofPropertyPlantandEquipmentTable" id="ScheduleofPropertyPlantandEquipmentTable">
+	  <link:definition>00000041 - Disclosure - 5. PROPERTY, EQUIPMENT AND PURCHASED SOFTWARE (Details) - Schedule of Property, Plant and Equipment</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/SoftwareDevelopmentCostsDetails" id="SoftwareDevelopmentCostsDetails">
+	  <link:definition>00000042 - Disclosure - 6. SOFTWARE DEVELOPMENT COSTS (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/Long-termDebtDetails" id="Long-termDebtDetails">
+	  <link:definition>00000043 - Disclosure - 11. LONG-TERM DEBT (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/Long-termDebtDetails1" id="Long-termDebtDetails1">
+	  <link:definition>00000044 - Disclosure - 11. LONG-TERM DEBT (Details 1)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ScheduleofDerivativeInstrumentsTable" id="ScheduleofDerivativeInstrumentsTable">
+	  <link:definition>00000045 - Disclosure - 12. DERIVATIVE FINANCIAL INSTRUMENTS (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/DerivativeFinancialInstrumentsDetails1" id="DerivativeFinancialInstrumentsDetails1">
+	  <link:definition>00000046 - Disclosure - 12. DERIVATIVE FINANCIAL INSTRUMENTS (Details 1)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/DerivativeFinancialInstrumentsDetails2" id="DerivativeFinancialInstrumentsDetails2">
+	  <link:definition>00000047 - Disclosure - 12. DERIVATIVE FINANCIAL INSTRUMENTS (Details 2)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ScheduleofDeferredTaxAssetsandLiabilitiesTable" id="ScheduleofDeferredTaxAssetsandLiabilitiesTable">
+	  <link:definition>00000048 - Disclosure - 13. INCOME TAXES (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ScheduleofEffectiveIncomeTaxRateReconciliationTable" id="ScheduleofEffectiveIncomeTaxRateReconciliationTable">
+	  <link:definition>00000049 - Disclosure - 13. INCOME TAXES (Details 1)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/SchedulesofConcentrationofRiskbyRiskFactorTable" id="SchedulesofConcentrationofRiskbyRiskFactorTable">
+	  <link:definition>00000050 - Disclosure - 14. CONCENTRATION OF CREDIT RISK (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/CommitmentsAndContingenciesDetails" id="CommitmentsAndContingenciesDetails">
+	  <link:definition>00000051 - Disclosure - 15. COMMITMENTS AND CONTINGENCIES (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodErrorDetails" id="ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodErrorDetails">
+	  <link:definition>00000052 - Disclosure - 16. CHANGE IN ACCOUNTING POLICY AND ACCOUNTING ESTIMATES, AND CORRECTION OF A PRIOR PERIOD ERROR (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/FourthQuarterAdjustmentDetails" id="FourthQuarterAdjustmentDetails">
+	  <link:definition>00000053 - Disclosure - 18. FOURTH QUARTER ADJUSTMENT (Details)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:roleType roleURI="http://imedicor.com/role/FourthQuarterAdjustmentDetails1" id="FourthQuarterAdjustmentDetails1">
+	  <link:definition>00000054 - Disclosure - 18. FOURTH QUARTER ADJUSTMENT (Details 1)</link:definition>
+	  <link:usedOn>link:presentationLink</link:usedOn>
+	  <link:usedOn>link:calculationLink</link:usedOn>
+	  <link:usedOn>link:definitionLink</link:usedOn>
+	</link:roleType>
+	<link:linkbaseRef xlink:type="simple" xlink:href="vmci-20140630_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Presentation Links" />
+	<link:linkbaseRef xlink:type="simple" xlink:href="vmci-20140630_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Label Links" />
+	<link:linkbaseRef xlink:type="simple" xlink:href="vmci-20140630_cal.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Calculation Links" />
+	<link:linkbaseRef xlink:type="simple" xlink:href="vmci-20140630_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:title="Definition Links" />
+      </appinfo>
+    </annotation>
+    <import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd" />
+    <import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" />
+    <import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd" />
+    <import namespace="http://xbrl.sec.gov/dei/2014-01-31" schemaLocation="http://xbrl.sec.gov/dei/2014/dei-2014-01-31.xsd" />
+    <import namespace="http://fasb.org/us-gaap/2015-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2015/elts/us-gaap-2015-01-31.xsd" />
+    <import namespace="http://fasb.org/us-types/2015-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2015/elts/us-types-2015-01-31.xsd" />
+    <import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd" />
+    <import namespace="http://www.xbrl.org/dtr/type/numeric" schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd" />
+    <element id="vmci_AccumulatedAmortizationComputerSoftwareCosts" name="AccumulatedAmortizationComputerSoftwareCosts" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_IssuanceOfStockForServices" name="IssuanceOfStockForServices" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_StockIssuedForCash" name="StockIssuedForCash" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_StockIssuedForCashShares" name="StockIssuedForCashShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_IssuanceOfStockInExchangeForConsultingAgents" name="IssuanceOfStockInExchangeForConsultingAgents" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_IssuanceOfStockInExchangeForConsultingAgentsShares" name="IssuanceOfStockInExchangeForConsultingAgentsShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_StockIssuedDuringPeriodConversionOfConvertibleSecuritiesShares" name="StockIssuedDuringPeriodConversionOfConvertibleSecuritiesShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_IssuanceOfStockForAcquisitionTechnologyAssets" name="IssuanceOfStockForAcquisitionTechnologyAssets" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_IssuanceOfStockForAcquisitionTechnologyAssetsShares" name="IssuanceOfStockForAcquisitionTechnologyAssetsShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_IssuanceOfStockForAccruedSalary" name="IssuanceOfStockForAccruedSalary" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_IssuanceOfStockForAccruedSalaryShares" name="IssuanceOfStockForAccruedSalaryShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_IssuanceOfStockForAccountsPayable" name="IssuanceOfStockForAccountsPayable" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_IssuanceOfStockForAccountsPayableShares" name="IssuanceOfStockForAccountsPayableShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_RoundingShares" name="RoundingShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_StockAndWarrantsIssuedForStockOfferingCosts" name="StockAndWarrantsIssuedForStockOfferingCosts" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_StockAndWarrantsIssuedForStockOfferingCostsShares" name="StockAndWarrantsIssuedForStockOfferingCostsShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_AmortizationOfOptionsAndRestrictedSeriesBPreferredStock" name="AmortizationOfOptionsAndRestrictedSeriesBPreferredStock" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_AmortizationOfOptionsAndRestrictedSeriesBPreferredStockShares" name="AmortizationOfOptionsAndRestrictedSeriesBPreferredStockShares" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_IncreaseDecreaseCommonStockPayable" name="IncreaseDecreaseCommonStockPayable" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_AmortizationOfSoftwareDevelopmentCosts" name="AmortizationOfSoftwareDevelopmentCosts" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_AmortizationOfLoanFinancingCosts" name="AmortizationOfLoanFinancingCosts" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_IncreaseDecreaseSharebasedCompensationLiability" name="IncreaseDecreaseSharebasedCompensationLiability" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_DerivativesGainLossOnDerivatives" name="DerivativesGainLossOnDerivatives" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_IncreaseCapitalizedSoftwareDevelopmentCosts" name="IncreaseCapitalizedSoftwareDevelopmentCosts" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ReclassifyShareBasedCompensationLiability" name="ReclassifyShareBasedCompensationLiability" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_WarrantsIssuedForStockIssuanceCosts" name="WarrantsIssuedForStockIssuanceCosts" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_CommonStockPayableForLoanAndStockIssuanceCosts" name="CommonStockPayableForLoanAndStockIssuanceCosts" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_SoftwareDevelopmentCostsTextBlock" name="SoftwareDevelopmentCostsTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ConstultingAgreementTextBlock" name="ConstultingAgreementTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodErrorTextBlock" name="ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodErrorTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_SoftwareDevelopmentCostsPolicyTextBlock" name="SoftwareDevelopmentCostsPolicyTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_LoanCostsPolicyTextBlock" name="LoanCostsPolicyTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_SoftwareDevelopmentCostsTableTextBlock" name="SoftwareDevelopmentCostsTableTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_FairValueOfCompoundEmbeddedDerivativesTableTextBlock" name="FairValueOfCompoundEmbeddedDerivativesTableTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_PriorPeriodAdjustmentsTableTextBlock" name="PriorPeriodAdjustmentsTableTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_EffectOfPriorPeriodAdjustmentsTableTextBlock" name="EffectOfPriorPeriodAdjustmentsTableTextBlock" nillable="true" xbrli:periodType="duration" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_WorkingCapitalDeficit" name="WorkingCapitalDeficit" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisedInPeriod" name="ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisedInPeriod" nillable="true" xbrli:periodType="duration" type="xbrli:sharesItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_AverageRemainingContractualLifeInYearsExercisable" name="AverageRemainingContractualLifeInYearsExercisable" nillable="true" xbrli:periodType="duration" type="xbrli:durationItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ShareBasedCompensationArrangementsByShareBasedPaymentAwardOptionsVestedInPeriodWeightedAverageExercisePrice" name="ShareBasedCompensationArrangementsByShareBasedPaymentAwardOptionsVestedInPeriodWeightedAverageExercisePrice" nillable="true" xbrli:periodType="duration" type="num:perShareItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_DevelopedSoftwareCosts" name="DevelopedSoftwareCosts" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_TotalDevelopedSoftwareCosts" name="TotalDevelopedSoftwareCosts" nillable="true" xbrli:periodType="duration" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_AccumulatedAmortizationDevelopmentSoftwareCosts" name="AccumulatedAmortizationDevelopmentSoftwareCosts" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_LessCurrentMaturities" name="LessCurrentMaturities" nillable="true" xbrli:periodType="instant" xbrli:balance="debit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_TotalLongtermMaturities" name="TotalLongtermMaturities" nillable="true" xbrli:periodType="instant" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_IssuanceOfWarrantsToInvestorsAndConsultants" name="IssuanceOfWarrantsToInvestorsAndConsultants" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ReclassificationOfSharebasedCompensationLiability" name="ReclassificationOfSharebasedCompensationLiability" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_LossRecognizedFromDebtRedemption" name="LossRecognizedFromDebtRedemption" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_NetSales" name="NetSales" nillable="true" xbrli:periodType="duration" type="num:percentItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_AccountsReceivable" name="AccountsReceivable" nillable="true" xbrli:periodType="duration" type="num:percentItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_PriorPeriodAdjustmentIncomeExpense" name="PriorPeriodAdjustmentIncomeExpense" nillable="true" xbrli:periodType="duration" xbrli:balance="credit" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_HIITSConsultingMember" name="HIITSConsultingMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_JTJCapitalLLCMember" name="JTJCapitalLLCMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_StockIssuedForAccruedSalaryMember" name="StockIssuedForAccruedSalaryMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_StockIssuedForAccountPayableMember" name="StockIssuedForAccountPayableMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_PreferredAAndBSharesPotentiallyConvertibleIntoCommonSharesMember" name="PreferredAAndBSharesPotentiallyConvertibleIntoCommonSharesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_EquityIssuedForCashMember" name="EquityIssuedForCashMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_HITSConsultingMember" name="HITSConsultingMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_TechnologySoftwareFromJTJCapitalMember" name="TechnologySoftwareFromJTJCapitalMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ClariDISCorporationMember" name="ClariDISCorporationMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ConverstionOfDebtAndInterestMember" name="ConverstionOfDebtAndInterestMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_StockIssuedForLoanExtensionFeeMember" name="StockIssuedForLoanExtensionFeeMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_StockIssuedAsFindersFeesMember" name="StockIssuedAsFindersFeesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_StockIssuedForServicesAcquisitionFeesAccruedExpensesAndConsultingMember" name="StockIssuedForServicesAcquisitionFeesAccruedExpensesAndConsultingMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_WarrantsIssuedWithDebtMember" name="WarrantsIssuedWithDebtMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_StockIssuedForOutstandingConvertibleDebtMember" name="StockIssuedForOutstandingConvertibleDebtMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_NumberOfWarrantsMember" name="NumberOfWarrantsMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_WeightedAverageExercisePriceMember" name="WeightedAverageExercisePriceMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_HospiceConvertibleDebentureMember" name="HospiceConvertibleDebentureMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_AsherConvertibleNotesMember" name="AsherConvertibleNotesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_SchnellerConvertibleNotesMember" name="SchnellerConvertibleNotesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_KoetingConvertibleNotesMember" name="KoetingConvertibleNotesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_SonoranPacificResourcesNote1Member" name="SonoranPacificResourcesNote1Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_InterestRateFromSeptember15_2010ToMay31_2011Member" name="InterestRateFromSeptember15_2010ToMay31_2011Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_SonoranPacificResourcesNotesMember" name="SonoranPacificResourcesNotesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_SonoranPacificResourcesNote2Member" name="SonoranPacificResourcesNote2Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_WellbrockGroupNoteMember" name="WellbrockGroupNoteMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_FormerDirectorNoteMember" name="FormerDirectorNoteMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ThreeNotesPayableMember" name="ThreeNotesPayableMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_PrincipalMember" name="PrincipalMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_InterestMember" name="InterestMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_GenesisFinanceCorporationNoteMember" name="GenesisFinanceCorporationNoteMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_UnsecuredNotesPayableMember" name="UnsecuredNotesPayableMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_TaintedWarrantsAndPreferredSharesMember" name="TaintedWarrantsAndPreferredSharesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_WarrantsInExcessOfAuthorizedSharesMember" name="WarrantsInExcessOfAuthorizedSharesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_EmbeddedConversionFeaturesMember" name="EmbeddedConversionFeaturesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_CustomerAMember" name="CustomerAMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_CustomerBMember" name="CustomerBMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_CustomerAandBMember" name="CustomerAandBMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_MassMutualInsuranceMember" name="MassMutualInsuranceMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_AccessHealthMember" name="AccessHealthMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_NonvestedStockOptionMember" name="NonvestedStockOptionMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_NotePayable1Member" name="NotePayable1Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_NotePayable2Member" name="NotePayable2Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_NotePayable3Member" name="NotePayable3Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_NotePayable4Member" name="NotePayable4Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_NotePayable5Member" name="NotePayable5Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_NotePayable6Member" name="NotePayable6Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_NotePayable7Member" name="NotePayable7Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_NotePayable8Member" name="NotePayable8Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_NotePayable9Member" name="NotePayable9Member" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_BlackScholesMember" name="BlackScholesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_BinomialLatticeMember" name="BinomialLatticeMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_CompoundEmbeddedDerivativesMember" name="CompoundEmbeddedDerivativesMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_CustomerCMember" name="CustomerCMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_CustomerDMember" name="CustomerDMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_CustomerEMember" name="CustomerEMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ActualMember" name="ActualMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_CorrectionOfErrorlMember" name="CorrectionOfErrorlMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_RestatedActualMember" name="RestatedActualMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_AsPreviouslyReportedMember" name="AsPreviouslyReportedMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_AdjustmentMember" name="AdjustmentMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_AsAdjustedMember" name="AsAdjustedMember" nillable="true" xbrli:periodType="duration" type="nonnum:domainItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_DocumentAndEntityInformationAbstract" name="DocumentAndEntityInformationAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_LiabilitiesAndStockholdersDeficitAbstract" name="LiabilitiesAndStockholdersDeficitAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_StockholdersDeficitAbstract" name="StockholdersDeficitAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_OtherIncomeExpensesAbstract" name="OtherIncomeExpensesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_AdjustmentsToReconcileNetLossToNetCashUsedInOperationsAbstract" name="AdjustmentsToReconcileNetLossToNetCashUsedInOperationsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ChangesInOperatingAssetsAndLiabilitiesAbstract" name="ChangesInOperatingAssetsAndLiabilitiesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_NoncashInvestingFinancingActivitiesAbstract" name="NoncashInvestingFinancingActivitiesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ScheduleOfNoncashInvestingAndFinancingTransactionsAbstract" name="ScheduleOfNoncashInvestingAndFinancingTransactionsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_SupplementalInformationAbstract" name="SupplementalInformationAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure1.NatureOfOperationsAbstract" name="Disclosure1.NatureOfOperationsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure2.GoingConcernAbstract" name="Disclosure2.GoingConcernAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure3.SummaryOfSignificantAccountingPoliciesAbstract" name="Disclosure3.SummaryOfSignificantAccountingPoliciesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure4.CommonStockAndPreferredStockAbstract" name="Disclosure4.CommonStockAndPreferredStockAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure5.PropertyAndEquipmentAbstract" name="Disclosure5.PropertyAndEquipmentAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure6.SoftwareDevelopmentCostsAbstract" name="Disclosure6.SoftwareDevelopmentCostsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure7.TechnologyAndMedicalSoftwareAbstract" name="Disclosure7.TechnologyAndMedicalSoftwareAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure8.ConsultingAgreementAbstract" name="Disclosure8.ConsultingAgreementAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure9.AcquisitionsAbstract" name="Disclosure9.AcquisitionsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure10.LineOfCreditAbstract" name="Disclosure10.LineOfCreditAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure11.LongtermDebtAbstract" name="Disclosure11.LongtermDebtAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure12.DerivativeFinancialInstrumentsAbstract" name="Disclosure12.DerivativeFinancialInstrumentsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure13.IncomeTaxesAbstract" name="Disclosure13.IncomeTaxesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure14.ConcentrationOfCreditRiskAbstract" name="Disclosure14.ConcentrationOfCreditRiskAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure15.CommitmentsAndContingenciesAbstract" name="Disclosure15.CommitmentsAndContingenciesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure16.ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodErrorAbstract" name="Disclosure16.ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodErrorAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure17.RelatedPartyTransactionsAbstract" name="Disclosure17.RelatedPartyTransactionsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure18.FourthQuarterAdjustmentAbstract" name="Disclosure18.FourthQuarterAdjustmentAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure19.SubsequentEventsAbstract" name="Disclosure19.SubsequentEventsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure6.SoftwareDevelopmentCostsTablesAbstract" name="Disclosure6.SoftwareDevelopmentCostsTablesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure15.CommitmentsAndContingenciesTablesAbstract" name="Disclosure15.CommitmentsAndContingenciesTablesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure16.ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodErrorTablesAbstract" name="Disclosure16.ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodErrorTablesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure18.FourthQuarterAdjustmentTablesAbstract" name="Disclosure18.FourthQuarterAdjustmentTablesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure2.GoingConcernDetailsAbstract" name="Disclosure2.GoingConcernDetailsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ScheduleOfFairValueMeasurementsSignificantInputsAbstract" name="ScheduleOfFairValueMeasurementsSignificantInputsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure4.CommonStockAndPreferredStockDetailsAbstract" name="Disclosure4.CommonStockAndPreferredStockDetailsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ScheduleOfPropertyPlantAndEquipmentAbstract" name="ScheduleOfPropertyPlantAndEquipmentAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure6.SoftwareDevelopmentCostsDetailsAbstract" name="Disclosure6.SoftwareDevelopmentCostsDetailsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure11.LongtermDebtDetails1Abstract" name="Disclosure11.LongtermDebtDetails1Abstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure11.LongtermDebtDetailsAbstract" name="Disclosure11.LongtermDebtDetailsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ScheduleOfDerivativeInstrumentsAbstract0" name="ScheduleOfDerivativeInstrumentsAbstract0" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure12.DerivativeFinancialInstrumentsDetails1Abstract" name="Disclosure12.DerivativeFinancialInstrumentsDetails1Abstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure12.DerivativeFinancialInstrumentsDetails2Abstract" name="Disclosure12.DerivativeFinancialInstrumentsDetails2Abstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ScheduleOfDeferredTaxAssetsAndLiabilitiesAbstract" name="ScheduleOfDeferredTaxAssetsAndLiabilitiesAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ScheduleOfEffectiveIncomeTaxRateReconciliationAbstract" name="ScheduleOfEffectiveIncomeTaxRateReconciliationAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ReconciliationOfTheEffectiveIncomeTaxRateToTheFederalStatutoryRateAbstract" name="ReconciliationOfTheEffectiveIncomeTaxRateToTheFederalStatutoryRateAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_SchedulesOfConcentrationOfRiskByRiskFactorAbstract" name="SchedulesOfConcentrationOfRiskByRiskFactorAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_CommitmentsAndContingenciesDetailsAbstract" name="CommitmentsAndContingenciesDetailsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure16.ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodErrorDetailsAbstract" name="Disclosure16.ChangeInAccountingPolicyAndAccountingEstimatesAndCorrectionOfPriorPeriodErrorDetailsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_StatementOfOperationsAbstract" name="StatementOfOperationsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure18.FourthQuarterAdjustmentDetailsAbstract" name="Disclosure18.FourthQuarterAdjustmentDetailsAbstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_Disclosure18.FourthQuarterAdjustmentDetails1Abstract" name="Disclosure18.FourthQuarterAdjustmentDetails1Abstract" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrli:item" />
+    <element id="vmci_ConsultingContractsAxis" name="ConsultingContractsAxis" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" />
+    <element id="vmci_EquityIssuancesAxis" name="EquityIssuancesAxis" abstract="true" nillable="true" xbrli:periodType="duration" type="xbrli:stringItemType" substitutionGroup="xbrldt:dimensionItem" />
+</schema>
