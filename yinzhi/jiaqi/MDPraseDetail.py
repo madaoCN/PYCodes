@@ -9,7 +9,7 @@ import urllib
 from bs4 import BeautifulSoup
 import codecs
 import pprint
-BASE_URL = 'http://www.hotelaah.com/liren/guangxi.html'
+BASE_URL = 'http://www.hotelaah.com/liren/'
 
 def downUrlRetrieve(url):
     '''
@@ -18,7 +18,7 @@ def downUrlRetrieve(url):
     print "downloading with requests"
     try:
         # with codecs.open(url) as file:
-        r = requests.get(url)
+        r = requests.get(BASE_URL + url)
         soup = BeautifulSoup(r.content, 'lxml')
         table = soup.find_all('table')
         secretaryTable = table[11]
@@ -26,12 +26,13 @@ def downUrlRetrieve(url):
         secretaryList = getNameDic(secretaryTable)
         mayorList = getNameDic(mayorTable)
 
-        pp = pprint.PrettyPrinter(indent=4)
-        pp.pprint(secretaryList)
-        pp.pprint(mayorList)
+        # pp = pprint.PrettyPrinter(indent=4)
+        # pp.pprint(secretaryList)
+        # pp.pprint(mayorList)
 
-        print len(secretaryList)
-        print len(mayorList)
+        print '有%s任市委书记' % len(secretaryList)
+        print '有%s任市长' % len(mayorList)
+        return secretaryList, mayorList
 
     except Exception,e :
         print e

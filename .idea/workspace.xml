@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77a0c3b0-3d4f-4e83-925b-b62333793223" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/10KWork/GET/MDCounterYear.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/10KWork/GET/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/10KWork/MDCounter.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/10KWork/MDWords.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/10KWork/MDWriteExcel.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/10KWork/folder.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/10KWork/folder_1.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/MDPraiseHtml.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/MDPraseDetail.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/MDUrlretireve.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/www.sec.gov/MDCompressFile.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/www.sec.gov/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yinzhi/10KWork/MDPraseXML.py" afterPath="$PROJECT_DIR$/yinzhi/10KWork/MDPraseXML.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yinzhi/10KWork/MDReverseDir.py" afterPath="$PROJECT_DIR$/yinzhi/10KWork/MDReverseDir.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yinzhi/10KWork/getCIK.py" afterPath="$PROJECT_DIR$/yinzhi/10KWork/getCIK.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yinzhi/www.sec.gov/DownLoadFiles.py" afterPath="$PROJECT_DIR$/yinzhi/www.sec.gov/DownLoadFiles.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/MDGetBaiduWord.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/MDGetPosition.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/MDMySql.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/MDSqlBaseInfo.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/MDSqlPosition.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yinzhi/jiaqi/MDPraseDetail.py" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/MDPraseDetail.py" />
     </list>
     <ignored path="pythonCodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,10 +22,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/pythonCodes$MDSqlPosition.coverage" NAME="MDSqlPosition Coverage Results" MODIFIED="1473152608434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDGetBaiduWord.coverage" NAME="MDGetBaiduWord Coverage Results" MODIFIED="1473221347477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDCompressFile.coverage" NAME="MDCompressFile Coverage Results" MODIFIED="1472527775877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/www.sec.gov" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDPraiseHtml.coverage" NAME="MDPraiseHtml Coverage Results" MODIFIED="1473068510599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDGetPosition.coverage" NAME="MDGetPosition Coverage Results" MODIFIED="1473216773397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDReverseDir.coverage" NAME="MDReverseDir Coverage Results" MODIFIED="1472959922177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
-    <SUITE FILE_PATH="coverage/pythonCodes$MDPraseDetail.coverage" NAME="MDPraseDetail Coverage Results" MODIFIED="1473071671171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDMySql.coverage" NAME="MDMySql Coverage Results" MODIFIED="1473155198202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDPraseDetail.coverage" NAME="MDPraseDetail Coverage Results" MODIFIED="1473213534165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDCounterYear__1_.coverage" NAME="MDCounterYear (1) Coverage Results" MODIFIED="1473057813913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/GET" />
     <SUITE FILE_PATH="coverage/pythonCodes$DownLoadFiles.coverage" NAME="DownLoadFiles Coverage Results" MODIFIED="1472530073213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/www.sec.gov" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDPraseXML.coverage" NAME="MDPraseXML Coverage Results" MODIFIED="1472981810949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
@@ -41,6 +37,7 @@
     <SUITE FILE_PATH="coverage/pythonCodes$MDCounter.coverage" NAME="MDCounter Coverage Results" MODIFIED="1473051897243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDWriteExcel.coverage" NAME="MDWriteExcel Coverage Results" MODIFIED="1473053010040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDUrlretireve.coverage" NAME="MDUrlretireve Coverage Results" MODIFIED="1473069121717" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDSqlBaseInfo.coverage" NAME="MDSqlBaseInfo Coverage Results" MODIFIED="1473152655944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
     <SUITE FILE_PATH="coverage/pythonCodes$getCIK.coverage" NAME="getCIK Coverage Results" MODIFIED="1471846067279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDWords.coverage" NAME="MDWords Coverage Results" MODIFIED="1473041442499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
   </component>
@@ -53,67 +50,116 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MDCounterYear.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/GET/MDCounterYear.py">
+      <file leaf-file-name="MDGetPosition.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDGetPosition.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1368">
-              <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+            <state relative-caret-position="1001">
+              <caret line="108" column="36" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
               <folding>
-                <element signature="e#13#26#0" expanded="true" />
+                <element signature="e#14#35#0" expanded="true" />
+                <marker date="1473216773000" expanded="true" signature="589:634" ph="SELECT * FRO... missing_value" />
+                <marker date="1473216773000" expanded="true" signature="589:662" ph="SELECT * FRO... missing_value" />
+                <marker date="1473216773000" expanded="true" signature="734:775" ph="SELECT * FRO... missing_value" />
+                <marker date="1473216773000" expanded="true" signature="906:951" ph="SELECT * FRO... missing_value" />
+                <marker date="1473216773000" expanded="true" signature="1077:1491" ph="INSERT INTO t_GovInfo... " />
+                <marker date="1473216773000" expanded="true" signature="1758:1795" ph="SELECT * FRO... missing_value" />
+                <marker date="1473216773000" expanded="true" signature="1758:1800" ph="SELECT * FRO... %s" />
+                <marker date="1473216773000" expanded="true" signature="1758:1849" ph="SELECT * FRO... %s" />
+                <marker date="1473216773000" expanded="true" signature="1758:1905" ph="SELECT * FRO... missing_value" />
+                <marker date="1473216773000" expanded="true" signature="1758:1906" ph="SELECT * FRO... missing_value" />
+                <marker date="1473216773000" expanded="true" signature="1758:1910" ph="SELECT * FRO... " />
+                <marker date="1473216773000" expanded="true" signature="1758:1913" ph="SELECT * FRO... missing_value" />
+                <marker date="1473216773000" expanded="true" signature="1758:1918" ph="SELECT * FRO... %s" />
+                <marker date="1473216773000" expanded="true" signature="1758:4131" ph="SELECT * FRO... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MDCounterYear.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/GET/MDCounterYear.py">
+      <file leaf-file-name="MDGetBaiduWord.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDGetBaiduWord.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
+            <state relative-caret-position="192">
+              <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
               <folding>
-                <element signature="e#13#26#0" expanded="true" />
+                <element signature="e#14#35#0" expanded="true" />
+                <marker date="1473227061000" expanded="true" signature="692:779" ph="INSERT INTO t_BaseInfo... " />
+                <marker date="1473227061000" expanded="true" signature="954:1037" ph="SELECT name,... missing_value" />
+                <marker date="1473227061000" expanded="true" signature="954:1040" ph="SELECT () FR... missing_value" />
+                <marker date="1473227061000" expanded="true" signature="1283:1364" ph="SELECT name,... missing_value" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Workbook.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/xlwt/Workbook.py">
+      <file leaf-file-name="MDSqlPosition.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDSqlPosition.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12204">
-              <caret line="680" column="8" selection-start-line="680" selection-start-column="8" selection-end-line="680" selection-end-column="8" />
+            <state relative-caret-position="270">
+              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="32" selection-end-column="17" />
+              <folding>
+                <element signature="e#14#35#0" expanded="true" />
+                <marker date="1473152368000" expanded="true" signature="535:599" ph="INSERT INTO t_GovInfo... " />
+                <marker date="1473152368000" expanded="true" signature="634:681" ph="INSERT INTO t_GovInfo... " />
+                <marker date="1473152368000" expanded="true" signature="1017:1521" ph="CREATE TABLE... missing_value" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MDMySql.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDMySql.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+              <folding>
+                <element signature="e#14#35#0" expanded="true" />
+                <marker date="1473154854000" expanded="true" signature="536:593" ph="INSERT INTO t_GovInfo... " />
+                <marker date="1473154854000" expanded="true" signature="628:699" ph="INSERT INTO t_GovInfo... " />
+                <marker date="1473154854000" expanded="true" signature="1032:1223" ph="CREATE TABLE... missing_value" />
+                <marker date="1473154854000" expanded="true" signature="1504:1526" ph="INSERT INTO t_GovInfo... " />
+                <marker date="1473154854000" expanded="true" signature="1504:1549" ph="INSERT INTO t_GovInfo... " />
+                <marker date="1473154854000" expanded="true" signature="1847:1904" ph="INSERT INTO t_GovInfo... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="os.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/os.py">
+      <file leaf-file-name="MDSqlBaseInfo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDSqlBaseInfo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3744">
-              <caret line="208" column="4" selection-start-line="208" selection-start-column="4" selection-end-line="208" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MDReverseDir.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDReverseDir.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4536">
-              <caret line="258" column="13" selection-start-line="258" selection-start-column="13" selection-end-line="258" selection-end-column="26" />
+            <state relative-caret-position="-602">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="21" />
               <folding>
-                <element signature="e#35#44#0" expanded="true" />
+                <element signature="e#14#35#0" expanded="true" />
+                <marker date="1473152655000" expanded="true" signature="535:599" ph="INSERT INTO t_GovInfo... " />
+                <marker date="1473152655000" expanded="true" signature="634:681" ph="INSERT INTO t_GovInfo... " />
+                <marker date="1473152655000" expanded="true" signature="1013:1421" ph="CREATE TABLE... missing_value" />
+                <marker date="1473152655000" expanded="true" signature="1013:1422" ph="CREATE TABLE... missing_value" />
+                <marker date="1473152655000" expanded="true" signature="1013:1425" ph="CREATE TABLE... missing_value" />
+                <marker date="1473152655000" expanded="true" signature="1013:1466" ph="CREATE TABLE... missing_value" />
+                <marker date="1473152655000" expanded="true" signature="1013:1541" ph="CREATE TABLE... missing_value" />
+                <marker date="1473152655000" expanded="true" signature="1013:1542" ph="CREATE TABLE... missing_value" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MDCounter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDCounter.py">
+      <file leaf-file-name="MDPraseDetail.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDPraseDetail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="79" column="43" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="43" />
+            <state relative-caret-position="126">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -122,11 +168,9 @@
       <file leaf-file-name="MDUrlretireve.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDUrlretireve.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="52" />
-              <folding>
-                <element signature="e#13#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="30" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -134,32 +178,18 @@
       <file leaf-file-name="MDPraiseHtml.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDPraiseHtml.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-21">
-              <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
-              <folding>
-                <element signature="e#35#44#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="156">
+              <caret line="58" column="30" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MDPraseDetail.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDPraseDetail.py">
+      <file leaf-file-name="MDCounter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDCounter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-              <folding>
-                <element signature="e#13#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MDWriteExcel.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDWriteExcel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="9" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="243">
+              <caret line="69" column="30" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -197,7 +227,13 @@
         <option value="$PROJECT_DIR$/yinzhi/10KWork/MDCounter.py" />
         <option value="$PROJECT_DIR$/yinzhi/jiaqi/MDPraiseHtml.py" />
         <option value="$PROJECT_DIR$/yinzhi/jiaqi/MDUrlretireve.py" />
+        <option value="$PROJECT_DIR$/yinzhi/jiaqi/MDSqlPosition.py" />
+        <option value="$PROJECT_DIR$/yinzhi/jiaqi/MDSqlBaseInfo.py" />
+        <option value="$PROJECT_DIR$/yinzhi/jiaqi/__init__.py" />
+        <option value="$PROJECT_DIR$/yinzhi/jiaqi/MDMySql.py" />
         <option value="$PROJECT_DIR$/yinzhi/jiaqi/MDPraseDetail.py" />
+        <option value="$PROJECT_DIR$/yinzhi/jiaqi/MDGetPosition.py" />
+        <option value="$PROJECT_DIR$/yinzhi/jiaqi/MDGetBaiduWord.py" />
       </list>
     </option>
   </component>
@@ -208,8 +244,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="39" />
-    <option name="y" value="24" />
+    <option name="x" value="82" />
+    <option name="y" value="23" />
     <option name="width" value="1264" />
     <option name="height" value="742" />
   </component>
@@ -238,6 +274,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -291,7 +328,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -306,61 +342,7 @@
       <recent name="$PROJECT_DIR$/yinzhi/10KWork" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.MDPraseDetail">
-    <configuration default="false" name="MDCounterYear" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yinzhi/10KWork" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pythonCodes" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/10KWork/GET/MDCounterYear.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="MDCounterYear (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Desktop/GET" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pythonCodes" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Desktop/GET/MDCounterYear.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="MDPraiseHtml" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yinzhi/jiaqi" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pythonCodes" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/jiaqi/MDPraiseHtml.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.MDGetBaiduWord">
     <configuration default="false" name="MDPraseDetail" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -379,7 +361,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="MDUrlretireve" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="MDMySql" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -392,7 +374,61 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonCodes" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/jiaqi/MDUrlretireve.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/jiaqi/MDMySql.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MDSqlBaseInfo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yinzhi/jiaqi" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonCodes" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/jiaqi/MDSqlBaseInfo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MDGetPosition" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yinzhi/jiaqi" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonCodes" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/jiaqi/MDGetPosition.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MDGetBaiduWord" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yinzhi/jiaqi" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonCodes" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/jiaqi/MDGetBaiduWord.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -606,19 +642,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.MDCounterYear" />
-      <item index="1" class="java.lang.String" itemvalue="Python.MDCounterYear (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.MDPraiseHtml" />
-      <item index="3" class="java.lang.String" itemvalue="Python.MDPraseDetail" />
-      <item index="4" class="java.lang.String" itemvalue="Python.MDUrlretireve" />
+      <item index="0" class="java.lang.String" itemvalue="Python.MDPraseDetail" />
+      <item index="1" class="java.lang.String" itemvalue="Python.MDMySql" />
+      <item index="2" class="java.lang.String" itemvalue="Python.MDSqlBaseInfo" />
+      <item index="3" class="java.lang.String" itemvalue="Python.MDGetPosition" />
+      <item index="4" class="java.lang.String" itemvalue="Python.MDGetBaiduWord" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.MDPraseDetail" />
-        <item index="1" class="java.lang.String" itemvalue="Python.MDUrlretireve" />
-        <item index="2" class="java.lang.String" itemvalue="Python.MDPraiseHtml" />
-        <item index="3" class="java.lang.String" itemvalue="Python.MDCounterYear (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.MDCounterYear" />
+        <item index="0" class="java.lang.String" itemvalue="Python.MDGetBaiduWord" />
+        <item index="1" class="java.lang.String" itemvalue="Python.MDGetPosition" />
+        <item index="2" class="java.lang.String" itemvalue="Python.MDPraseDetail" />
+        <item index="3" class="java.lang.String" itemvalue="Python.MDMySql" />
+        <item index="4" class="java.lang.String" itemvalue="Python.MDSqlBaseInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -639,17 +675,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="24" width="1264" height="742" extended-state="0" />
+    <frame x="82" y="23" width="1264" height="742" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24050634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28083208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.54234767" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -659,6 +694,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32986626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -694,60 +730,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="59" />
+      <option name="time" value="65" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/yinzhi/出题工具/insert2DB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/出题工具/dealWithXML.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/出题工具/createXML.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1200">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/出题工具/spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2469">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/出题工具/readDir.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/出题工具/MDPraseHeader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/出题工具/insert2DB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/出题工具/dealWithXML.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -923,13 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDDealDB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/xlutils/copy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -976,7 +956,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +963,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1001,7 +979,7 @@
         <state relative-caret-position="4536">
           <caret line="258" column="13" selection-start-line="258" selection-start-column="13" selection-end-line="258" selection-end-column="26" />
           <folding>
-            <element signature="e#35#44#0" expanded="true" />
+            <element signature="e#35#44#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1011,7 +989,7 @@
         <state relative-caret-position="1368">
           <caret line="76" column="32" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
           <folding>
-            <element signature="e#13#26#0" expanded="true" />
+            <element signature="e#13#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1026,56 +1004,163 @@
     </entry>
     <entry file="file://$USER_HOME$/Desktop/GET/MDCounterYear.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="1188">
           <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
           <folding>
-            <element signature="e#13#26#0" expanded="true" />
+            <element signature="e#13#26#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDCounter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="79" column="43" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDWriteExcel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="450">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="34" />
+          <folding>
+            <element signature="e#35#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/MySQLdb/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDDealDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#35#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/10KWork/MDCounter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="69" column="30" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDSqlBaseInfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-602">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="21" />
+          <folding>
+            <element signature="e#14#35#0" expanded="true" />
+            <marker date="1473152655000" expanded="true" signature="535:599" ph="INSERT INTO t_GovInfo... " />
+            <marker date="1473152655000" expanded="true" signature="634:681" ph="INSERT INTO t_GovInfo... " />
+            <marker date="1473152655000" expanded="true" signature="1013:1421" ph="CREATE TABLE... missing_value" />
+            <marker date="1473152655000" expanded="true" signature="1013:1422" ph="CREATE TABLE... missing_value" />
+            <marker date="1473152655000" expanded="true" signature="1013:1425" ph="CREATE TABLE... missing_value" />
+            <marker date="1473152655000" expanded="true" signature="1013:1466" ph="CREATE TABLE... missing_value" />
+            <marker date="1473152655000" expanded="true" signature="1013:1541" ph="CREATE TABLE... missing_value" />
+            <marker date="1473152655000" expanded="true" signature="1013:1542" ph="CREATE TABLE... missing_value" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDSqlPosition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="32" selection-end-column="17" />
+          <folding>
+            <element signature="e#14#35#0" expanded="true" />
+            <marker date="1473152368000" expanded="true" signature="535:599" ph="INSERT INTO t_GovInfo... " />
+            <marker date="1473152368000" expanded="true" signature="634:681" ph="INSERT INTO t_GovInfo... " />
+            <marker date="1473152368000" expanded="true" signature="1017:1521" ph="CREATE TABLE... missing_value" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDPraiseHtml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+        <state relative-caret-position="156">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDPraseDetail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDGetPosition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1001">
+          <caret line="108" column="36" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
           <folding>
-            <element signature="e#35#44#0" expanded="true" />
+            <element signature="e#14#35#0" expanded="true" />
+            <marker date="1473216773000" expanded="true" signature="589:634" ph="SELECT * FRO... missing_value" />
+            <marker date="1473216773000" expanded="true" signature="589:662" ph="SELECT * FRO... missing_value" />
+            <marker date="1473216773000" expanded="true" signature="734:775" ph="SELECT * FRO... missing_value" />
+            <marker date="1473216773000" expanded="true" signature="906:951" ph="SELECT * FRO... missing_value" />
+            <marker date="1473216773000" expanded="true" signature="1077:1491" ph="INSERT INTO t_GovInfo... " />
+            <marker date="1473216773000" expanded="true" signature="1758:1795" ph="SELECT * FRO... missing_value" />
+            <marker date="1473216773000" expanded="true" signature="1758:1800" ph="SELECT * FRO... %s" />
+            <marker date="1473216773000" expanded="true" signature="1758:1849" ph="SELECT * FRO... %s" />
+            <marker date="1473216773000" expanded="true" signature="1758:1905" ph="SELECT * FRO... missing_value" />
+            <marker date="1473216773000" expanded="true" signature="1758:1906" ph="SELECT * FRO... missing_value" />
+            <marker date="1473216773000" expanded="true" signature="1758:1910" ph="SELECT * FRO... " />
+            <marker date="1473216773000" expanded="true" signature="1758:1913" ph="SELECT * FRO... missing_value" />
+            <marker date="1473216773000" expanded="true" signature="1758:1918" ph="SELECT * FRO... %s" />
+            <marker date="1473216773000" expanded="true" signature="1758:4131" ph="SELECT * FRO... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDMySql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+          <folding>
+            <element signature="e#14#35#0" expanded="true" />
+            <marker date="1473154854000" expanded="true" signature="536:593" ph="INSERT INTO t_GovInfo... " />
+            <marker date="1473154854000" expanded="true" signature="628:699" ph="INSERT INTO t_GovInfo... " />
+            <marker date="1473154854000" expanded="true" signature="1032:1223" ph="CREATE TABLE... missing_value" />
+            <marker date="1473154854000" expanded="true" signature="1504:1526" ph="INSERT INTO t_GovInfo... " />
+            <marker date="1473154854000" expanded="true" signature="1504:1549" ph="INSERT INTO t_GovInfo... " />
+            <marker date="1473154854000" expanded="true" signature="1847:1904" ph="INSERT INTO t_GovInfo... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDUrlretireve.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="52" />
-          <folding>
-            <element signature="e#13#28#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="30" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDPraseDetail.py">
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MDGetBaiduWord.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+        <state relative-caret-position="192">
+          <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
           <folding>
-            <element signature="e#13#28#0" expanded="true" />
+            <element signature="e#14#35#0" expanded="true" />
+            <marker date="1473227061000" expanded="true" signature="692:779" ph="INSERT INTO t_BaseInfo... " />
+            <marker date="1473227061000" expanded="true" signature="954:1037" ph="SELECT name,... missing_value" />
+            <marker date="1473227061000" expanded="true" signature="954:1040" ph="SELECT () FR... missing_value" />
+            <marker date="1473227061000" expanded="true" signature="1283:1364" ph="SELECT name,... missing_value" />
           </folding>
         </state>
       </provider>
