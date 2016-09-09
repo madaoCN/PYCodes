@@ -3,68 +3,27 @@ import codecs
 from lxml import etree
 import os
 import xlwt
+import glob
 
-def createExcel(setA,setB,now,last,path):
-    book = xlwt.Workbook(encoding = 'utf-8',style_compression = 0)
-    sheet = book.add_sheet('path',cell_overwrite_ok = True)
+IDX = 0
+book = xlwt.Workbook(encoding='utf-8', style_compression=0)
+sheet = book.add_sheet('path', cell_overwrite_ok=True)
 
-    # if (os.path.exists("/" + path)):
-    #     os.mkdir("/" + path)
-    #
-    #     listA = setA & setB
-    #     listB = setB - setA
-    #     listC = setA - setB
-    #
-    #     for index in range(len(listA)):
-    #         sheet.write(0, 0, "都有")
-    #         sheet.write(index + 1, 0, str)
-    #
-    #     for index in range(len(listB)):
-    #         sheet.write(0, 1, "本年无")
-    #         sheet.write(index + 1, 1, str)
-    #
-    #     for index in range(len(listC)):
-    #         sheet.write(0, 2, "前一年无")
-    #         sheet.write(index + 1, 2, str)
-    # else:
-    #
-    #
-    #     listA = setA & setB
-    #     listB = setB - setA
-    #     listC = setA - setB
-    #
-    #
-    #     for index in range(len(listA)):
-    #
-    #         sheet.write(0, 0, "都有")
-    #         sheet.write(index + 1 ,0,str)
-    #
-    #     for index in range(len(listB)):
-    #         sheet.write(0, 1, "本年无")
-    #         sheet.write(index + 1, 1, str)
-    #
-    #     for index in range(len(listC)):
-    #         sheet.write(0, 2, "前一年无")
-    #         sheet.write(index + 1, 2, str)
+def createExcel(company_name, setA,setB,now,last, index):
 
 
     listA = setA & setB
     listB = setB - setA
     listC = setA - setB
 
-    for index in range(len(listA)):
-        sheet.write(0, 0, "都有")
-        sheet.write(index + 1, 0, listA[index])
+    print company_name, now+'-'+last, len(listA), len(listB), len(listC)
+    sheet.write(index, 0, company_name)
+    sheet.write(index, 1, now)
+    sheet.write(index, 2, last)
+    sheet.write(index, 3, len(listA))
+    sheet.write(index, 4, len(listB))
+    sheet.write(index, 5, len(listC))
 
-    for index in range(len(listB)):
-        sheet.write(0, 1, "本年无")
-        sheet.write(index + 1, 1, listB[index])
-
-    for index in range(len(listC)):
-        sheet.write(0, 2, "前一年无")
-        sheet.write(index + 1, 2, listC[index])
-
-    book.save(now + "-"+ last +".xls")
 
 def read_xml(in_path):
     f = codecs.open(in_path,"r")
@@ -74,8 +33,7 @@ def read_xml(in_path):
     return tree
 
 def countItem(path):
-    for root, dirs, files in os.walk(os.path.abspath(path)):
-        print root, dirs, files
+    for root, dirs, files in os.walk(path):
         for file in files:
             if file.endswith("_base.xml"):
                 pass
@@ -94,31 +52,42 @@ def countItem(path):
                         news_tags.append(input.tag)
                 return set(news_tags)
 
+def deal(path, forPath):
+    realPath = path[2:]
+    year = realPath.split('#')[0][:4]
+    company_name = realPath.split('#')[1]
+    year1 = forPath[2:].split('#')[0][:4]
 
-
-
-
+    try:
+        global IDX
+        IDX += 1
+        createExcel(company_name, countItem(path), countItem(forPath), year, year1, IDX)
+    except Exception, e:
+        print '======'
+        print e
 
 
 def dealFile(path,list):
-
     realPath = path[2:]
     year = realPath.split('#')[0][:4]
-    print list
     company_name =  realPath.split('#')[1]
+
     for str in list:
         if len(str) > 1:
-            print str
             year1 = str[2:].split('#')[0][:4]
             company_name1 = str[2:].split('#')[1]
             if (company_name == company_name1 and int(year1) == int(year) - 1) :
-                createExcel(countItem(path), countItem(str),year,year1, company_name)
+                global IDX
+                IDX += 1
+                createExcel(company_name,countItem(path), countItem(str),year,year1,IDX)
+
+    book.save("countYear.xls")
 
 
 if __name__ == "__main__":
 
     # find. - type d >> folder.txt
-    file = open("/Users/liangxiansong/git4Madao/pythonCode/yinzhi/10KWork/GET/fold.txt")
+    file = open("folder.txt")
 
     filePathlist = []
     while 1:
@@ -131,6 +100,15 @@ if __name__ == "__main__":
 
     for index in range(len(filePathlist)):
         try:
-            dealFile(filePathlist[index], filePathlist)
-        except Exception:
+            list = filePathlist[index].split('#')
+            if len(list) > 1:
+                year =  list[0][-8:-4]
+                forYear = int(year) -1
+                # print './%s*#%s' % (year, list[-1])
+                for f in glob.iglob(r'./%s*#%s' % (forYear, list[-1])):
+                    deal(filePathlist[index], f)
+            # dealFile(filePathlist[index], filePathlist)
+            book.save("countYear.xls")
+        except Exception, e:
+            print e
             print 'error : %s' % filePathlist[index]
