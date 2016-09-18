@@ -115,8 +115,9 @@ if __name__ == "__main__":
                item =  dealFile(line[:-1])
                if item != None:
                     list.append(item)
-               print dealFile(line[:-1])
-            except Exception:
+               # print dealFile(line[:-1])
+            except Exception, e:
+                print 'error..', e
                 pass
         # print list
     file.close()

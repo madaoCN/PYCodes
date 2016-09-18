@@ -20,9 +20,9 @@ def downUrlRetrieve(url):
         # with codecs.open(url) as file:
         r = requests.get(BASE_URL + url)
         soup = BeautifulSoup(r.content, 'lxml')
-        table = soup.find_all('table')
-        secretaryTable = table[11]
-        mayorTable = table[12]
+        table = soup.find_all('table', {'border':'1'})
+        secretaryTable = table[0]
+        mayorTable = table[1]
         secretaryList = getNameDic(secretaryTable)
         mayorList = getNameDic(mayorTable)
 
@@ -30,8 +30,8 @@ def downUrlRetrieve(url):
         # pp.pprint(secretaryList)
         # pp.pprint(mayorList)
 
-        print '有%s任市委书记' % len(secretaryList)
-        print '有%s任市长' % len(mayorList)
+        print '有%s任书记' % len(secretaryList)
+        print '有%s任**长' % len(mayorList)
         return secretaryList, mayorList
 
     except Exception,e :
@@ -48,12 +48,17 @@ def getNameDic(table):
             if isinstance(result, str):
                 pass
             if result != u'任期' and result != u'姓名' and result:
-                arr = result.split('-')
-                if len(arr) == 1:
-                    DIC['name'] = arr
-                else:
+                if re.search('\d{4}', result):#是日期
+                    arr = result.split('-')
                     DIC['forTime'] = arr[0].strip()
                     DIC['sufTime'] = arr[-1].strip()
+                else:#不排除有"-至今"的情况
+                    arr = result.split('-')
+                    if len(arr) == 1:
+                        DIC['name'] = arr
+                    else:
+                        DIC['forTime'] = arr[0].strip()
+                        DIC['sufTime'] = arr[-1].strip()
         if len(DIC):
             LIST.append(DIC)
     return LIST
@@ -61,8 +66,9 @@ def getNameDic(table):
 
 
 if __name__ == "__main__":
-    pool = Pool(5)
-    pool.apply_async(downUrlRetrieve, args=(BASE_URL, ))
-    pool.close()
-    pool.join()
+    sec, may = downUrlRetrieve('guizhou_anshun_xixiu.html')
+    # pool = Pool(5)
+    # pool.apply_async(downUrlRetrieve, args=(BASE_URL, ))
+    # pool.close()
+    # pool.join()
 

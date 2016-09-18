@@ -26,7 +26,7 @@ def addItems(filePath):
             print fileID
             jsonDic = getItems(fileID)
 
-            idx = 7
+            idx = 10
             try:  # 公司名
                 if jsonDic['companyName'] != None:
                     writeBook.get_sheet(0).write(row, idx, jsonDic['companyName'])
@@ -47,8 +47,7 @@ def addItems(filePath):
                     writeBook.get_sheet(0).write(row, idx + 3, jsonDic['acceptanceDatetime'])
             except:
                 pass
-
-        writeBook.save(filePath)
+            writeBook.save(filePath)
         print '写入成功。。。'
 
 def getItems(key):
@@ -57,7 +56,7 @@ def getItems(key):
 
 
 if __name__ == '__main__':
-    DIR = '/Users/liangxiansong/Desktop/resultcount.xls'
+    DIR = '/Users/liangxiansong/Desktop/xbrlResult.xls'
     addItems(DIR)
 
 

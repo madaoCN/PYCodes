@@ -7,12 +7,14 @@ import codecs
 import MDRules
 import re
 from multiprocessing import Pool,Process
+import MDCompressFile
 try:
     import xml.etree.cElementTree as ET
 except ImportError:
     import xml.etree.ElementTree as ET
+from lxml import etree
 
-conn = pymongo.MongoClient("127.0.0.1", 27017, connect=False)
+conn = pymongo.MongoClient("202.120.24.213", 27017, connect=False)
 secCom = conn.secCom
 baseStandard = conn.baseStandard
 SupportItem = ['unit', 'context','schemaRef']
@@ -23,8 +25,7 @@ def praseXML(path):
         # namespaces = {'us-gaap': 'http://xbrl.us/us-gaap/2009-01-31'}
         # xmlDoc = ET.parse(path)
         # root = xmlDoc.getroot()
-        from lxml import etree
-        tree = etree.parse(path)
+        tree = etree.parse(MDCompressFile.uncompress_file(path))
         root = tree.getroot()
         nsmap = root.nsmap
         #nsmap双向映射
@@ -201,7 +202,7 @@ def praseXML(path):
     except Exception, e:
         print '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
         print e
-        print secCom.fails.insert({'failPath':path})
+        # print secCom.fails.insert({'failPath':path})
         print '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 
 
@@ -253,7 +254,7 @@ def getDirFile(dir):
 
 if __name__ == '__main__':
     # DIR = '/Users/lixiaorong/Desktop/2016'
-    DIR = os.path.join(os.path.expanduser("~"), 'Desktop/20140630#iMedicor')
+    DIR = os.path.join(os.path.expanduser("~"), 'Desktop', 'XBRLTest')
     print DIR
     pool = Pool(5)
     def func(args,dire,fis):

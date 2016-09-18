@@ -76,17 +76,26 @@ def getLinkAndArea():
             # print mayerList
             for secretary in secretaryList:
                 try:
+                    # forTime = 'None'
+                    # sufTime = 'None'
                     position = realWants['province']
                     if realWants['city'] !='None' and realWants['city'] != None:
                         position = realWants['city']
                     if realWants['district'] !='None' and realWants['district'] != None:
                         position = realWants['district']
-                    print position
-
+                    try:
+                        forTime = secretary['forTime']
+                    except:
+                        forTime = 'None'
+                    try:
+                        sufTime = secretary['sufTime']
+                    except:
+                        sufTime = 'None'
+                    print secretary['name'][0], forTime, sufTime
                     insertSQL((secretary['name'][0], realWants['id'],
                                realWants['province'], realWants['city'],
                                realWants['district'], position + u'书记',
-                               secretary['forTime'], secretary['sufTime']))
+                               forTime, sufTime))
 
                 except Exception, e:
                     print e
@@ -94,16 +103,26 @@ def getLinkAndArea():
 
             for mayer in mayerList:
                 try:
+                    # forTime = 'None'
+                    # sufTime = 'None'
                     position = realWants['province']
                     if realWants['city'] !='None' and realWants['city'] != None:
                         position = realWants['city']
                     if realWants['district'] !='None' and realWants['district'] != None:
                         position = realWants['district']
-                    print position
+                    try:
+                        forTime = mayer['forTime']
+                    except:
+                        forTime = 'None'
+                    try:
+                        sufTime = mayer['sufTime']
+                    except:
+                        sufTime = 'None'
+                    print mayer['name'][0], forTime, sufTime
                     insertSQL((mayer['name'][0], realWants['id'],
                                realWants['province'], realWants['city'],
                                realWants['district'], position + u'长',
-                               mayer['forTime'], mayer['sufTime']))
+                               forTime, sufTime))
                 except Exception, e:
                     print e
                     print 'no startTime'
