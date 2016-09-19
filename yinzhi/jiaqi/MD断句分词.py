@@ -46,7 +46,10 @@ def breakSentencesByYear(sentence):
     # 处理 \d{2}年 的情况
     for item in re.findall(u'\d{2}年', sentence):
         sentence = sentence.replace(item, item[:-1] + u'#')
-    seg_list = jieba.cut(sentence.strip().replace(u'—', u'#'))
+    for item in re.findall(u'\d{2}\.', sentence):
+        sentence = sentence.replace(item, item[:-1] + u'#')
+    seg_list = jieba.cut(sentence.strip().replace(u'——', u'#').replace(u'—', u'#')\
+                         .replace(u'至',u'#'), HMM=True)
     # print("Default Mode: " + "/ ".join(seg_list))  # 精确模式
     # 断句
     # divList = [li for li in seg_list]
@@ -61,7 +64,7 @@ def breakSentencesByYear(sentence):
             mdStack.push(li)
         elif li == '#' and flag == 0:
             flag += 1
-        elif li == "#" and flag > 0:
+        elif li == "#" and flag > 1:
             temp = mdStack.pop()  # 抛出#号前一个
             while not mdStack.empty():
                 tempData.append(mdStack.pop())
@@ -119,17 +122,24 @@ def praseHTML(filePath):
                     # for tent in content:
                     #     print tent
 
-        pprint.pprint(paramDIC)
+        # pprint.pprint(paramDIC)
         for li in paramDIC['sentence']:
             print '========='
             print '//'.join(li)
             # paramLIST.append(divText)
 
 
+def funx(arg, dire, files):
+    for file in files:
+        if file.endswith('.txt'):
+            print os.path.join(dire, file)
+            jieba.load_userdict(os.path.join(dire, file))
+
 if __name__ == "__main__":
-    jieba.load_userdict(os.path.join(os.path.expanduser('~'), 'Desktop', u'分词字典','customDic.txt'))
-    jieba.load_userdict(os.path.join(os.path.expanduser('~'), 'Desktop', u'分词字典','location.txt'))
-    jieba.load_userdict(os.path.join(os.path.expanduser('~'), 'Desktop', u'分词字典','timeDic.txt'))
-    jieba.enable_parallel(4)
+
+    dicPath = os.path.join(os.path.expanduser('~'), 'Desktop', u'分词字典')
+    os.path.walk(dicPath, funx, ())
+
+    jieba.enable_parallel(4)#并行分词
     BASEPATH = os.path.join(os.path.expanduser('~'), 'Desktop', 'test.html')
     praseHTML(BASEPATH)
