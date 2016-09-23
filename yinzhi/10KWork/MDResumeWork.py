@@ -6,7 +6,7 @@ import pymongo
 if __name__ == "__main__":
     conn = pymongo.MongoClient("202.120.24.213", 27017, connect=False)
     secCom = conn.secCom.rssInfo
-    #已下载
+    # 已下载
     # downLoaded = set()
     # with codecs.open('/Users/liangxiansong/Desktop/XBRLDown/folder.txt') as file:
     #     for line in file.readlines():

@@ -13,51 +13,156 @@ try:
 except ImportError:
     import xml.etree.ElementTree as ET
 from lxml import etree
+import pprint
+import StringIO
+import MDCreateXML
 
 conn = pymongo.MongoClient("202.120.24.213", 27017, connect=False)
 secCom = conn.secCom
 baseStandard = conn.baseStandard
 SupportItem = ['unit', 'context','schemaRef']
 
-def praseXML(path):
-    itemArr = []
+
+def getVersionID(nsKey, pamsn):
+    '''
+    获取命名空间对应url中的版本号
+    :param nsKey:
+    :param pamsn:
+    :return:
+    '''
     try:
-        # namespaces = {'us-gaap': 'http://xbrl.us/us-gaap/2009-01-31'}
-        # xmlDoc = ET.parse(path)
-        # root = xmlDoc.getroot()
-        tree = etree.parse(MDCompressFile.uncompress_file(path))
+        if pamsn.has_key(nsKey):
+            url = pamsn[nsKey]
+            result = re.search('19|20\d{2}', url)
+            if result:#获取到版本号
+                version = result.group(0)
+                return version
+            else:
+                return None
+        else:
+            return None
+    except Exception, e:
+        print e
+        print '获取版本号失败'
+        return None
+
+def categoryXML(path,nsmap, itemArr):
+    '''
+    xml 规则匹配和分类
+    :param path: 文件路径
+    :param nsmap: 命名空间字典
+    :param itemArr: xml 元素集合
+    :return:
+    '''
+    currentDirName = os.path.dirname(path).split('/')[-1]  # 当前文件目录
+    currentFileName = os.path.basename(path)  # 当前文件名
+    targetDir = os.path.join(os.getcwd(), 'XBRLCate', currentDirName)
+    # 原文件地址
+    originPath = os.path.join(targetDir, currentFileName)
+    # 基本分类文档地址(基本待定)
+    basePath = os.path.join(targetDir, currentFileName.replace('.xml', '_base.xml'))
+    # 基本分类文档地址(确认)
+    baseSurePath = os.path.join(targetDir, currentFileName.replace('.xml', '_baseSure.xml'))
+    # 基本分类文档地址(未确认)
+    baseNotSurePath = os.path.join(targetDir, currentFileName.replace('.xml', '_baseNotSure.xml'))
+
+    # 拓展分类文档地址(基本待定)
+    extendPath = os.path.join(targetDir, currentFileName.replace('.xml', '_ext.xml'))
+    # 拓展分类文档地址(确认)
+    extendSurePath = os.path.join(targetDir, currentFileName.replace('.xml', '_extSure.xml'))
+    # 拓展分类文档地址(未确认)
+    extendNotSurePath = os.path.join(targetDir, currentFileName.replace('.xml', '_extNotSure.xml'))
+    # 写入原始文件
+    writeToXML(nsmap, itemArr, originPath)
+
+    # 写入元素
+    base = []
+    baseSure = []
+    baseNotSure = []
+    # 拓展
+    extend = []
+    extendSure = []
+    extendNotSure = []
+    for item in itemArr:
+        for key in item.keys():
+            if key == None:
+                continue
+            # #匹配规则
+            searchKey = key.split(':')[0]
+            if MDRules.matchBaseCategory(searchKey, nsmap):  # 如果是base备选
+                base.append(item)
+                # __year = getVersionID(searchKey, nsmap)
+                # if __year:
+                #     # base.append(item)
+                #     row = baseStandard[__year].find_one({'name': key.split(':')[1]})
+                #     if row:  # 和标准库匹配成功 为base标准
+                #         base.append(item)
+                #         # item['categoryTag'] = 'Base'
+                #     else:  # 标准库中无记录为拓展
+                #         extend.append(item)
+                #         # baseNotSure.append(item)
+                #         # item['categoryTag'] = 'noBase'
+                # else:  # 无版本号为拓展
+                #     extend.append(item)
+            else:  # 否则是拓展备选
+                # 获取元素版本号
+                extend.append(item)
+
+                # 判断是否是拓展和未确认
+                # if MDRules.matchExtCategory({searchKey:nsmap[searchKey]}, xsdNsmap):
+                #     extendSure.append(item)
+                # else:
+                #     extendNotSure.append(item)
+
+    # print len(itemArr), len(base) , len(extend)
+
+    # 写入基本分类文档
+    writeToXML(nsmap, base, basePath)
+    # writeToXML(nsmap, baseSure, baseSurePath)
+    # writeToXML(nsmap, baseNotSure, baseNotSurePath)
+    # elementDic = copy.deepcopy(originDic)
+    # elementDic['tags'] = base
+    # elementDic['filePath'] = basePath
+    # elementDic['fileName'] = os.path.basename(basePath)
+    # elementDic['fileSize'] = os.path.getsize(basePath)
+    # loadToDB(elementDic, 'base')
+
+
+    # 写入拓展分类文档
+    writeToXML(nsmap, extend, extendPath)
+    # writeToXML(nsmap, extendSure, extendSurePath)
+    # writeToXML(nsmap, extendNotSure, extendNotSurePath)
+    # instanceDic = copy.deepcopy(originDic)
+    # instanceDic['tags'] = extend
+    # instanceDic['filePath'] = extendPath
+    # instanceDic['fileName'] = os.path.basename(extendPath)
+    # instanceDic['fileSize'] = os.path.getsize(extendPath)
+    # loadToDB(instanceDic, 'extend')
+
+def praseXML(path):
+    '''
+    解析xml 获取命名空间, 和实例
+    :param path:xml文档路径
+    :return: 命名空间 和 实例集合
+    '''
+    itemArr = []#存储xml中实例
+    try:
+        tree = etree.parse(StringIO.StringIO(MDCompressFile.uncompress_file(path)))
         root = tree.getroot()
         nsmap = root.nsmap
         #nsmap双向映射
         pamsn = {v:k for k,v in nsmap.items()}
 
-        #xsd文件
-        xsdPath = path[:-4]+'.xsd'
-        xsdNsmap = None
-        xsdPamsn = None
-        if os.path.exists(xsdPath):
-            xsdTree = etree.parse(xsdPath)
-            xsdRoot = xsdTree.getroot()
-            xsdNsmap = xsdRoot.nsmap
-            xsdPamsn = {v: k for k, v in xsdNsmap.items()}
+        #xsd文件获取命名空间, xsd获取命名空间 为了进一步确认是否是拓展或者未确认
+        # xsdPath = path[:-4]+'.xsd'
+        # xsdNsmap = None
+        # xsdPamsn = None
+        # if os.path.exists(xsdPath):
+        #     xsdTree = etree.parse(xsdPath)
+        #     xsdRoot = xsdTree.getroot()
+        #     xsdNsmap = xsdRoot.nsmap
+        #     xsdPamsn = {v: k for k, v in xsdNsmap.items()}
 
-        #获取usgaap版本号
-        __year = None
-        try:
-            findKey = None
-            for key in nsmap:
-                if key == None:
-                    continue
-                if re.search(u'us-gaap', key):
-                    print key
-                    findKey = key
-            usgaap = nsmap[findKey]
-            if usgaap:
-               __year = usgaap.split('/')[-1].split('-')[0]
-               print '获取到版本号' + __year + '========='
-        except Exception, e:
-            print e
-            print '获取版本号失败=='
 
         #获取当前文件名年数
         for child in root:
@@ -68,10 +173,10 @@ def praseXML(path):
             except Exception, e:
                 continue
 
-            nameSpace = str(child.tag).strip('{').split('}')[0]
+            nameSpaceLink = str(child.tag).strip('{').split('}')[0]
 
             #判断 tag前命名引用 是否是存在namespace中间的
-            if pamsn[nameSpace] != None:
+            if pamsn[nameSpaceLink] != None:
                 #规则过滤
                 attDic = child.attrib
                 #拼接参数
@@ -82,7 +187,7 @@ def praseXML(path):
                     value['CONTENTTEXT'] = text
                 except Exception,e:
                     print e
-                    print  'praseXML 57'
+                    print  'something wrong to get <CONTENTTEXT> ============'
                 #处理tag属性
                 for attTemp in attDic:
                     try:
@@ -96,109 +201,9 @@ def praseXML(path):
                     except Exception, e:
                         continue
 
-                dic = {pamsn[nameSpace] +':'+ tag.split('}')[-1]:value}
+                dic = {pamsn[nameSpaceLink] +':'+ tag.split('}')[-1]:value}
                 itemArr.append(dic)
-
-
-        #根据fileName查找对象
-        # __name = os.path.basename(path)
-        # __year = '2008'
-
-        # try:
-        #     row = secCom.xmltest.find_one({'files.fileName': __name})
-        #     try:
-        #         __year = row['period'][:4]
-        #     except:
-        #         print '查不到该条数据 设置为2008年'
-        # except Exception, e:
-        #     print e
-        #     print '查找失败!'
-
-        pathPattern = path.split('home')
-        #原文件地址
-        originPath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')
-
-        #基本分类文档地址(基本待定)
-        basePath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')[:-4] + '_base' + pathPattern[1][-4:]
-        # 基本分类文档地址(确认)
-        baseSurePath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')[:-4] + '_baseSure' + pathPattern[1][-4:]
-        # 基本分类文档地址(未确认)
-        baseNotSurePath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')[:-4] + '_baseNotSure' + pathPattern[1][-4:]
-
-        # 拓展分类文档地址(基本待定)
-        extendPath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')[:-4] + '_ext' + pathPattern[1][-4:]
-        # 拓展分类文档地址(确认)
-        extendSurePath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')[:-4] + '_extSure' + pathPattern[1][-4:]
-        # 拓展分类文档地址(未确认)
-        extendNotSurePath = pathPattern[0] + 'home/' + '10kDeal/' + pathPattern[1].lstrip('/XBRLData')[:-4] + '_extNotSure' + pathPattern[1][-4:]
-        #写入原始文件
-        writeToXML(nsmap, itemArr, originPath)
-        # originDic = {'filePath': path, 'tags': itemArr,
-        #              'fileName': os.path.basename(originPath),
-        #              'fileSize': os.path.getsize(originPath),
-        #              'identifier':identifier}
-        # loadToDB(originDic, 'origin')
-
-        #写入元素
-        base = []
-        baseSure = []
-        baseNotSure = []
-        #拓展
-        extend = []
-        extendSure = []
-        extendNotSure = []
-        for item in itemArr:
-            for key in item.keys():
-                try:
-                    if key == None:
-                        continue
-                    # #匹配规则
-                    searchKey = key.split(':')[0]
-                    if MDRules.matchBaseCategory(searchKey, nsmap): #如果是base备选
-                        base.append(item)
-                        row = baseStandard[__year].find_one({'name':key.split(':')[1]})
-                        if row:  # 和标准库匹配成功 为base标准
-                            baseSure.append(item)
-                            # item['categoryTag'] = 'Base'
-                        else:   #为拓展
-                            extend.append(item)
-                            # baseNotSure.append(item)
-                            # item['categoryTag'] = 'noBase'
-                    else:  # 否则是拓展备选
-                        extend.append(item)
-                        #判断是否是拓展和未确认
-                        # if MDRules.matchExtCategory({searchKey:nsmap[searchKey]}, xsdNsmap):
-                        #     extendSure.append(item)
-                        # else:
-                        #     extendNotSure.append(item)
-                except Exception, e:
-                    print e
-                    print path
-                    print '查找失败!'
-
-        writeToXML(nsmap, base, basePath)
-        # writeToXML(nsmap, baseSure, baseSurePath)
-        # writeToXML(nsmap, baseNotSure, baseNotSurePath)
-        # elementDic = copy.deepcopy(originDic)
-        # elementDic['tags'] = base
-        # elementDic['filePath'] = basePath
-        # elementDic['fileName'] = os.path.basename(basePath)
-        # elementDic['fileSize'] = os.path.getsize(basePath)
-        # loadToDB(elementDic, 'base')
-
-
-        # 写入实例
-        writeToXML(nsmap, extend, extendPath)
-
-        # writeToXML(nsmap, extendSure, extendSurePath)
-        # writeToXML(nsmap, extendNotSure, extendNotSurePath)
-        # instanceDic = copy.deepcopy(originDic)
-        # instanceDic['tags'] = extend
-        # instanceDic['filePath'] = extendPath
-        # instanceDic['fileName'] = os.path.basename(extendPath)
-        # instanceDic['fileSize'] = os.path.getsize(extendPath)
-        # loadToDB(instanceDic, 'extend')
-
+        return nsmap,itemArr
     except Exception, e:
         print '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
         print e
@@ -206,24 +211,31 @@ def praseXML(path):
         print '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 
 
+
 def writeToXML(nameSpace, itemArr, path):
-    # 写入xml
+    '''
+    将内容写入xml文档
+    :param nameSpace:
+    :param itemArr:
+    :param path:
+    :return:
+    '''
     fileDir =  os.path.dirname(path)
     if not os.path.exists(fileDir):
         print '创建目录'
         print fileDir
         os.makedirs(fileDir)
     try:
-        import MDCreateXML
         doc = MDCreateXML.initalXML(nameSpace, itemArr)
         MDCreateXML.writeXML(path, doc)
     except Exception, e:
         print e
         print '生成xml失败'
+        print path
 
 def loadToDB(dic, collectionName):
     '''
-    写入数据库
+    录入数据库
     '''
     try:
         # 写入fileUrl地址
@@ -234,41 +246,49 @@ def loadToDB(dic, collectionName):
         print e
         print '插入数据库失败==============='
 
-
-
-def getDirFile(dir):
+def main(path):
     '''
-    获取目录下html文档路径
-    :param dir: 路径
-    :return: 文档路径集合
+    函数入口
+    :return:
     '''
-    fileList = []
-    list = os.listdir(dir)
-    if len(list) > 0:
-        for file in list:
-            filePath = os.path.join(dir, file)
-            if not os.path.isdir(filePath):  # 如果是不是目录,是文件
-                fileList.append(filePath)
-
-    return fileList
+    nsmap, itemArr = praseXML(path)
+    categoryXML(path,nsmap, itemArr)
 
 if __name__ == '__main__':
     # DIR = '/Users/lixiaorong/Desktop/2016'
-    DIR = os.path.join(os.path.expanduser("~"), 'Desktop', 'XBRLTest')
-    print DIR
+    #两种工作模式 @1:目录递归
+    # DIR = os.path.join(os.path.expanduser("~"), 'Desktop', 'XBRLTestData')
+    # print DIR
+    # pool = Pool(5)
+    # def func(args,dire,files):
+    #     for file in files:
+    #         if file.endswith('.xml'):
+    #             fileName = os.path.basename(file)
+    #             splList = fileName.split('_')
+    #             if len(splList) == 1:
+    #                 targetPath = os.path.join(dire, file)
+    #                 pool.apply_async(main, args=(targetPath,))
+    #
+    # os.path.walk(DIR, func, ())
+    # pool.close()
+    # pool.join()
+
+    #@2:读路径列表
+    # find . -type f -name "*-*[0-9].xml"
     pool = Pool(5)
-    def func(args,dire,fis):
-        fileList = getDirFile(dire)
-        if fileList > 0:
-            for file in fileList:
-
-                if os.path.splitext(file)[-1] == '.xml':
-                    fileName = os.path.basename(file)
-                    splList = fileName.split('_')
-                    if len(splList) == 1:
-                        pool.apply_async(praseXML, args=(file,))
-
-    os.path.walk(DIR, func, ())
+    # folderPath = os.path.join(os.path.expanduser("~"), 'Desktop', 'XBRLTestData','folder.txt')
+    folderPath = os.path.join(os.path.expanduser("/"), 'Volumes', 'TOSHIBA EXT', 'XBRL' ,'folder.txt')
+    dirPath = folderPath.strip('/folder.txt')
+    idx = 0
+    with codecs.open(folderPath, 'r', encoding='utf8') as file:
+        for line in file.readlines():
+            if idx > 5:
+                break
+            idx += 1
+            fileName = os.path.basename(line).strip()
+            # if not re.search('_', fileName) and fileName.endswith('.xml'):
+            targetPath = os.path.join('/', dirPath, line.lstrip('./')).strip()
+            pool.apply_async(main, args=(targetPath,))
     pool.close()
     pool.join()
     print 'processed ============'

@@ -37,22 +37,68 @@ def findNativePlaceAndSchool(soup):
 
     return nativePlace, graduateSchool
 
+# def breakSentencesByYear(sentence):
+#     '''
+#     按年份分词
+#     :param sentence:
+#     :return:
+#     '''
+#     # 处理 \d{2}年 的情况
+#     for item in re.findall(u'\d{2}年', sentence):
+#         sentence = sentence.replace(item, item[:-1] + u'#')
+#     for item in re.findall(u'\d{2}\.', sentence):
+#         sentence = sentence.replace(item, item[:-1] + u'#')
+#     for item in re.findall(u'\d{2}－', sentence):
+#         sentence = sentence.replace(item, item[:-1] + u'#')
+#     print sentence
+#     # seg_list = jieba.cut(sentence.strip().replace(u'——', u'#').replace(u'—', u'#')\
+#     #                      .replace(u'至',u'#'), HMM=True)
+#     seg_list = jieba.cut(sentence.strip(), HMM=True)
+#     # print("Default Mode: " + "/ ".join(seg_list))  # 精确模式
+#     # 断句
+#     # divList = [li for li in seg_list]
+#     flag = 0
+#     mdStack = Stack()
+#     tempData = []
+#     tempStr = ''
+#     for li in seg_list:
+#         if li == ' ' and li == u'':
+#             pass
+#         if li != '#':
+#             mdStack.push(li)
+#         elif li == '#' and flag == 0:
+#             flag += 1
+#         elif li == "#" and flag > 1:
+#             temp = mdStack.pop()  # 抛出#号前一个
+#             while not mdStack.empty():
+#                 tempData.append(mdStack.pop())
+#             tempData.reverse()
+#             paramDIC['sentence'].append(tempData)
+#             tempData = []
+#             mdStack.push(temp)
+#
+#     tempData = []
+#     while not mdStack.empty():
+#         tempData.append(mdStack.pop())
+#     tempData.reverse()
+#     paramDIC['sentence'].append(tempData)
+
 def breakSentencesByYear(sentence):
     '''
     按年份分词
     :param sentence:
     :return:
     '''
-    # 处理 \d{2}年 的情况
-    for item in re.findall(u'\d{2}年', sentence):
+    for item in re.findall(u'\d{2}年|\d{2}\.', sentence):
         sentence = sentence.replace(item, item[:-1] + u'#')
-    for item in re.findall(u'\d{2}\.', sentence):
-        sentence = sentence.replace(item, item[:-1] + u'#')
-    seg_list = jieba.cut(sentence.strip().replace(u'——', u'#').replace(u'—', u'#')\
-                         .replace(u'至',u'#'), HMM=True)
+    # for c in sentence:
+    #     if re.search(u'[\u2014]', c):
+    #         print c
+    # return
+
+    seg_list = jieba.cut(sentence.strip(), HMM=True)
     # print("Default Mode: " + "/ ".join(seg_list))  # 精确模式
-    # 断句
-    # divList = [li for li in seg_list]
+
     flag = 0
     mdStack = Stack()
     tempData = []
@@ -60,11 +106,17 @@ def breakSentencesByYear(sentence):
     for li in seg_list:
         if li == ' ' and li == u'':
             pass
-        if li != '#':
+        if li != '#' and flag == 0:
             mdStack.push(li)
         elif li == '#' and flag == 0:
             flag += 1
-        elif li == "#" and flag > 1:
+        elif li != '#' and flag == 1:
+            #判断是否带有除 (年,月,日,至) 以外的中文字符 [\u4e00-\u9fa5]
+            if re.search(u'[-至到\u2014]', li):
+                flag = 0
+            mdStack.push(li)
+        elif li == "#" and flag > 0:
+            flag == 0
             temp = mdStack.pop()  # 抛出#号前一个
             while not mdStack.empty():
                 tempData.append(mdStack.pop())
@@ -78,6 +130,7 @@ def breakSentencesByYear(sentence):
         tempData.append(mdStack.pop())
     tempData.reverse()
     paramDIC['sentence'].append(tempData)
+
 
 
 def dealPersonInfo(info):
@@ -101,9 +154,8 @@ def praseHTML(filePath):
         for div in content:
             divList = []
             divText = div.text.strip()
-
-            spliteEnd = re.split(u'。|;', divText)
-            # print spliteEnd
+            
+            spliteEnd = re.split(u'。|;|；', divText)
 
             for end in spliteEnd:
                 end.strip(u' {}[],.（）\n\s')
@@ -125,7 +177,7 @@ def praseHTML(filePath):
         # pprint.pprint(paramDIC)
         for li in paramDIC['sentence']:
             print '========='
-            print '//'.join(li)
+            print ''.join(li)
             # paramLIST.append(divText)
 
 

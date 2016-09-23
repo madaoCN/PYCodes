@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #coding=utf8
 import xml.dom.minidom as Dom
+import MDCompressFile
 
 # FILE = '/Users/lixiaorong/Desktop/'
 
@@ -14,9 +15,9 @@ def initalXML(nameSpace, tags):
         root_node = doc.createElement('xbrl')
         for name in nameSpace:
             if name == None:
-                root_node.setAttribute('xbrl', nameSpace[None])
+                root_node.setAttribute('xmlns', nameSpace[None])
             else:
-                root_node.setAttribute('xbrl'+':'+name, nameSpace[name])
+                root_node.setAttribute('xmlns'+':'+name, nameSpace[name])
     except Exception, e:
         print e
         return
@@ -57,7 +58,7 @@ def writeXML(path, xml):
     print path
     try:
         file = open(path, mode='w')
-        file.write(xml.toprettyxml(indent = "\t", newl = "\n", encoding = "utf-8"))
+        file.write(MDCompressFile.gzip_compress(xml.toprettyxml(indent = "\t", newl = "\n", encoding = "utf-8")))
         file.close()
         print '文件目录', path
         print '生成xml成功。。'

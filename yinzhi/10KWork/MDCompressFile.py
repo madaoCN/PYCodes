@@ -48,7 +48,7 @@ def uncompress_file(file_in):
 #     f_in.close()
 
 if __name__ == "__main__":
-    print uncompress_file(r'/Users/liangxiansong/Desktop/XBRL/20050502193435#0001067491/xinfy-20050502.xml')
+    print uncompress_file(r'/Users/liangxiansong/git4Madao/pythonCode/yinzhi/10KWork/XBRLCate/20050502193435#0001067491/xinfy-20050502_ext.xml')
 
 
 
