@@ -6,7 +6,7 @@ import copy
 import codecs
 import re
 
-conn = pymongo.MongoClient("202.120.24.213", 27017, connect=False)
+conn = pymongo.MongoClient("127.0.0.1", 27017, connect=False)
 baseStandard = conn.baseStandard
 matchArr = ['xbrl', 'gaap', 'wc', 'w3c', 'sec', 'fasb']
 
@@ -14,17 +14,20 @@ def matchBaseCategory(searchKey, nameSpace):
     '''
     :return: 是否是基本分类文档
     '''
+    link = None
+    if not nameSpace.has_key(searchKey):
+        return False
+    link = nameSpace[searchKey]
     for matchInstance in matchArr:
-        if matchInstance == None:
-            continue
-        patternStr = r'[^\/a-zA-Z]*%s[^\/a-zA-Z]*' % matchInstance
-        pattern = re.compile(patternStr)
-        if re.search(pattern, nameSpace[searchKey]):#base备选
+#        patternStr = r'[^\.\/a-zA-Z]*%s[^\. \/a-zA-Z]*' % matchInstance
+        patternStr = '[^a-zA-Z]%s[^a-zA-Z]' % matchInstance
+        if re.search(patternStr, link):#base备选
             # print searchKey, re.search(pattern, nameSpace[searchKey]).group(0)
             if baseStandard.specialList.find_one({'prefix':searchKey, 'link':nameSpace[searchKey]}):
                 return False#extend备选
             else:
-                return True#base备选
+                return True
+                
     return False #extend备选
 
 def matchExtCategory(searchDic, extSpace):
