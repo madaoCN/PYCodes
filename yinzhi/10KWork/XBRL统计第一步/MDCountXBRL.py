@@ -25,8 +25,8 @@ def createExcel(list):
 			excelNum += 1
 			book = xlwt.Workbook(encoding='utf-8', style_compression=0)
 			sheet = book.add_sheet('path', cell_overwrite_ok=True)
-		sheet.write(sepIndex,0,list[index].pop("aacceptanceDateTime",' '))
-		sheet.write(sepIndex,1,list[index].pop("cik",' '))
+		sheet.write(sepIndex, 0,list[index].pop("aacceptanceDateTime",' '))
+		sheet.write(sepIndex, 1,list[index].pop("cik",' '))
 		sheet.write(sepIndex, 2, list[index].pop("originSize", ' '))
 		sheet.write(sepIndex, 3, list[index].pop("baseSize", ' '))
 		sheet.write(sepIndex, 4, list[index].pop("extSize", ' '))
@@ -62,8 +62,8 @@ def countItem(path):
 			news_tags.append(input.tag)
 	del tree
 	result = []
-	result.append(str(len(inputs)))
-	result.append(str(len(news_tags)))
+	result.append(str(len(inputs) - 1))
+	result.append(str(len(news_tags) - 1))
 
 	return  result
 
