@@ -12,7 +12,7 @@ import chardet
 
 __DOWNLOAD_BASE_PATH = os.path.join(os.path.expanduser('~'), 'Desktop/downLoad/')
 __XML_PATH = os.path.join(os.path.expanduser('~'), 'Desktop/xmls/')
-conn = pymongo.MongoClient("127.0.0.1", 27017, connect=False)
+conn = pymongo.MongoClient("202.120.24.213", 27017, connect=False)
 consur = conn.secCom
 collection = consur.xmlInfo
 

@@ -6,8 +6,8 @@ from bs4 import BeautifulSoup
 import pymongo
 
 BASE_URL = 'https://www.sec.gov/Archives/edgar/monthly/'
-conn = pymongo.MongoClient("127.0.0.1", 27017, connect=False)
-consur = conn.secCom
+# conn = pymongo.MongoClient("127.0.0.1", 27017, connect=False)
+# consur = conn.secCom
 
 
 # def prasePage(text):
@@ -45,4 +45,19 @@ def downUrlRetrieve(url, fileName):
     with open(desktopPath, "wb") as code:
         code.write(r.content)
 
+def getLinks(content):
+    soup = BeautifulSoup(content, 'lxml')
+    aTag = soup.find_all('a')
+    for a in aTag:
+        try:
+            link = a['href']
+            if link.endswith('.xml'):
+                yield link
+        except Exception, e:
+            print e
 
+
+if __name__ == "__main__":
+    content = requests.get(BASE_URL).content
+    for link in getLinks(content):
+        downUrlRetrieve(BASE_URL+link, link)

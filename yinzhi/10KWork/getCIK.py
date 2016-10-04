@@ -15,19 +15,20 @@ except ImportError:
     import xml.etree.ElementTree as ET
 
 
-conn = pymongo.MongoClient("10.189.2.229", 27017, connect=False)
+conn = pymongo.MongoClient("202.120.24.213", 27017, connect=False)
 consur = conn.instance
 secCom = conn.secCom
-baseStandard = conn.baseStandard
 
 CIKSet = set()
 def praseXML():
     itemArr = []
     try:
-        ciks = secCom.xmltest.find({})
+        ciks = secCom.rssInfo.find({'formType':{'$regex':'10-K'}})
         for cik in ciks:
             print cik['cikNumber']
+            print cik['formType']
             CIKSet.add(cik['cikNumber'])
+
 
     except Exception, e:
         print '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
@@ -51,9 +52,7 @@ def writeTofile():
 
 if __name__ == '__main__':
     praseXML()
-
-
-# writeTofile()
+    writeTofile()
 # print 'processed ============'
 
 

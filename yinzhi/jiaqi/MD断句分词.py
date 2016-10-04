@@ -134,10 +134,16 @@ def breakSentencesByYear(sentence):
 
 
 def dealPersonInfo(info):
-    if re.search(u'(,|\s).+?(校)?(大学)?(学院)?(系)?(专业)', info):
-        print '找到匹配项'
+    '''
+    判断是否带有学历信息
+    :param info:
+    :return:
+    '''
+    # if re.search(u'(校)?(大学)?(学院)?(系)?(专业)?(学生)?(毕业)?(党校)?(班)?(读书)?(学习)?', info):
+    if re.search(u'培训|毕业|读书|学习', info):
+        print '找到学历匹配项'
         print info
-        print '//'.join(jieba.cut(info.strip(), cut_all=False, HMM=True))
+        return True
 
 def praseHTML(filePath):
     paramDIC.update({'sentence':[]})
@@ -176,9 +182,38 @@ def praseHTML(filePath):
 
         # pprint.pprint(paramDIC)
         for li in paramDIC['sentence']:
-            print '========='
-            print ''.join(li)
-            # paramLIST.append(divText)
+            if dealPersonInfo(''.join(li)):
+                startYear = None
+                startMonth = None
+                endYear = None
+                endMonth = None
+
+                for item in li:
+                    if re.search('\d{4}', item) and not startYear:
+                        startYear = item
+                        # li.remove(item)
+                        li[li.index(item)] = ''
+                    elif re.search('\d{4}', item) and startYear and not endYear:
+                        endYear = item
+                        li[li.index(item)] = ''
+                    elif re.search('\d{2}', item) and not startMonth:
+                        startMonth = item
+                        li[li.index(item)] = ''
+                    elif re.search('\d{2}', item) and startMonth and not endMonth:
+                        endMonth = item
+                        li[li.index(item)] = ''
+                    elif re.search('\d', item) and not startMonth:
+                        startMonth = item
+                        li[li.index(item)] = ''
+                    elif re.search('\d', item) and startMonth and not endMonth:
+                        endMonth = item
+                        li[li.index(item)] = ''
+                print startYear, '年',startMonth, endYear, '年',endMonth,
+                fliterList = [u'大学', u'学院',u'专业', u'本科', u'研究生']
+                print ''.join(li).replace(u'大学',u'大学#').replace(u'学院',u'学院#').replace(u'专业',u'专业#') \
+                    .replace(u'本科', u'本科#').replace(u'研究生',u'研究生#').replace(u'博士',u'博士#') \
+                    .replace(u'校', u'校#').replace(u'，', u'#')
+
 
 
 def funx(arg, dire, files):
