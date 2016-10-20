@@ -104,9 +104,9 @@ class Spider:
                 if pattern.match(value1) and pattern.match(value2):
                     try:
                         if abs(float(value1) - float(value2)) < precision:
-                            print '++++++++++++++++++++++++++'
-                            print key1 + '_' + k1, key2 + '_' + k2
-                            print value1, value2
+                            # print '++++++++++++++++++++++++++'
+                            # print key1 + '_' + k1, key2 + '_' + k2
+                            # print value1, value2
                             #这里写插值函数
                             if isinstance(self.xmlData[key1 + '_' + k1], list):
                                 self.xmlData[key1 + '_' + k1].append(key2 + '_' + k2)
@@ -203,7 +203,7 @@ class Spider:
 
 
 if __name__ == '__main__':
-    DIR = '/Users/liangxiansong/Desktop/1.1'
+    DIR = '/Users/liangxiansong/Desktop/test'
 
     def func(args,dire,fis):
         spider = Spider()

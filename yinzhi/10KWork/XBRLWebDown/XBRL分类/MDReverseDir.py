@@ -17,7 +17,7 @@ import pprint
 import StringIO
 import MDCreateXML
 
-conn = pymongo.MongoClient("127.0.0.1", 27017, connect=False)
+conn = pymongo.MongoClient("202.120.24.213", 27017, connect=False)
 secCom = conn.secCom
 baseStandard = conn.baseStandard
 SupportItem = ['unit', 'context','schemaRef']
@@ -56,7 +56,7 @@ def categoryXML(path,nsmap, itemArr):
     '''
     currentDirName = os.path.dirname(path).split('/')[-1]  # 当前文件目录
     currentFileName = os.path.basename(path)  # 当前文件名
-    targetDir = os.path.join(os.path.expanduser('/'), 'home', 'XBRLCate', currentDirName)
+    targetDir = os.path.join(os.path.expanduser('~'), 'Desktop', 'XBRLWebDown', 'XBRLCate' ,currentDirName)
     # 原文件地址
     originPath = os.path.join(targetDir, currentFileName)
     # 基本分类文档地址(基本待定)
@@ -147,7 +147,7 @@ def praseXML(path):
     '''
     itemArr = []#存储xml中实例
     try:
-        tree = etree.parse(StringIO.StringIO(MDCompressFile.uncompress_file(path)))
+        tree = etree.parse(StringIO.StringIO(MDCompressFile.uncompress_file(path)), parser=etree.XMLParser(huge_tree=True))
         root = tree.getroot()
         nsmap = root.nsmap
         #nsmap双向映射
@@ -257,39 +257,37 @@ def main(path):
 if __name__ == '__main__':
     # DIR = '/Users/lixiaorong/Desktop/2016'
     #两种工作模式 @1:目录递归
-    # DIR = os.path.join(os.path.expanduser("~"), 'Desktop', 'XBRLTestData')
-    # print DIR
-    # pool = Pool(5)
-    # def func(args,dire,files):
-    #     for file in files:
-    #         if file.endswith('.xml'):
-    #             fileName = os.path.basename(file)
-    #             splList = fileName.split('_')
-    #             if len(splList) == 1:
-    #                 targetPath = os.path.join(dire, file)
-    #                 pool.apply_async(main, args=(targetPath,))
-    #
-    # os.path.walk(DIR, func, ())
-    # pool.close()
-    # pool.join()
-
-    #@2:读路径列表
-    # find . -type f -name "*-*[0-9].xml"
-    pool = Pool()
-#    folderPath = os.path.join(os.path.expanduser("~"), 'Desktop', 'XBRLTestData','folder.txt')
-    folderPath = os.path.join(os.path.expanduser("/"), 'home', 'XBRL','folder.txt')
-    dirPath = folderPath.strip('/folder.txt')
-    idx = 0
-    with codecs.open(folderPath, 'r', encoding='utf8') as file:
-        for line in file.readlines():
-            fileName = os.path.basename(line).strip()
-            # if not re.search('_', fileName) and fileName.endswith('.xml'):
-            targetPath = os.path.join('/', dirPath, line.lstrip('./')).strip()
-            pool.apply_async(main, args=(targetPath,))
+    DIR = os.path.join(os.path.expanduser("~"), 'Desktop', 'XBRLWebDown','XBRLDown')
+    print DIR
+    pool = Pool(5)
+    def func(args,dire,files):
+        for file in files:
+            if file.endswith('.xml'):
+               fileName = os.path.basename(file)
+               splList = fileName.split('_')
+               if len(splList) == 1:
+                   targetPath = os.path.join(dire, file)
+                   pool.apply_async(main, args=(targetPath,))
+    
+    os.path.walk(DIR, func, ())
     pool.close()
     pool.join()
 
-    print 'processed ============'
-
+    #@2:读路径列表
+    # find . -type f -name "*-*[0-9].xml"
+#    pool = Pool()
+##    folderPath = os.path.join(os.path.expanduser("~"), 'Desktop', 'XBRLTestData','folder.txt')
+#    folderPath = os.path.join(os.path.expanduser("/"), 'home', 'XBRL','folder.txt')
+#    dirPath = folderPath.strip('/folder.txt')
+#    idx = 0
+#    with codecs.open(folderPath, 'r', encoding='utf8') as file:
+#        for line in file.readlines():
+#            fileName = os.path.basename(line).strip()
+#            # if not re.search('_', fileName) and fileName.endswith('.xml'):
+#            targetPath = os.path.join('/', dirPath, line.lstrip('./')).strip()
+#            pool.apply_async(main, args=(targetPath,))
+#    pool.close()
+#    pool.join()
+#    print 'processed ============'
 
 
