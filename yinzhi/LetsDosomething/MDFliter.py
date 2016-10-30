@@ -53,7 +53,7 @@ def main(path):
 
 
 if __name__ == '__main__':
-    DIR = os.path.join(os.path.expanduser('~'),'Desktop', 'test02')
+    DIR = os.path.join(os.path.expanduser('~'),'Desktop', 'temp')
 
     # pool = Pool(1)
     def func(args, dire, files):
