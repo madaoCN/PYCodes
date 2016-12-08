@@ -13,7 +13,6 @@ URL = "http://onlineclass.4i-test.com/web/my/teaching/material/question/bill/%s"
 
 def openWindow(idArr):
 
-
     #初始化
     driverPath = '/Users/liangxiansong/Desktop/geckodriver'
     profile = webdriver.FirefoxProfile('/Users/liangxiansong/Library/Application Support/Firefox/Profiles/ta0bshzl.default')
@@ -29,37 +28,15 @@ def openWindow(idArr):
 
 
 if __name__ == "__main__":
+    # itemArr = [3070,
+    #            3095,
+    #            3110,
+    #            3116,
+    #            3123,
+    #            3191,
+    #            3192,3193,3104,
+    #            3207,]
     itemArr = []
-    idxArr = [
-'3007',
-'3008',
-'3010',
-'3025',
-'3026',
-'3043',
-'3078',
-'3085',
-'3086',
-'3095',
-'3096',
-'3150',
-'3193',
-'3193',
-'3245',
-'3241',
-'3288',
-'3287',
-'3337',
-'3377',
-'3384',
-'3361',
-'3362',
-'3429',
-'3431',
-'3435',
-'3477',
-'3527',
-'3552',]
-    for i in idxArr:
+    for i in range(6200, 6230):
         itemArr.append(i)
     openWindow(itemArr)

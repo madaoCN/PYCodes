@@ -1,11 +1,40 @@
-#coding=utf8
-
+# coding=utf8
+# !/usr/bin/env python
 import MySQLdb as mdb
 from email.mime.text import MIMEText
 from email.header import Header
 import smtplib
 from threading import Timer
 import time
+import codecs
+import os
+import logging
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
+# 创建一个logger
+logger = logging.getLogger('MDSpider')
+logger.setLevel(logging.DEBUG)
+
+# 创建一个handler，用于写入日志文件
+fh = logging.FileHandler('spyLIXIN.log')
+fh.setLevel(logging.DEBUG)
+
+# 再创建一个handler，用于输出到控制台
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+
+# 定义handler的输出格式
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+fh.setFormatter(formatter)
+ch.setFormatter(formatter)
+
+# 给logger添加handler
+logger.addHandler(fh)
+logger.addHandler(ch)
+
 config = {
     'host': '202.120.24.211',
     'port': 3306,
@@ -15,7 +44,7 @@ config = {
     'charset': 'utf8'
 }
 
-SQLAssignmentID2FindTeacherName= '''SELECT name FROM tb_teacher WHERE id in
+SQLAssignmentID2FindTeacherName = '''SELECT name FROM tb_teacher WHERE id in
 (SELECT fk_teacher_id FROM tb_course where id=%s)'''
 SQLId2NameANDNAME = '''SELECT name,student_no from tb_student WHERE id in
 (SELECT fk_student_id FROM tb_testpaper where id=%s)'''
@@ -23,8 +52,16 @@ SQLId2NameANDNAME = '''SELECT name,student_no from tb_student WHERE id in
 TEACHERSET = set()
 STUDENTSET = set()
 
-def ConfigInitialData(tearcher, student):
 
+def writeLog(content):
+    currentDir = os.getcwd()
+    with codecs.open(os.path.join(currentDir, 'log.txt'), 'a') as file:
+        file.write(content)
+        file.write('\n')
+    file.close
+
+
+def ConfigInitialData(tearcher, student):
     tearchSet = set()
     studentSet = set()
     conn = mdb.connect(**config)
@@ -37,15 +74,16 @@ def ConfigInitialData(tearcher, student):
         for item in cursor.fetchall():  # 教师出题
             if item[1] in fliterList:
                 continue
-            tearchSet.add(str(item[0])+'#'+ str(item[1]) + '#' + item[2])
+            tearchSet.add(str(item[0]) + '#' + str(item[1]) + '#' + item[2])
 
     if student != None:
         cursor.execute('SELECT id,fk_assignment_id, curr_count, total_score from tb_testpaper')
         for item in cursor.fetchall():  # 学生答题
-            studentSet.add(str(item[0])+'#'+str(item[1])+'#'+str(item[2]) + '#'+ str(item[-1]))
+            studentSet.add(str(item[0]) + '#' + str(item[1]) + '#' + str(item[2]) + '#' + str(item[-1]))
     conn.close()
 
     return tearchSet, studentSet
+
 
 def SendEmail(toAdd, subject, text):
     # yvqkowkowrmmbcee
@@ -61,9 +99,10 @@ def SendEmail(toAdd, subject, text):
     smtp.login(strFrom, 'yvqkowkowrmmbcee');
     try:
         smtp.sendmail(strFrom, strTo, msg.as_string());
-        print '发送邮件成功!!!'
+        logger.info('发送邮件成功!!!')
     finally:
         smtp.close;
+
 
 def FindTeacherDeliverWork():
     '''
@@ -80,7 +119,7 @@ def FindTeacherDeliverWork():
         workNameList = []
         print len(result), len(teacherSet), len(TEACHERSET)
         if len(result):
-            print '有新作业发布啦'
+            logger.info('有新作业发布啦')
             TEACHERSET = teacherSet
             conn = mdb.connect(**config)
             cursor = conn.cursor()
@@ -95,17 +134,19 @@ def FindTeacherDeliverWork():
             qStr = ''
             for idx in range(len(nameList)):
                 print nameList[idx], workNameList[idx]
-                qStr = qStr + nameList[idx] + u'发布了题目: %s' % workNameList[idx]
+                qStr = qStr + u'\n' + nameList[idx] + u'发布了题目: %s' % workNameList[idx]
 
-            print qStr
+            logger.info(qStr)
             SendEmail("229377879@qq.com", u'教师发布了新题目!!!', qStr);
         else:
-            print '暂时没有新作业'
+            logger.info('暂时没有新作业')
 
 
     except Exception, e:
         print 'error'
-        print e
+        logger.info(str(e))
+        # writeLog(str(e))
+
 
 def FindStudentWork():
     '''
@@ -122,7 +163,7 @@ def FindStudentWork():
         total_score = []
         print len(result), len(studentSet), len(STUDENTSET)
         if len(result):
-            print '有学生做作业啦'
+            logger.info('有学生做作业啦')
             STUDENTSET = studentSet
             conn = mdb.connect(**config)
             cursor = conn.cursor()
@@ -138,28 +179,31 @@ def FindStudentWork():
 
             qStr = ''
             for idx in range(len(studentNo)):
-                print nameList[idx], studentNo[idx],curr_count[idx], total_score[idx]
+                print nameList[idx], studentNo[idx], curr_count[idx], total_score[idx]
                 qStr = qStr + u'学生:%s 学号:%s 做题次数:%s 做题分数:%s' % (nameList[idx], studentNo[idx],
-                                                              curr_count[idx], total_score[idx])
-            print qStr
+                                                                curr_count[idx], total_score[idx])
+            logger.info(qStr)
             SendEmail("229377879@qq.com", u'学生做题啦!!!', qStr);
         else:
-            print '暂时没有学生做作业'
+            logger.info('暂时没有学生做作业')
     except Exception, e:
         print 'error'
-        print e
+        logger.info(str(e))
+
 
 def main():
     global TEACHERSET, STUDENTSET
     TEACHERSET, STUDENTSET = ConfigInitialData(1, 1)
+    # FindTeacherDeliverWork()
     # FindStudentWork()
     # t = Timer(5, main)
     # t.start()
     while True:
-        print  time.strftime('%Y-%m-%d %X', time.localtime(time.time()))
+        # logger.info(time.strftime('%Y-%m-%d %X', time.localtime(time.time())))
         FindTeacherDeliverWork()
         FindStudentWork()
-        time.sleep(5)
+        time.sleep(60 * 10)
+
 
 if __name__ == "__main__":
     main()
