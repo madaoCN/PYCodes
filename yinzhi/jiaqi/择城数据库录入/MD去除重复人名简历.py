@@ -44,8 +44,8 @@ def deleteFile(fiterPath):
 
 
 if __name__ == "__main__":
-    # filePath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences', 'folder.txt')
+    filePath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences', 'folder.txt')
     fliterPath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences', 'fliter.txt')
-    # resultPath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences', 'result.txt')
-    # doSomething(filePath, fliterPath, resultPath)
-    deleteFile(fliterPath)
+    resultPath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences', 'result.txt')
+    doSomething(filePath, fliterPath, resultPath)
+    # deleteFile(fliterPath)

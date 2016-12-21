@@ -9,6 +9,7 @@ from MDError import MDError
 import uuid
 import MySQLdb as mdb
 import pymongo
+from MDSort import MDSort
 
 IDX = 0
 
@@ -27,8 +28,10 @@ cursor = conn.cursor()
 # import sys
 # reload(sys) # Python2.5 初始化后会删除 sys.setdefaultencoding 这个方法，我们需要重新载入
 # sys.setdefaultencoding('utf-8')
-OUT_FILE_DIR = os.path.join(os.path.expanduser("~"), 'Desktop', 'out-v2')
+OUT_FILE_DIR = os.path.join(os.path.expanduser("~"), 'Desktop', 'out-v3')
 FILE = codecs.open(os.path.join(os.path.expanduser("~"), 'Desktop', 'result.txt'), 'a', 'utf8')
+
+MDSortter = MDSort()
 
 def reverseFile(filePath):
     '''
@@ -81,9 +84,9 @@ def praseTagSet(strline):
     :param strline:
     :return:
     '''
-    result = re.findall('(/.+?\\b)', strline)
-    str = '_'.join(result)
-    str = str.replace('/', '')
+    result = re.findall('(?<=[/])(\w+?\\b)', strline)
+    str = '_'.join(result).rstrip('_')
+    # str = str.replace('/', '').rstrip('_')
     return str
 
 def removeTag(strline):
@@ -109,10 +112,12 @@ def mapSenteceToModels(hmName ,hmId ,fileName, origSts, tagSets):
         stModel.fileName = fileName
         stModel.hmId = str(hmId).zfill(4)
         stModel.origSt = origSts[index].encode('utf8')
-        stModel.clearSt = removeTag(tagSets[index]).encode('utf8')
-        stModel.splitSt = tagSets[index].encode('utf8')
-        stModel.tagSet = praseTagSet(tagSets[index]).encode('utf8')
-        stModel.hasYear = u'True' if findYear(origSts[index]) else u'False'
+        stModel.clearSt = removeTag(tagSets[index]).encode('utf8')#无tag集合
+        stModel.splitSt = tagSets[index].encode('utf8')#
+        stModel.tagSet = praseTagSet(tagSets[index]).encode('utf8')#标记集合
+        stModel.hasYear = u'True' if findYear(origSts[index]) else u'False'#是否有年份
+        list = stModel.tagSet.split('_')
+        stModel.sortedTag = '_'.join(MDSortter.sortTag(list))
         modelList.append(stModel)
     return modelList
 
@@ -126,13 +131,13 @@ def loadToDB(stModel):
                                     'hmId, fileName, ' \
                                     'origSt, splitTagSt, ' \
                                     'tagSet, splitOrigSt,' \
-                                    'hasYear) ' \
-          'values("%s","%s","%s","%s","%s","%s","%s","%s", "%s")' \
+                                    'hasYear, sortedTag) ' \
+          'values("%s","%s","%s","%s","%s","%s","%s","%s", "%s", "%s")' \
           % (mdb.escape_string(stModel.stId), mdb.escape_string(stModel.hmName),
              mdb.escape_string(stModel.hmId), mdb.escape_string(stModel.fileName),
              mdb.escape_string(stModel.origSt), mdb.escape_string(stModel.splitSt),
              mdb.escape_string(stModel.tagSet), mdb.escape_string(stModel.clearSt),
-             mdb.escape_string(stModel.hasYear))
+             mdb.escape_string(stModel.hasYear), mdb.escape_string(stModel.sortedTag))
     # print sql
     cursor.execute(sql)
     conn.commit()
@@ -154,8 +159,8 @@ def main(dire, file):
         if os.path.exists(splitPath) and os.path.exists(orginPath):
 
             if judgeYear(getFileContent(orginPath)):
-                print '包含1940年前的信息 跳过'
-                print '**********' + file + '**********'
+                # print '包含1940年前的信息 跳过'
+                # print '**********' + file + '**********'
                 return
                 #----------------------原句
             oriList = reverseFile(orginPath)
@@ -172,9 +177,8 @@ def main(dire, file):
         for item in modelList:
             # pass
             # print item.hasYear
-            # print item.origSt
             loadToDB(item)
-            # FILE.write(item.hmName.decode('utf8'))
+            # FILE.write(item.tagSet + '\n')
             # FILE.write(item.hmName.decode('utf8') + '##'
             #            + str(item.hmId) + '##'
             #            +item.stId.decode('utf8') + '##'
@@ -183,10 +187,14 @@ def main(dire, file):
             #            +item.splitSt.decode('utf8') + '##'
             #            +item.tagSet + '##'
             #            +item.fileName.decode('utf8') + '\n')
+
+
     except MDError, e:
+        print "MDError"
         print e
         print '**********' + file + '**********'
     except Exception, e:
+        print 'Exception'
         print e
         print '**********' + file + '**********'
 
@@ -209,5 +217,6 @@ if __name__ == "__main__":
                 main(dire, file)
 
     os.path.walk('/Users/liangxiansong/Desktop/sentences/', funx, ())
+
 
 

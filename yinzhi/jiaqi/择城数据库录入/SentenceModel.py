@@ -19,7 +19,8 @@ class SententceModel:
         self.splitSt = splitSt
         self.tagSet = tagSet
         self.fileName = fileName
-        self.hasYear = 'N/A'
+        self.hasYear = hasYear
+
 
 
     def __init__(self):
@@ -32,6 +33,7 @@ class SententceModel:
         self.tagSet = 'N/A'
         self.fileName = 'N/A'
         self.hasYear = 'False'
+        self.sortedTag = 'N/A'
 
 
     def __repr__(self):
@@ -43,16 +45,11 @@ class SententceModel:
                + " splitSt:" + self.splitSt \
                + " tagSet:" + self.tagSet \
                + " fileName:" + self.fileName\
-               + " hasYear:" + self.hasYear
+               + " hasYear:" + self.hasYear \
+               + " sortedTag:" + self.sortedTag
 
 
 if __name__ == "__main__":
 
     import re
-
-    if False if re.search(u'([0-3]\d|40)(?=年)', u'1940年8月任建屏县第一任县长，') == None else True:
-        print '找到了'
-
-    if False if re.search(u'(\d{2})(?=年)', u'1940年8月任建屏县第一任县长，') == None else True:
-        print '找到了2'
-    print "processed......"
+    print re.split(u'。|;|；', u'adsfasdf.sdfsdf。sadfsadf;fsdafsa；sadfsa')
