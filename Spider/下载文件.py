@@ -7,15 +7,30 @@ import re
 import os
 import urllib
 import wget
+import random
+import os
 BASE_URL = 'http://www.hotelaah.com/liren/index.html'
+
+IPANDPORT = []
+# 获取代理列表
+def getTheRemoteAgent():
+    listUrl = os.path.join(os.path.expanduser('~'), 'Desktop/proxy_list.txt')
+    f = open(listUrl, "r")
+    for line in f:
+        IPANDPORT.append(line)
+    f.close()
 
 def downUrlRetrieve(dirPath, url, fileName):
     '''
     下载URL
     '''
     print "downloading with requests"
+    index = random.randint(0, len(IPANDPORT) - 1)
+    proxy = {'http': 'http://%s' % IPANDPORT[index].strip()}
+    print proxy
+
     try:
-        r = requests.get(url)
+        r = requests.get(url, proxy=proxy)
         if not os.path.exists(dirPath):
             os.makedirs(dirPath)
             print '创建目录。。', dirPath
@@ -39,8 +54,9 @@ if __name__ == "__main__":
     targetURL = 'http://www.csrc.gov.cn/pub/newsite/fxjgb/scgkfxfkyj/'
     fileURL = os.path.join(os.path.expanduser('~'), 'Desktop/files.txt')
     dirPath = os.path.join(os.path.expanduser('~'), 'Desktop/files')
-    pool = Pool(5)
+    getTheRemoteAgent()
 
+    pool = Pool(5)
     import codecs
     with codecs.open(fileURL, encoding='utf8') as file:
         for line in file.readlines():
