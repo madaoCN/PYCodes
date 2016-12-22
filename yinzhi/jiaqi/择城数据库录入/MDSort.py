@@ -37,8 +37,12 @@ class MDSort():
 
 
 if __name__ == "__main__":
-    list = ["Rg", "month", "gwhub", "day", "year"]
-    # list.sort(lambda x,y:cmp(GLOBAL_SORTKEYS[x],GLOBAL_SORTKEYS[y]))
-    # list.sort()
-    mdSorter = MDSort()
-    print mdSorter.sortTag(list)
+    # list = ["Rg", "month", "gwhub", "day", "year"]
+    # # list.sort(lambda x,y:cmp(GLOBAL_SORTKEYS[x],GLOBAL_SORTKEYS[y]))
+    # # list.sort()
+    # mdSorter = MDSort()
+    # print mdSorter.sortTag(list)
+    import re
+    cp2 = re.compile(u'(?<=[\u4e00-\u9fa5])(19\d{2}|20\d{2})[年]')
+    print cp2.findall(u'1968年―1974年，在内1987年蒙古土默特左旗察素齐公社下乡')
+

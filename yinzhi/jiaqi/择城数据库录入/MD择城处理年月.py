@@ -10,7 +10,7 @@ cp1 = re.compile(u'(?!<[\d])(?P<year>19\d{2}|20\d{2})(?!年)')
 # #前面不为数字, 四位数字XXXX后面为. 符号的年份
 cp2 = re.compile(u'(?!<[\d])(?P<year>19\d{2}|20\d{2})(?=[.])')
 # #13年“科研集团化-高校 补年份
-cp3 = re.compile(u'(?<![\d])(?P<year>[01][0-6])(?=年)')
+cp3 = re.compile(u'(?<![\d])(?P<year>[01][0-9])(?=年)')
 # 87年“科研集团化-高校 补年份
 cp4 = re.compile(u'(?<![\d])(?P<year>[4-9]\d)(?=年)')
 # 前面年加一个标点
@@ -75,6 +75,6 @@ if __name__ == "__main__":
                 pool.apply_async(doSomething, (dire, file))
                 # main(dire, file)
 
-    os.path.walk('/Users/liangxiansong/Desktop/test', funx, ())
+    os.path.walk('/Users/liangxiansong/Desktop/sentences', funx, ())
     pool.close()
     pool.join()
