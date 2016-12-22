@@ -3,31 +3,42 @@
 import codecs
 import os
 import re
+from multiprocessing import Pool
 
 def replaceItem(content):
     print re.findall('.{1}[\d{1,4}]{1,4}.{1}', content)
     return re.findall('.{1}[\d{1,4}]{1,4}.{1}', content)
 
-def doSomething(resultPath, dirPath):
-    targetPath = os.path.join(dirPath, )
-    with codecs.open(resultPath, 'r', 'utf8') as file:
-        for line in file.readlines():
-            line = line.strip()
-            if line.endswith(".txt") and not line.endswith("t.txt") and not line.endswith("r.txt"):
-                print os.path.join(dirPath, line.lstrip('./'))
-                with codecs.open(os.path.join(dirPath, line.lstrip('./')), 'r', 'utf8') as resultFile:
-                    content = resultFile.read()
-                    list = replaceItem(content)
-                    with codecs.open(os.path.join(dirPath, 'target.txt'), 'a', 'utf8') as modifyFile:
-                        for item in list:
-                            modifyFile.write(item)
-                            modifyFile.write('\n')
+def doSomething(dirPath, filePath):
+
+    if filePath.endswith(".txt"):
+        print os.path.join(dirPath, filePath)
+        with codecs.open(os.path.join(dirPath, filePath), 'r', 'utf8') as resultFile:
+            content = resultFile.read()
+            list = replaceItem(content)
+            with codecs.open(os.path.join(dirPath, '../','target.txt'), 'a', 'utf8') as modifyFile:
+                for item in list:
+                    modifyFile.write(item)
+                    # modifyFile.write('\s\s\s\s' + filePath)
+                    modifyFile.write('\n')
 if __name__ == "__main__":
 
-    resultPath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences', 'result.txt')
-    dirPath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences')
+    # resultPath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences', 'result.txt')
+    # dirPath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences')
+    #
+    # # resultPath = os.path.join(os.path.expanduser("~"), "Desktop", 'test', 'result.txt')
+    # # dirPath = os.path.join(os.path.expanduser("~"), "Desktop", 'test')
+    #
+    # doSomething(resultPath, dirPath)
 
-    # resultPath = os.path.join(os.path.expanduser("~"), "Desktop", 'test', 'result.txt')
-    # dirPath = os.path.join(os.path.expanduser("~"), "Desktop", 'test')
+    pool = Pool(5)
+    def funx(args, dire, files):
+        for file in files:
+            if file.endswith('.txt'):
+                pool.apply_async(doSomething, (dire, file))
+                # main(dire, file)
 
-    doSomething(resultPath, dirPath)
+
+    os.path.walk('/Users/liangxiansong/Desktop/sentences', funx, ())
+    pool.close()
+    pool.join()

@@ -1,7 +1,7 @@
 #coding=utf8
 
 import MySQLdb as mdb
-import MDPraseDetail
+import yinzhi.jiaqi.MDPraseDetail
 import pymongo
 import requests
 import os

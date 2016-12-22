@@ -53,3 +53,5 @@ if __name__ == "__main__":
 
     import re
     print re.split(u'。|;|；', u'adsfasdf.sdfsdf。sadfsadf;fsdafsa；sadfsa')
+    datepat = re.compile(r'(\d+)/(\d+)/(\d+)')
+    print datepat.sub(r'\3-\1-\2', 'Today is 2012/11/27. PyCon starts 2013/3/13.')
