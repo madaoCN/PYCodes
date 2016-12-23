@@ -29,7 +29,7 @@ cursor = conn.cursor()
 # reload(sys) # Python2.5 初始化后会删除 sys.setdefaultencoding 这个方法，我们需要重新载入
 # sys.setdefaultencoding('utf-8')
 OUT_FILE_DIR = os.path.join(os.path.expanduser("~"), 'Desktop', 'out-v3')
-FILE = codecs.open(os.path.join(os.path.expanduser("~"), 'Desktop', 'result.txt'), 'a', 'utf8')
+# FILE = codecs.open(os.path.join(os.path.expanduser("~"), 'Desktop', 'result.txt'), 'a', 'utf8')
 
 MDSortter = MDSort()
 
@@ -66,7 +66,7 @@ def findYear(strline):
     '''
     # print len(re.findall(u'(\d{2})(?=年)', strline)) == 0
     # print re.findall(u'(\d{2})(?=年)', strline)
-    return False if len(re.findall(u'(\d{2})(?=年)', strline)) == 0 else True
+    return False if len(re.findall(u'(/year)', strline)) == 0 else True
 
 def judgeYear(str):
     '''
@@ -84,38 +84,38 @@ def praseTagSet(strline):
     :param strline:
     :return:
     '''
-    result = re.findall('(?<=[/])(\w+?\\b)', strline)
+    result = re.findall('(?<=[/])(\w+?)(?=\s)', strline)
     str = '_'.join(result).rstrip('_')
     # str = str.replace('/', '').rstrip('_')
     return str
 
-def removeTag(strline):
+def removeTag(strline, replacement):
     '''
     去除标签
     :param strline:
     :return:
     '''
-    result = re.sub('(/.+?\\b)', "_", strline).replace(' ', '')
+    result = re.sub('(/.+?\\b)', replacement, strline).replace(' ', '')
     # str = '_'.join(result)
     # str = str.replace('/', '')
     return result
 
-def mapSenteceToModels(hmName ,hmId ,fileName, origSts, tagSets):
+def mapSenteceToModels(hmName ,hmId ,fileName, tagSets):
     '''
     映射模型
     '''
     modelList = []
-    for index in range(len(origSts)):#遍历原句列表
+    for index in range(len(tagSets)):#遍历原句列表
         stModel = SententceModel()
         stModel.stId = str(hmId).zfill(4) + '_' + str(index).zfill(4)
         stModel.hmName = hmName
         stModel.fileName = fileName
         stModel.hmId = str(hmId).zfill(4)
-        stModel.origSt = origSts[index].encode('utf8')
-        stModel.clearSt = removeTag(tagSets[index]).encode('utf8')#无tag集合
+        stModel.origSt = removeTag(tagSets[index], '').encode('utf8')
+        stModel.clearSt = removeTag(tagSets[index], '_').strip('_').encode('utf8')#无tag集合
         stModel.splitSt = tagSets[index].encode('utf8')#
         stModel.tagSet = praseTagSet(tagSets[index]).encode('utf8')#标记集合
-        stModel.hasYear = u'True' if findYear(origSts[index]) else u'False'#是否有年份
+        stModel.hasYear = u'True' if findYear(tagSets[index]) else u'False'#是否有年份
         list = stModel.tagSet.split('_')
         stModel.sortedTag = '_'.join(MDSortter.sortTag(list))
         modelList.append(stModel)
@@ -127,7 +127,7 @@ def loadToDB(stModel):
     :param stModel:
     :return:
     '''
-    sql = 'INSERT INTO t_CaeerInfo (stId, hmName, ' \
+    sql = 'INSERT INTO t_CaInfo (stId, hmName, ' \
                                     'hmId, fileName, ' \
                                     'origSt, splitTagSt, ' \
                                     'tagSet, splitOrigSt,' \
@@ -138,9 +138,9 @@ def loadToDB(stModel):
              mdb.escape_string(stModel.origSt), mdb.escape_string(stModel.splitSt),
              mdb.escape_string(stModel.tagSet), mdb.escape_string(stModel.clearSt),
              mdb.escape_string(stModel.hasYear), mdb.escape_string(stModel.sortedTag))
-    # print sql
-    cursor.execute(sql)
-    conn.commit()
+    print sql
+    # cursor.execute(sql)
+    # conn.commit()
 
 def main(dire, file):
     # print dire, file
@@ -162,17 +162,12 @@ def main(dire, file):
                 # print '包含1940年前的信息 跳过'
                 # print '**********' + file + '**********'
                 return
-                #----------------------原句
-            oriList = reverseFile(orginPath)
-        #----------------------分词后句
+            #----------------------分词后句子
             splitList = reverseFile(splitPath)
-            if len(oriList) != len(splitList):
-                raise MDError("原始句子数目和粉刺后句子数目不一致")
-
         else:
             raise MDError("文件不存在")
 
-        modelList = mapSenteceToModels(hmName, IDX, file, oriList, splitList)
+        modelList = mapSenteceToModels(hmName, IDX, file, splitList)
 
         for item in modelList:
             # pass

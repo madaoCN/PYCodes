@@ -13,7 +13,8 @@ def doSomething(filePath, fliterPath, resultPath):
     with codecs.open(filePath, 'r', 'utf8') as file:
         for line in file.readlines():
             line = line.strip()
-            if line.endswith(".txt"):
+            print line
+            if line.endswith(".txt") and not line.endswith('er.txt'):
                 hmName = line.split("/")[-1].split('_')[1]
                 # print re.search(u'代.*?长', hmName)
                 if not re.search(u'[\(\（].*?代.*?[\)\）]', hmName) and not re.search(u'.*?代.*?长', hmName):
@@ -32,7 +33,7 @@ def doSomething(filePath, fliterPath, resultPath):
         resultFile.write(dateSet.get(key) + '\n')
 
 def deleteFile(fiterPath):
-    dirPath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences')
+    dirPath = os.path.join(os.path.expanduser("~"), "Desktop", 'jieba')
     with codecs.open(fiterPath, 'r', 'utf8') as file:
         for line in file.readlines():
             line = line.strip()
@@ -44,8 +45,8 @@ def deleteFile(fiterPath):
 
 
 if __name__ == "__main__":
-    filePath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences', 'folder.txt')
-    fliterPath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences', 'fliter.txt')
-    resultPath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences', 'result.txt')
-    doSomething(filePath, fliterPath, resultPath)
-    # deleteFile(fliterPath)
+    # filePath = os.path.join(os.path.expanduser("~"), "Desktop", 'jieba', 'folder.txt')
+    fliterPath = os.path.join(os.path.expanduser("~"), "Desktop", 'jieba', 'fliter.txt')
+    # resultPath = os.path.join(os.path.expanduser("~"), "Desktop", 'sentences', 'result.txt')
+    # doSomething(filePath, fliterPath, resultPath)
+    deleteFile(fliterPath)

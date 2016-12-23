@@ -8,8 +8,9 @@ import jieba
 import jieba.analyse
 import jieba.posseg as pseg
 
-resultDIR = os.path.join(os.path.expanduser('~'), 'Desktop', 'result')
+resultDIR = os.path.join(os.path.expanduser('~'), 'Desktop', 'jieba')
 
+compiler1 = re.compile(u'(?<![(/p)(/wp)(/v)(/w)])\s(?P<year>(19\d{2}|20\d{2})[年])')
 def breakSentencesByYear(sentence):
     '''
     按年份分词
@@ -24,6 +25,10 @@ def breakSentencesByYear(sentence):
         seg_list.append(word + '/' + flag)
     return ' '.join(seg_list)
 
+def breakSentenceByTag(sentence):
+    sentence = compiler1.sub('## \g<year>', sentence)
+    seg_set = sentence.split("##")
+    return seg_set
 
 def breakWords(dire, fileName):
     '''
@@ -40,7 +45,7 @@ def breakWords(dire, fileName):
         for line in file.readlines():
             line = line.strip()
             # sentenceList.extend(breakSentencesByYear(line))
-            sentenceList.append(breakSentencesByYear(line))
+            sentenceList.extend(breakSentenceByTag(line))
         for sentence in sentenceList:
             sentence = sentence.strip()
             if len(sentence)  > 3:
@@ -57,7 +62,7 @@ def main(dire, file):
 if __name__ == "__main__":
     if not os.path.exists(resultDIR):
         os.makedirs(resultDIR)
-    jieba.enable_parallel(4)#并行分词
+    # jieba.enable_parallel(4)#并行分词
     # pool = Pool(5)
     def funx(args, dire ,files):
         for file in files:
