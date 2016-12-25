@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77a0c3b0-3d4f-4e83-925b-b62333793223" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/propertyList.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD格式化规则V1.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MDConstructFile.py" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MDConstructFile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MDSort.py" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MDSort.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD去除重复人名简历.py" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD去除重复人名简历.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD日期断句.py" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD日期断句.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD日期断句分词版.py" afterPath="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD日期断句分词版.py" />
     </list>
     <ignored path="pythonCodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,12 +15,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/pythonCodes$MDExcel2Json.coverage" NAME="MDExcel2Json Coverage Results" MODIFIED="1479707934897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDFliter.coverage" NAME="MDFliter Coverage Results" MODIFIED="1477546907648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDexcel.coverage" NAME="MD追加excel Coverage Results" MODIFIED="1475218414824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork/XBRL统计第一步" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDPraseDetail.coverage" NAME="MDPraseDetail Coverage Results" MODIFIED="1474009308826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
-    <SUITE FILE_PATH="coverage/pythonCodes$MDCounterYear__1_.coverage" NAME="MDCounterYear (1) Coverage Results" MODIFIED="1473057813913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/GET" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDCounterYear__1_.coverage" NAME="MDCounterYear (1) Coverage Results" MODIFIED="1473057813913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../GET" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDPraseXML.coverage" NAME="MDPraseXML Coverage Results" MODIFIED="1472981810949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDCounterYear.coverage" NAME="MDCounterYear Coverage Results" MODIFIED="1473242909494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork/GET" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDSqlBaseInfo.coverage" NAME="MDSqlBaseInfo Coverage Results" MODIFIED="1473152655944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
@@ -96,108 +91,32 @@
       <file leaf-file-name="MDConstructFile.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MDConstructFile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="141" column="20" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="20" />
               <folding>
-                <marker date="1482461532000" expanded="true" signature="3281:3631" ph="INSERT INTO t_CaInfo... " />
+                <element signature="e#13#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MD日期断句.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD日期断句.py">
+      <file leaf-file-name="MD格式化规则V1.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD格式化规则V1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="18" selection-end-column="7" />
+            <state relative-caret-position="317">
+              <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
               <folding>
-                <element signature="e#14#23#0" expanded="true" />
+                <element signature="e#13#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e821e62-5b29-4bff-a468-52406bef30a5/console.sql">
+      <file leaf-file-name="MDStack.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MDStack.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MD日期断句分词版.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD日期断句分词版.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MD断句分词.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MD断句分词.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1404">
-              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="131" selection-end-column="41" />
-              <folding>
-                <element signature="e#13#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MD择城处理年月.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD择城处理年月.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
-              <folding>
-                <element signature="e#15#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MD正则测试.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MD正则测试.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MD去除重复人名简历.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD去除重复人名简历.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MDSort.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MDSort.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
-              <folding>
-                <element signature="e#13#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="propertyList.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/propertyList.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -218,9 +137,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/yinzhi/www.sec.gov/DownLoadXML.py" />
-        <option value="$PROJECT_DIR$/yinzhi/10KWork/MDReverseDir.py" />
-        <option value="$PROJECT_DIR$/yinzhi/www.sec.gov/PraseXML.py" />
         <option value="$PROJECT_DIR$/yinzhi/LetsDosomething/MD统计数据库中10k数目.py" />
         <option value="$PROJECT_DIR$/yinzhi/10KWork/XBRL补充10-5/MD求差集.py" />
         <option value="$PROJECT_DIR$/yinzhi/jiaqi/MD输出职位分词句子.py" />
@@ -269,6 +185,9 @@
         <option value="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD日期断句.py" />
         <option value="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD日期断句分词版.py" />
         <option value="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD去除重复人名简历.py" />
+        <option value="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD.py" />
+        <option value="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD格式化规则.py" />
+        <option value="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD格式化规则V1.py" />
       </list>
     </option>
   </component>
@@ -279,10 +198,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="82" />
-    <option name="y" value="23" />
+    <option name="x" value="93" />
+    <option name="y" value="56" />
     <option name="width" value="1280" />
-    <option name="height" value="768" />
+    <option name="height" value="695" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -323,7 +242,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemId" value="pyCode" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -333,7 +252,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemId" value="pyCode" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -347,7 +266,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemId" value="pyCode" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -365,7 +284,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemId" value="pyCode" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -383,8 +302,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,7 +324,7 @@
       <recent name="$PROJECT_DIR$/yinzhi" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.MD去除重复人名简历">
+  <component name="RunManager" selected="Python.MD格式化规则">
     <configuration default="false" name="MD日期断句" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -420,24 +339,6 @@
       <module name="pythonCodes" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD日期断句.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="MDSort" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pythonCodes" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MDSort.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -496,55 +397,22 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+    <configuration default="false" name="MD格式化规则" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonCodes" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pythonCodes" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="pythonCodes" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD格式化规则V1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -576,22 +444,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <module name="pythonCodes" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -706,18 +558,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.MD日期断句" />
-      <item index="1" class="java.lang.String" itemvalue="Python.MDSort" />
-      <item index="2" class="java.lang.String" itemvalue="Python.MD择城处理年月" />
-      <item index="3" class="java.lang.String" itemvalue="Python.MD日期断句分词版" />
-      <item index="4" class="java.lang.String" itemvalue="Python.MD去除重复人名简历" />
+      <item index="1" class="java.lang.String" itemvalue="Python.MD择城处理年月" />
+      <item index="2" class="java.lang.String" itemvalue="Python.MD日期断句分词版" />
+      <item index="3" class="java.lang.String" itemvalue="Python.MD去除重复人名简历" />
+      <item index="4" class="java.lang.String" itemvalue="Python.MD格式化规则" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.MD去除重复人名简历" />
-        <item index="1" class="java.lang.String" itemvalue="Python.MD日期断句分词版" />
-        <item index="2" class="java.lang.String" itemvalue="Python.MD日期断句" />
-        <item index="3" class="java.lang.String" itemvalue="Python.MD择城处理年月" />
-        <item index="4" class="java.lang.String" itemvalue="Python.MDSort" />
+        <item index="0" class="java.lang.String" itemvalue="Python.MD格式化规则" />
+        <item index="1" class="java.lang.String" itemvalue="Python.MD去除重复人名简历" />
+        <item index="2" class="java.lang.String" itemvalue="Python.MD日期断句分词版" />
+        <item index="3" class="java.lang.String" itemvalue="Python.MD日期断句" />
+        <item index="4" class="java.lang.String" itemvalue="Python.MD择城处理年月" />
       </list>
     </recent_temporary>
   </component>
@@ -755,20 +607,19 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="82" y="23" width="1280" height="768" extended-state="0" />
+    <frame x="93" y="56" width="1280" height="695" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23101777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23034154" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31464174" sideWeight="0.32429907" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4112426" sideWeight="0.67570096" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32205883" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17578773" sideWeight="0.67570096" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28529412" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48382354" sideWeight="0.6070312" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48382354" sideWeight="0.6070312" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -776,6 +627,7 @@
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14558823" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -819,20 +671,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/抓取工作目录/CFDA药监JU网站.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="74" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/抓取工作目录/yaya医师.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="60" column="59" selection-start-line="60" selection-start-column="59" selection-end-line="60" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/网页测试.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-159">
@@ -1048,13 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/SentenceModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="56" column="77" selection-start-line="56" selection-start-column="77" selection-end-line="56" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD删除文件.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1069,13 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD输出年份格式.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD提取html文本.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1085,7 +909,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MD正则测试.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
+        <state relative-caret-position="114">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
@@ -1093,47 +917,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/MD断句分词.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
+        <state relative-caret-position="1482">
           <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="131" selection-end-column="41" />
           <folding>
-            <element signature="e#13#25#0" expanded="true" />
+            <element signature="e#13#25#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e821e62-5b29-4bff-a468-52406bef30a5/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/4c71a182/4e821e62-5b29-4bff-a468-52406bef30a5/zeCheng.t_CaInfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="53" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MDConstructFile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <marker date="1482461532000" expanded="true" signature="3281:3631" ph="INSERT INTO t_CaInfo... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e821e62-5b29-4bff-a468-52406bef30a5/console.sql" />
+    <entry file="dbDummy://dbtable:/4c71a182/4e821e62-5b29-4bff-a468-52406bef30a5/zeCheng.t_CaInfo" />
     <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MDSort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
+        <state relative-caret-position="779">
           <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
           <folding>
             <element signature="e#13#22#0" expanded="true" />
@@ -1143,7 +939,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/propertyList.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="266">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding />
         </state>
@@ -1151,17 +947,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD日期断句.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
+        <state relative-caret-position="247">
           <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="18" selection-end-column="7" />
           <folding>
-            <element signature="e#14#23#0" expanded="true" />
+            <element signature="e#14#23#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD日期断句分词版.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD输出年份格式.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-248">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD择城处理年月.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
+        <state relative-caret-position="-172">
           <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
           <folding>
             <element signature="e#15#28#0" expanded="true" />
@@ -1169,19 +981,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD日期断句分词版.py">
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD去除重复人名简历.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="113">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="42" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD去除重复人名简历.py">
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/SentenceModel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        <state relative-caret-position="318">
+          <caret line="56" column="77" selection-start-line="56" selection-start-column="77" selection-end-line="56" selection-end-column="77" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MDConstructFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="141" column="20" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="20" />
+          <folding>
+            <element signature="e#13#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MDStack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD格式化规则V1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
+          <folding>
+            <element signature="e#13#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
