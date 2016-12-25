@@ -20,9 +20,12 @@ config = {
     'db': 'zeCheng',
     'charset': 'utf8'
 }
+
 conn = mdb.connect(**config)
 #获取游标
 cursor = conn.cursor()
+
+FILE = codecs.open("/Users/lixiaorong/Desktop/result.txt", "r", "utf8")
 
 stack_year = Stack()
 stack_pl = Stack()
@@ -67,7 +70,6 @@ def main(stId):
 
 if __name__ == "__main__":
     idPath = os.path.join(os.path.expanduser("~"), "Desktop", 'stIDs.txt')
-    FILE = codecs.open("")
     with codecs.open(idPath, 'r', 'utf8') as file:
         for line in file.readlines():
             line = line.strip()
