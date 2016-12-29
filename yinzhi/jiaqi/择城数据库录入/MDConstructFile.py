@@ -84,7 +84,7 @@ def praseTagSet(strline):
     :param strline:
     :return:
     '''
-    result = re.findall('(?<=[/])(\w+?)(?=\s)', strline)
+    result = re.findall('(?<=[/])(\w+?)(?=\s)', strline + ' ')
     str = '_'.join(result).rstrip('_')
     # str = str.replace('/', '').rstrip('_')
     return str
