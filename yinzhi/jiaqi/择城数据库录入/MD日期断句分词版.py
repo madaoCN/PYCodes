@@ -64,11 +64,18 @@ if __name__ == "__main__":
         os.makedirs(resultDIR)
     # jieba.enable_parallel(4)#并行分词
     # pool = Pool(5)
-    def funx(args, dire ,files):
-        for file in files:
-            if file.endswith('.txt'):
-                # pool.apply_async(main, (dire, file))
-                main(dire, file)
-    os.path.walk('/Users/liangxiansong/Desktop/test', funx, ())
+    # def funx(args, dire ,files):
+    #     for file in files:
+    #         if file.endswith('.txt'):
+    #             # pool.apply_async(main, (dire, file))
+    #             main(dire, file)
+    # os.path.walk('/Users/liangxiansong/Desktop/test', funx, ())
     # pool.close()
     # pool.join()
+
+    direPath = os.path.join('/Users/liangxiansong/Desktop/test')
+    folderPath = os.path.join('/Users/liangxiansong/Desktop/target.txt')
+    with codecs.open(folderPath, 'r', 'utf8') as file:
+        for lines in file.readlines():
+            lines = lines.strip()
+            main(direPath, lines)

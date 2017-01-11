@@ -63,7 +63,7 @@ def getUrl(target_url, index):
         byteStr[i] = 0x5A ^ byteStr[i]
 
 
-    prepare = Request('POST', curentURL, headers=headers, data = bytes(byteStr)).prepare()
+    prepare = Request('GET', curentURL, headers=headers, data = bytes(byteStr)).prepare()
     # print prepare.headers
     # print prepare.body
     # print prepare._cookies

@@ -28,7 +28,6 @@ cursor = conn.cursor()
 # import sys
 # reload(sys) # Python2.5 初始化后会删除 sys.setdefaultencoding 这个方法，我们需要重新载入
 # sys.setdefaultencoding('utf-8')
-OUT_FILE_DIR = os.path.join(os.path.expanduser("~"), 'Desktop', 'out-v3')
 # FILE = codecs.open(os.path.join(os.path.expanduser("~"), 'Desktop', 'result.txt'), 'a', 'utf8')
 
 MDSortter = MDSort()
@@ -138,9 +137,9 @@ def loadToDB(stModel):
              mdb.escape_string(stModel.origSt), mdb.escape_string(stModel.splitSt),
              mdb.escape_string(stModel.tagSet), mdb.escape_string(stModel.clearSt),
              mdb.escape_string(stModel.hasYear), mdb.escape_string(stModel.sortedTag))
-    print sql
-    # cursor.execute(sql)
-    # conn.commit()
+    # print sql
+    cursor.execute(sql)
+    conn.commit()
 
 def main(dire, file):
     # print dire, file
@@ -148,17 +147,14 @@ def main(dire, file):
     IDX = IDX + 1
     # hmId = uuid.uuid1()
     try:
-        fileName = file
         hmName = None
-        oriList = []
         splitList = []
         modelList = []
-        splitPath = os.path.join(OUT_FILE_DIR, fileName)
-        orginPath = os.path.join(dire, file)
-        hmName = re.search('_(?P<name>.+?)_', fileName).group("name")
-        if os.path.exists(splitPath) and os.path.exists(orginPath):
+        splitPath = os.path.join(dire, file)
+        hmName = re.search('_(?P<name>.+?)_', file).group("name")
+        if os.path.exists(splitPath):
 
-            if judgeYear(getFileContent(orginPath)):
+            if judgeYear(getFileContent(splitPath)):
                 # print '包含1940年前的信息 跳过'
                 # print '**********' + file + '**********'
                 return
@@ -211,7 +207,7 @@ if __name__ == "__main__":
             if file.endswith('.txt'):
                 main(dire, file)
 
-    os.path.walk('/Users/liangxiansong/Desktop/sentences/', funx, ())
+    os.path.walk('/Users/liangxiansong/Desktop/jieba/', funx, ())
 
 
 

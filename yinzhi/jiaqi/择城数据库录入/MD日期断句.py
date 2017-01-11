@@ -9,7 +9,7 @@ resultDIR = os.path.join(os.path.expanduser('~'), 'Desktop', 'result')
 delset = u'''\!"$%&'()\*\+,./:;<=>?@[\]\^_`{|}~;,。、；，：“”（）、？《》'''
 # cp1 = re.compile(u'(?<=[%s自从于在当见间])(?P<year>19\d{2}|20\d{2})[年]' % delset)
 # cp2 = re.compile(u'(?<=[\u4e00-\u9fa5])(19\d{2}|20\d{2})[年]')
-cp1 = re.compile(u'(?<![至到-－-—-～－])(?P<year>19\d{2}|20\d{2})[年]')
+cp1 = re.compile(u'(?<![至到-－-—-～－~])(?P<year>19\d{2}|20\d{2})[年]')
 
 def addTag(content):
     '''
@@ -60,6 +60,6 @@ if __name__ == "__main__":
                 print file
                 pool.apply_async(main, (dire, file))
                 # main(dire, file)
-    os.path.walk('/Users/liangxiansong/Desktop/sentences', funx, ())
+    os.path.walk('/Users/liangxiansong/Desktop/test', funx, ())
     pool.close()
     pool.join()
