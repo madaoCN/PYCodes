@@ -1,17 +1,7 @@
 #coding=utf8
-import codecs
-import os
 import re
-import chardet
-from multiprocessing import Pool
-from SentenceModel import SententceModel
-from MDError import MDError
-import uuid
-import MySQLdb as mdb
-import pymongo
-from MDSort import MDSort
-from MDStack import Stack
 
+import MySQLdb as mdb
 
 LIST = []
 config = {

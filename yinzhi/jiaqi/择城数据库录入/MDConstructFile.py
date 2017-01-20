@@ -2,14 +2,12 @@
 import codecs
 import os
 import re
-import chardet
-from multiprocessing import Pool
-from SentenceModel import SententceModel
-from MDError import MDError
-import uuid
+
 import MySQLdb as mdb
-import pymongo
-from MDSort import MDSort
+
+from MDError import MDError
+from SentenceModel import SententceModel
+from yinzhi.jiaqi.官员数据修正.MDSort import MDSort
 
 IDX = 0
 

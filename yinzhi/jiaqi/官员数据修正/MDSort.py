@@ -38,8 +38,8 @@ class MDSort():
 
 if __name__ == "__main__":
     list = ["Rg", "month", "gwhub", "day", "year"]
-    # # list.sort(lambda x,y:cmp(GLOBAL_SORTKEYS[x],GLOBAL_SORTKEYS[y]))
-    # # list.sort()
+
+
 
 
 

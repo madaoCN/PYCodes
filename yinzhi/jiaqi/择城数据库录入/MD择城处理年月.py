@@ -21,9 +21,12 @@ def fliter(sentence):
     '''
     处理市委
     '''
-    delset = u'''\!"#$%&'()\*\+,-./:;<=>?@[\]\^_`{|}~;,。、'''
+    delset = u'''\!"#$%&'()\*\+,-./:;<=>?@[\]\^_`{|}~;,。、，'''
     sentence = re.sub(u'(?<![%s省市区县州洲])(?P<name>[省市区县州洲])(?P<suff>[委长])' % delset,
                       '\g<name>\g<name>\g<suff>', sentence)
+    # print re.search(u'(?<=[代副(代理)])([省市区县州洲])\1(?=[长])', sentence)
+    sentence = re.sub(u'(?<=[代副(代理)])(?P<name>[省市区县州洲])[省市区县州洲](?=[长])',
+                      '\g<name>', sentence)
     return sentence
 
 def replaceItem(content):
@@ -75,6 +78,6 @@ if __name__ == "__main__":
                 pool.apply_async(doSomething, (dire, file))
                 # main(dire, file)
 
-    os.path.walk('/Users/liangxiansong/Desktop/sentences', funx, ())
+    os.path.walk('/Users/liangxiansong/Desktop/target', funx, ())
     pool.close()
     pool.join()

@@ -1,162 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="MySQL - zeCheng@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
-    <schema id="1" name="zeCheng">
-      <visible>1</visible>
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="zeCheng">
+      <Visible>1</Visible>
     </schema>
-    <schema id="2" name="focusns_prod"/>
-    <schema id="3" name="gtfund_devp"/>
-    <schema id="4" name="information_schema"/>
-    <schema id="5" name="mysql"/>
-    <schema id="6" name="performance_schema"/>
-    <schema id="7" name="sys"/>
-    <table id="8" parent="1" name="t_BaseInfo"/>
-    <table id="9" parent="1" name="t_GovInfo"/>
-    <table id="10" parent="1" name="t_PositionInfo"/>
-    <table id="11" parent="1" name="t_CaInfo"/>
-    <column id="12" parent="8" name="id">
-      <mandatory>1</mandatory>
-      <data-type>int(11)|0</data-type>
-      <sequence-identity>1</sequence-identity>
+    <schema id="3" parent="1" name="focusns_prod"/>
+    <schema id="4" parent="1" name="gtfund_devp"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="sys"/>
+    <table id="9" parent="2" name="t_BaseInfo"/>
+    <table id="10" parent="2" name="t_GovInfo"/>
+    <table id="11" parent="2" name="t_PositionInfo"/>
+    <table id="12" parent="2" name="t_CaInfo"/>
+    <column id="13" parent="9" name="id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="13" parent="8" name="name">
-      <mandatory>1</mandatory>
-      <data-type>varchar(255)|0</data-type>
+    <column id="14" parent="9" name="name">
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="14" parent="8" name="govID">
-      <mandatory>1</mandatory>
-      <data-type>int(11)|0</data-type>
-      <default-expression>&apos;0&apos;</default-expression>
+    <column id="15" parent="9" name="govID">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="15" parent="8" name="primaryNative">
-      <data-type>varchar(255)|0</data-type>
+    <column id="16" parent="9" name="primaryNative">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="16" parent="8" name="secondaryNative">
-      <data-type>varchar(255)|0</data-type>
+    <column id="17" parent="9" name="secondaryNative">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="17" parent="8" name="undergraduateSchool">
-      <data-type>varchar(255)|0</data-type>
+    <column id="18" parent="9" name="undergraduateSchool">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="18" parent="8" name="undergraduateMajor">
-      <data-type>varchar(255)|0</data-type>
+    <column id="19" parent="9" name="undergraduateMajor">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="19" parent="8" name="inDate">
-      <data-type>varchar(255)|0</data-type>
+    <column id="20" parent="9" name="inDate">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="20" parent="8" name="outDate">
-      <data-type>varchar(255)|0</data-type>
+    <column id="21" parent="9" name="outDate">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <index id="21" parent="8" name="govID">
-      <columns>govID</columns>
-      <desc-columns></desc-columns>
+    <index id="22" parent="9" name="govID">
+      <ColNames>govID</ColNames>
     </index>
-    <key id="22" parent="8" name="PRIMARY">
-      <columns>id</columns>
-      <primary>1</primary>
+    <key id="23" parent="9" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
     </key>
-    <column id="23" parent="9" name="id">
-      <mandatory>1</mandatory>
-      <data-type>int(11)|0</data-type>
-      <sequence-identity>1</sequence-identity>
+    <column id="24" parent="10" name="id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="24" parent="9" name="province">
-      <mandatory>1</mandatory>
-      <data-type>varchar(255)|0</data-type>
+    <column id="25" parent="10" name="province">
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="25" parent="9" name="city">
-      <data-type>varchar(255)|0</data-type>
+    <column id="26" parent="10" name="city">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="26" parent="9" name="district">
-      <data-type>varchar(255)|0</data-type>
+    <column id="27" parent="10" name="district">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="27" parent="9" name="PRIMARY">
-      <columns>id</columns>
-      <primary>1</primary>
+    <key id="28" parent="10" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
     </key>
-    <column id="28" parent="10" name="id">
-      <mandatory>1</mandatory>
-      <data-type>int(11)|0</data-type>
-      <sequence-identity>1</sequence-identity>
+    <column id="29" parent="11" name="id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="29" parent="10" name="name">
-      <mandatory>1</mandatory>
-      <data-type>varchar(255)|0</data-type>
+    <column id="30" parent="11" name="name">
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="30" parent="10" name="govID">
-      <mandatory>1</mandatory>
-      <data-type>int(11)|0</data-type>
-      <default-expression>&apos;0&apos;</default-expression>
+    <column id="31" parent="11" name="govID">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="31" parent="10" name="provinceControl">
-      <data-type>varchar(255)|0</data-type>
+    <column id="32" parent="11" name="provinceControl">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="32" parent="10" name="cityControl">
-      <data-type>varchar(255)|0</data-type>
+    <column id="33" parent="11" name="cityControl">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="33" parent="10" name="districtControl">
-      <data-type>varchar(255)|0</data-type>
+    <column id="34" parent="11" name="districtControl">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="34" parent="10" name="position">
-      <data-type>varchar(255)|0</data-type>
+    <column id="35" parent="11" name="position">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="35" parent="10" name="startDate">
-      <data-type>varchar(255)|0</data-type>
+    <column id="36" parent="11" name="startDate">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="36" parent="10" name="endDate">
-      <data-type>varchar(255)|0</data-type>
+    <column id="37" parent="11" name="endDate">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <index id="37" parent="10" name="govID">
-      <columns>govID</columns>
-      <desc-columns></desc-columns>
+    <index id="38" parent="11" name="govID">
+      <ColNames>govID</ColNames>
     </index>
-    <key id="38" parent="10" name="PRIMARY">
-      <columns>id</columns>
-      <primary>1</primary>
+    <key id="39" parent="11" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
     </key>
-    <foreign-key id="39" parent="10" name="fk_area">
-      <columns>govID</columns>
-      <ref-key>~.t_GovInfo.PRIMARY</ref-key>
-      <cascade-update-rule>restrict</cascade-update-rule>
-      <cascade-delete-rule>restrict</cascade-delete-rule>
+    <foreign-key id="40" parent="11" name="fk_area">
+      <ColNames>govID</ColNames>
+      <RefTableName>t_GovInfo</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="40" parent="11" name="id">
-      <mandatory>1</mandatory>
-      <data-type>int(11)|0</data-type>
-      <sequence-identity>1</sequence-identity>
+    <column id="41" parent="12" name="id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="41" parent="11" name="stId">
-      <data-type>varchar(11)|0</data-type>
+    <column id="42" parent="12" name="stId">
+      <DataType>varchar(11)|0</DataType>
     </column>
-    <column id="42" parent="11" name="hmName">
-      <data-type>varchar(255)|0</data-type>
+    <column id="43" parent="12" name="hmName">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="43" parent="11" name="hmId">
-      <data-type>int(11)|0</data-type>
+    <column id="44" parent="12" name="hmId">
+      <DataType>int(11)|0</DataType>
     </column>
-    <column id="44" parent="11" name="fileName">
-      <data-type>varchar(255)|0</data-type>
+    <column id="45" parent="12" name="fileName">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="45" parent="11" name="origSt">
-      <data-type>text|0</data-type>
+    <column id="46" parent="12" name="origSt">
+      <DataType>text|0</DataType>
     </column>
-    <column id="46" parent="11" name="splitTagSt">
-      <data-type>text|0</data-type>
+    <column id="47" parent="12" name="splitTagSt">
+      <DataType>text|0</DataType>
     </column>
-    <column id="47" parent="11" name="tagSet">
-      <data-type>text|0</data-type>
+    <column id="48" parent="12" name="tagSet">
+      <DataType>text|0</DataType>
     </column>
-    <column id="48" parent="11" name="splitOrigSt">
-      <data-type>text|0</data-type>
+    <column id="49" parent="12" name="splitOrigSt">
+      <DataType>text|0</DataType>
     </column>
-    <column id="49" parent="11" name="hasYear">
-      <data-type>varchar(255)|0</data-type>
+    <column id="50" parent="12" name="hasYear">
+      <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="50" parent="11" name="sortedTag">
-      <data-type>text|0</data-type>
+    <column id="51" parent="12" name="sortedTag">
+      <DataType>text|0</DataType>
     </column>
-    <key id="51" parent="11" name="PRIMARY">
-      <columns>id</columns>
-      <primary>1</primary>
+    <key id="52" parent="12" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
     </key>
   </database-model>
 </dataSource>

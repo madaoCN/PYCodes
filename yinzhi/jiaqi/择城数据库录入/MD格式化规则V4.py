@@ -15,7 +15,7 @@ cpNs = re.compile('(?<![a-zA-Z])ns$')
 cpNt = re.compile('(?<![a-zA-Z])nt$')
 cpPosition = re.compile('(?<![a-zA-Z])nposition$')
 
-FILE = codecs.open("/Users/liangxiansong/Desktop/out.txt", "a", "utf8")
+FILE = codecs.open("/Users/liangxiansong/Desktop/out1.txt", "a", "utf8")
 FILE1 = codecs.open("/Users/liangxiansong/Desktop/out1.txt", "a", "utf8")
 maxYear = 0
 maxNs = 0
@@ -74,7 +74,7 @@ def formatNtPosition(list):
     stack_po.clear()
     resutlList = []
     for item in list:
-        if not cpPosition.search(item): #nt
+        if not cpPosition.search(item): #nt / ns
             stack_po.push(item)
         else:#nposition
             tempList = []
@@ -88,60 +88,61 @@ def formatNtPosition(list):
 def mapItemsToList(item, stId):
     '''分割成list形式'''
     resultPo = []
-    resultPl = []
+    # resultPl = []
     resultYear = []
     list = item.split(" ")
     stack_year.clear()
-    stack_pl.clear()
+    # stack_pl.clear()
     stack_po.clear()
     for item in list:
         temp = item.split("/")[-1]
         if temp in ["year", "month"]:
             stack_year.push(item)
-        elif temp in ["ns"]:
-            stack_pl.push(item)
-        elif temp in ["nt", "nposition"]:
+        # elif temp in ["ns"]:
+        #     stack_pl.push(item)
+        elif temp in ["nt", "nposition", "ns"]:
             stack_po.push(item)
 
     while not stack_po.empty():
         resultPo.append(stack_po.pop())
-    while not stack_pl.empty():
-        resultPl.append(stack_pl.pop())
+    # while not stack_pl.empty():
+    #     resultPl.append(stack_pl.pop())
     while not stack_year.empty():
         resultYear.append(stack_year.pop())
 
     resultYear.reverse()
-    resultPl.reverse()
+    # resultPl.reverse()
     resultPo.reverse()
 
 
-    # str =  "##" + '##'.join(formatYear(resultYear))
+    str =  "##" + '##'.join(formatYear(resultYear))
     # str = str + "##" + '##'.join(formatNs(resultPl))
-    # for item in formatNtPosition(resultPo):
-    #     if len(item) > 0:
-    #         str = str + "##" + ' '.join(item)
-    # return str
-
-    result = []
-    result.extend(formatYear(resultYear))
-    result.extend(formatNs(resultPl))
     for item in formatNtPosition(resultPo):
         if len(item) > 0:
-            result.extend(item)
-    # formatNs(resultPl)
-    # formatNtPosition(resultPo)
-    string =  "##".join(map(lambda m : m.split('/')[0] , result))
-    string1 = "##".join(map(lambda m : m.split('/')[-1] , result))
-    FILE.write(stId + '##' + string + '\n')
-    FILE1.write(stId + '##' + string1 + '\n')
+            str = str + "##" + ' '.join(item)
+    return str
+    #
+    # result = []
+    # result.extend(formatYear(resultYear))
+    # # result.extend(formatNs(resultPl))
+    # for item in formatNtPosition(resultPo):
+    #     if len(item) > 0:
+    #         result.extend(item)
+    # # formatNs(resultPl)
+    # # formatNtPosition(resultPo)
+    # string =  "##".join(map(lambda m : m.split('/')[0] , result))
+    # string1 = "##".join(map(lambda m : m.split('/')[-1] , result))
+    # FILE.write(stId + '##' + string + '\n')
+    # FILE1.write(stId + '##' + string1 + '\n')
+
 def loadFile():
-    idPath = os.path.join(os.path.expanduser("~"), "Desktop", 'target.txt')
+    idPath = os.path.join(os.path.expanduser("~"), "Desktop", 'result.txt')
     with codecs.open(idPath, 'r', 'utf8') as file:
         for line in file.readlines():
             line = line.strip()
             mapItemsToList(line.split("##")[6], line.split("##")[1])
-            # string = mapItemsToList(line.split("##")[6], line.split("##")[1])
-            # FILE.write(line + string + '\n')
-
+            string = mapItemsToList(line.split("##")[6], line.split("##")[1])
+            line = "##".join(line.split('##')[0:14])
+            FILE.write(line + string + '\n')
 if __name__ == "__main__":
     loadFile()
