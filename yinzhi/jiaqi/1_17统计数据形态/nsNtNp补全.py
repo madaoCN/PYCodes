@@ -88,7 +88,8 @@ def reverseOtherTree(sentenceList, idx, toCompleteList ,stack, findItem,  tag='n
 
     #若查找字典为空，略过 返回 [原数组]
     if not len(findSet):
-        return returnList
+        print findItem + u'**********未找到前驱'
+        return None
     for innerIdx in xrange(idx, -1, -1):  # 倒序遍历 sentenceList[idx -1 ... 0]
         reverseList = sentenceList[innerIdx]
         # print innerIdx
@@ -107,22 +108,18 @@ def reverseOtherTree(sentenceList, idx, toCompleteList ,stack, findItem,  tag='n
                         and item not in returnList:
                         # and item not in toCompleteList:
                     # returnList.append(item)
+                    print findItem + u'=========找到前驱：' + item
                     return item
                 elif item in findSet \
                         and item != findItem\
                         and item not in stack\
                         and item not in returnList:
                         # and item not in toCompleteList:
+                    print findItem + u'========找到前驱：' + item
                     return item
+    print findItem + u'*******未找到前驱'
     return None
                     # returnList.append(item)
-    print u'查找目标遍历到 %s' % findItem
-    if len(returnList):
-        print u'有输出———---：' + '__'.join(returnList)
-    else:
-        print '---------[]'
-    return returnList
-
 
 def completeSentence(sentenceList):
     for idx in xrange(len(sentenceList) - 1, -1, -1):#倒序遍历 sentenceList
@@ -140,13 +137,13 @@ def completeSentence(sentenceList):
             topItem = currentItem  # 最顶层元素
             tag = topItem.split('/')[-1]
             while flag:
-                tempList = reverseOtherTree(sentenceList, idx, _toCompleteList, stack, topItem, tag=tag)
-                if len(tempList):  # 长度为非0
-                    topItem = tempList[-1]  # 最顶层元素
-                    tag = topItem.split('/')[-1]
+                temp = reverseOtherTree(sentenceList, idx, _toCompleteList, stack, topItem, tag=tag)
+                if temp != None:  # 长度为非0
+                    tag = temp.split('/')[-1]
+                    topItem = temp
                     if not currentItem.endswith('/nposition'):
-                        tempList.insert(0, currentItem)
-                    stack.extend(tempList)
+                        stack.append(currentItem)
+                    stack.append(temp)
                 else:  # 没有顶层元素
                     flag = 0  # 跳出循环
 

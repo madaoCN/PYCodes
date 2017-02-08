@@ -74,7 +74,6 @@ def countUpNPosition(splitedSTList):
         else: #若有键
             if len(spliteByBlankList) > 1:  # 有前驱
                 forItem = spliteByBlankList[-2]
-
                 if cpFindNs.search(forItem):  # 若是ns
                     list = npositionDic[npostionKey]
                     list.extend(re.findall(SpliteStr, forItem))
