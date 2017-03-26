@@ -12,7 +12,6 @@ try:
 except ImportError:
     import xml.etree.ElementTree as ET
 
-
 def sortNposition(list):
     '''
     分割ns， nt，
@@ -21,21 +20,20 @@ def sortNposition(list):
     '''
 
 if __name__ == "__main__":
-
-
+    print [1, 2, 3, 4][0:]
     # excel = pd.read_html('/Users/liangxiansong/Desktop/投资者互动000004.SZ.xls')
     # print excel
 
     # import codecs
     # from bs4 import BeautifulSoup
     #
-    FILe = codecs.open('/Users/liangxiansong/Desktop/out.txt', 'a')
-    with codecs.open('/Users/liangxiansong/Desktop/test.txt', 'r') as file:
-        for item in file.readlines():
-            result = item.strip('\r\n')
-            if len(result) > 0:
-                FILe.write(result)
-                FILe.write('\n')
+    # FILe = codecs.open('/Users/liangxiansong/Desktop/out.txt', 'a')
+    # with codecs.open('/Users/liangxiansong/Desktop/test.txt', 'r') as file:
+    #     for item in file.readlines():
+    #         result = item.strip('\r\n')
+    #         if len(result) > 0:
+    #             FILe.write(result)
+    #             FILe.write('\n')
 
     # dom = xml.dom.minidom.parse('/Users/liangxiansong/Desktop/投资者互动000004.SZ.xls')
     # root = dom.documentElement
@@ -47,7 +45,6 @@ if __name__ == "__main__":
     # ET.register_namespace('html', 'http://www.w3.org/TR/REC-html40')
     # ET.register_namespace('o', 'schemas-microsoft-com:office:office')
     # tree = ET.parse('/Users/liangxiansong/Desktop/投资者互动000004.SZ.xls')
-
 
 
 

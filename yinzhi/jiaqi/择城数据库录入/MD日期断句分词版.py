@@ -50,6 +50,7 @@ def breakWords(dire, fileName):
             sentence = sentence.strip()
             if len(sentence)  > 3:
                 resultFile.write(sentence + '\n')
+
 def main(dire, file):
     try:
         # contetnt = getFileContent(os.path.join(dire, file))

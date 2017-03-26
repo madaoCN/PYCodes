@@ -12,7 +12,7 @@ checkedProxyList = []
 
 #抓取代{过}{滤}理网站
 targets = []
-for i in xrange(1,2):
+for i in xrange(1,3):
     if i != 1:
         target = r"http://www.xicidaili.com/nt/%d" % i
         targets.append(target)

@@ -88,14 +88,14 @@ def reverseOtherTree(sentenceList, idx, toCompleteList ,stack, findItem,  tag='n
 
     #若查找字典为空，略过 返回 [原数组]
     if not len(findSet):
-        print findItem + u'**********未找到前驱'
+        # print findItem + u'**********未找到前驱'
         return None
     for innerIdx in xrange(idx, -1, -1):  # 倒序遍历 sentenceList[idx -1 ... 0]
         reverseList = sentenceList[innerIdx]
         # print innerIdx
         # print '_'.join(reverseList)
         for item in reverseList:#遍历一个 nposition树
-            print u'遍历到', item
+            # print u'遍历到', item
             itemText = item.split('/')[0]
             if item.endswith('nposition'):  # 若是nposition 则跳过
                 continue
@@ -108,16 +108,16 @@ def reverseOtherTree(sentenceList, idx, toCompleteList ,stack, findItem,  tag='n
                         and item not in returnList:
                         # and item not in toCompleteList:
                     # returnList.append(item)
-                    print findItem + u'=========找到前驱：' + item
+                    # print findItem + u'=========找到前驱：' + item
                     return item
                 elif item in findSet \
                         and item != findItem\
                         and item not in stack\
                         and item not in returnList:
                         # and item not in toCompleteList:
-                    print findItem + u'========找到前驱：' + item
+                    # print findItem + u'========找到前驱：' + item
                     return item
-    print findItem + u'*******未找到前驱'
+    # print findItem + u'*******未找到前驱'
     return None
                     # returnList.append(item)
 
@@ -153,16 +153,16 @@ def completeSentence(sentenceList):
             if item in resultSet:
                 stack.append(item)
         # stack.reverse()
-        # yield (idx, stack)
+        yield (idx, stack)
 
-        print '========================='
-        for item in sentenceList:
-            print '__'.join(item)
-        print '*************************'
-        print '__'.join(_toCompleteList)
-        print '__'.join(stack)
-        print '========================='
-        print '\n'
+        # print '========================='
+        # for item in sentenceList:
+        #     print '__'.join(item)
+        # print '*************************'
+        # print '__'.join(_toCompleteList)
+        # print '__'.join(stack)
+        # print '========================='
+        # print '\n'
     # exit()
 
 def main():
@@ -179,21 +179,22 @@ def main():
                 # print '----------'
                 # for item in sentenceList:
                 #     print '__'.join(item)
-                completeSentence(sentenceList)
-            #     for idx, stack in completeSentence(sentenceList):
-            #         # print ' '.join(sentenceList[idx])
-            #         # print ' '.join(stack)
-            #         sentenceList[idx] = stack
-            #     # print '**********'
-            #
-            #     FILE.write('##'.join(splitedList[:18]))
-            #     for item in sentenceList:
-            #         item.reverse()
-            #         FILE.write('##')
-            #         FILE.write(' '.join(item))
-            #     FILE.write('\r\n')
-            # else:
-            #     FILE.write(line + '\r\n')
+                # completeSentence(sentenceList)#console打印
+
+                for idx, stack in completeSentence(sentenceList):
+                    # print ' '.join(sentenceList[idx])
+                    # print ' '.join(stack)
+                    sentenceList[idx] = stack
+                # print '**********'
+
+                FILE.write('##'.join(splitedList[:18]))
+                for item in sentenceList:
+                    item.reverse()
+                    FILE.write('##')
+                    FILE.write(' '.join(item))
+                FILE.write('\r\n')
+            else:
+                FILE.write(line + '\r\n')
 
 
 

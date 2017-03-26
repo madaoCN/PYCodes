@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
+
 from multiprocessing import Process, Pool
 import os, threading
 from bs4 import BeautifulSoup
 import requests
 from requests import Request, Session
-import pymysql,random, selenium, re
+import random, selenium, re
 
 # 下一级的url列表
 URLS = []
@@ -23,11 +24,13 @@ def getTheRemoteAgent():
     f.close()
 
 def getNextUrl(target_url, index):
+
     headers = {'User-Agent':'Mozilla/5.0 (compatible; WOW64; MSIE 10.0; Windows NT 6.2)',
                'X-Requested-With':'XMLHttpRequest',
                "cache-control":"no-cache",
                 "Content-Type":"application/x-www-form-urlencoded"
     }
+
     if index != 0:
         data = {
         'tableId':'33',
@@ -126,12 +129,28 @@ def writeTofile(*arr):
         f.close()
 
 
-# if __name__ == '__name__':
-getTheRemoteAgent()
-pool = Pool()
-for index in range(37):
-    host = 'http://app1.sfda.gov.cn/datasearch/face3/search.jsp'
-    pool.apply_async(getNextUrl, args=(host, index,))
-pool.close()
-pool.join()
-print 'All subprocesses done.'
+def func(arg):
+    print 'this is fine' + str(arg)
+
+
+if __name__ == '__main__':
+    # getTheRemoteAgent()
+    # pool = Pool()
+    # for index in range(37):
+    #     host = 'http://app1.sfda.gov.cn/datasearch/face3/search.jsp'
+    #     pool.apply_async(getNextUrl, args=(host, index,))
+    # pool.close()
+    # pool.join()
+    # print 'All subprocesses done.'
+
+
+
+    pool = Pool()
+    for idx in range(10):
+        pool.apply(func, args=(idx,))
+
+    pool.close()
+    pool.join()
+
+    print 'All subprocesses done.'
+

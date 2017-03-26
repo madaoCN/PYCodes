@@ -73,7 +73,8 @@ class Spider(object):
         # for data in dataStr:
         #     print data.string
         # print dataStr
-
+if __name__ == "__main__":
+    pass
 
 spider = Spider()
 spider.start()

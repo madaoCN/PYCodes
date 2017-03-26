@@ -1,4 +1,4 @@
-#coding=utf8
+# coding=utf8
 from multiprocessing import Process, Pool
 import os, threading
 import requests
@@ -20,19 +20,19 @@ import chardet
 import base64
 import bz2
 
-
 ssl._create_default_https_context = ssl._create_unverified_context
-
-
 
 # 地址列表
 IPANDPORT = []
+
+
 # 获取代理列表
 def getTheRemoteAgent():
     f = open("proxy_list.txt", "r")
     for line in f:
         IPANDPORT.append(line)
     f.close()
+
 
 # 目标host
 HOST_1 = 'http://clientapi.medical-lighter.com/user/short_userinfo'
@@ -41,7 +41,8 @@ HOST_3 = 'http://api.doctorpda.cn/api/app/client/open?app_key=f1c18i2otirc0004&c
 # session会话
 session = Session()
 
-#第一级url
+
+# 第一级url
 def getUrl(target_url, index):
     # print target_url
     print index
@@ -53,7 +54,7 @@ def getUrl(target_url, index):
                'Connection': 'keep-alive',
                'Content-Type': 'application/x-www-form-urlencoded',
                'Accept-Language': 'zh-cn',
-    }
+               }
 
     s = '''{\"device\":{\"platform\":\"android\",\"idfa\":\"e721e44d-ba72-3ec7-b90c-cd0d81bd8932\",\"macAddress\":\"9c:c1:72:6f:4d:59\",\"imei\":\"864036028378890\"},\"command\":\"message\\/notification\",\"user\":{\"uid\":\"302142\",\"nickname\":\"unicorn1369\",\"access_token\":\"y7NQT9BV8BB8F~nPdDjlf5ir7amkekGpjKpT7-QVn85sZ4FVertH-2w6EfgnPJIECwDGBGZbKqSAizFe\"},\"soft\":{\"coopId\":\"10020\",\"version\":\"2.1.4\",\"productId\":\"3001\"},\"request\":{\"user_id\":\"302143\"}}'''
     c = zlib.compress(s)
@@ -62,8 +63,7 @@ def getUrl(target_url, index):
     for i in range(0, len(byteStr)):
         byteStr[i] = 0x5A ^ byteStr[i]
 
-
-    prepare = Request('GET', curentURL, headers=headers, data = bytes(byteStr)).prepare()
+    prepare = Request('GET', curentURL, headers=headers, data=bytes(byteStr)).prepare()
     # print prepare.headers
     # print prepare.body
     # print prepare._cookies
@@ -76,7 +76,7 @@ def getUrl(target_url, index):
             # proxy = {'http': 'http://%s' % IPANDPORT[ind].strip()}
             # print proxy
             # result = session.send(prepare, timeout=20, proxies = proxy)
-            result = session.send(prepare ,timeout=5)
+            result = session.send(prepare, timeout=5)
             success = True
             result.encoding = 'utf8'
         except Exception, e:
@@ -99,12 +99,14 @@ def getUrl(target_url, index):
     except Exception, e:
         print e
 
-#解析用户名,关注,点赞,阅读数python bz2.decompress
+
+# 解析用户名,关注,点赞,阅读数python bz2.decompress
 def praseJsonForOne(response, index):
     print '+++++++++++++++++++++++++++++++++++++'
     client = MongoClient()
     myDB = client['zsyxDB']
-    print myDB.web.insert({'index':index, 'data':response})
+    print myDB.web.insert({'index': index, 'data': response})
+
 
 #
 # if __name__ == '__name__':
