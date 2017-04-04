@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77a0c3b0-3d4f-4e83-925b-b62333793223" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nerverStop/__init__.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nerverStop/palyground.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yinzhi/LetsDosomething/MD编码转换.py" />
@@ -24,6 +25,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/网页测试.py" afterPath="$PROJECT_DIR$/网页测试.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/西刺国内代理.py" afterPath="$PROJECT_DIR$/西刺国内代理.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/西刺国内普通代理.py" afterPath="$PROJECT_DIR$/西刺国内普通代理.py" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/学习目录/gevent/gevent+multiprocessing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/学习目录/gevent/子进程.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/学习目录/gevent/线程局部变量.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/学习目录/gevent/锁和信号量.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/学习目录/nltk/playground.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/学习目录/nltk/文本相似度.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/学习目录/nltk/第五章分类和标注词汇/POSTagging.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
     </list>
     <ignored path="pythonCodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,6 +47,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/pythonCodes$palyground.coverage" NAME="palyground Coverage Results" MODIFIED="1490147822483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/nerverStop" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDGetBaiduWord.coverage" NAME="MDGetBaiduWord Coverage Results" MODIFIED="1473572367562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDcopy.coverage" NAME="MD路径列表copy指定地点 Coverage Results" MODIFIED="1474258305882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
@@ -57,13 +69,20 @@
     <SUITE FILE_PATH="coverage/pythonCodes$MDFindTitle.coverage" NAME="MDFindTitle Coverage Results" MODIFIED="1474086902297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/出题工具" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDWriteExcel.coverage" NAME="MDWriteExcel Coverage Results" MODIFIED="1473584857533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
     <SUITE FILE_PATH="coverage/pythonCodes$playground__2_.coverage" NAME="playground (2) Coverage Results" MODIFIED="1484740401411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/树" />
+=======
+    <SUITE FILE_PATH="coverage/pythonCodes$MDExcel2Json.coverage" NAME="MDExcel2Json Coverage Results" MODIFIED="1479707934897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
+    <SUITE FILE_PATH="coverage/pythonCodes$nsNtNp.coverage" NAME="nsNtNp补全 Coverage Results" MODIFIED="1484916286379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/1_17统计数据形态" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDFliter.coverage" NAME="MDFliter Coverage Results" MODIFIED="1477546907648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDexcel.coverage" NAME="MD追加excel Coverage Results" MODIFIED="1475218414824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork/XBRL统计第一步" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
     <SUITE FILE_PATH="coverage/pythonCodes$MDPraseDetail.coverage" NAME="MDPraseDetail Coverage Results" MODIFIED="1474009308826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
-    <SUITE FILE_PATH="coverage/pythonCodes$MDMySql.coverage" NAME="MDMySql Coverage Results" MODIFIED="1473155198202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
-    <SUITE FILE_PATH="coverage/pythonCodes$TLGetDes.coverage" NAME="TLGetDes Coverage Results" MODIFIED="1481449148632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider/通联数据" />
-    <SUITE FILE_PATH="coverage/pythonCodes$MDRemoveInputText.coverage" NAME="MDRemoveInputText Coverage Results" MODIFIED="1476861991291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
+    <SUITE FILE_PATH="coverage/pythonCodes$maxsizeQueue.coverage" NAME="maxsizeQueue Coverage Results" MODIFIED="1490974153688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/学习目录/gevent" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDCounterYear__1_.coverage" NAME="MDCounterYear (1) Coverage Results" MODIFIED="1473057813913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/GET" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDPraseXML.coverage" NAME="MDPraseXML Coverage Results" MODIFIED="1472981810949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDCounterYear.coverage" NAME="MDCounterYear Coverage Results" MODIFIED="1473242909494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork/GET" />
     <SUITE FILE_PATH="coverage/pythonCodes$nt.coverage" NAME="统计查找未识别的nt Coverage Results" MODIFIED="1486716615271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/1_17统计数据形态" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDSqlBaseInfo.coverage" NAME="MDSqlBaseInfo Coverage Results" MODIFIED="1473152655944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/pythonCodes$Unittests_in_pythonCode.coverage" NAME="Unittests in pythonCode Coverage Results" MODIFIED="1476927724268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDConstructFile.coverage" NAME="MDConstructFile Coverage Results" MODIFIED="1482482320437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入" />
     <SUITE FILE_PATH="coverage/pythonCodes$TLGetTitle.coverage" NAME="TLGetTitle Coverage Results" MODIFIED="1481445205033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider/通联数据" />
@@ -92,17 +111,73 @@
     <SUITE FILE_PATH="coverage/pythonCodes$MDRename.coverage" NAME="MDRename Coverage Results" MODIFIED="1475134826638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDSort.coverage" NAME="MDSort Coverage Results" MODIFIED="1484629351611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/官员数据修正" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDGetPosition.coverage" NAME="MDGetPosition Coverage Results" MODIFIED="1474009431300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+=======
+    <SUITE FILE_PATH="coverage/pythonCodes$greenlet.coverage" NAME="子类化greenlet Coverage Results" MODIFIED="1490972640495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/学习目录/gevent" />
+    <SUITE FILE_PATH="coverage/pythonCodes$playground__1_.coverage" NAME="playground (1) Coverage Results" MODIFIED="1485165423713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/1_17统计数据形态" />
+    <SUITE FILE_PATH="coverage/pythonCodes$getCIK.coverage" NAME="getCIK Coverage Results" MODIFIED="1475151184421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
+    <SUITE FILE_PATH="coverage/pythonCodes$SentenceModel.coverage" NAME="SentenceModel Coverage Results" MODIFIED="1482390601674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入" />
+    <SUITE FILE_PATH="coverage/pythonCodes$groupOtherSytle.coverage" NAME="groupOtherSytle Coverage Results" MODIFIED="1490974398556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/学习目录/gevent" />
+    <SUITE FILE_PATH="coverage/pythonCodes$pool.coverage" NAME="pool Coverage Results" MODIFIED="1490974501191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/学习目录/gevent" />
+    <SUITE FILE_PATH="coverage/pythonCodes$POSTagging.coverage" NAME="POSTagging Coverage Results" MODIFIED="1491273654264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/学习目录/nltk/第五章分类和标注词汇" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDFindTitle.coverage" NAME="MDFindTitle Coverage Results" MODIFIED="1474086902297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/出题工具" />
+    <SUITE FILE_PATH="coverage/pythonCodes$Queue.coverage" NAME="Queue Coverage Results" MODIFIED="1490973962298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/学习目录/gevent" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDGetBaiduWord.coverage" NAME="MDGetBaiduWord Coverage Results" MODIFIED="1473572367562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$TLGetTitle.coverage" NAME="TLGetTitle Coverage Results" MODIFIED="1481445205033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider/通联数据" />
+    <SUITE FILE_PATH="coverage/pythonCodes$POST.coverage" NAME="POST请求 Coverage Results" MODIFIED="1483089746900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
     <SUITE FILE_PATH="coverage/pythonCodes$MDRules.coverage" NAME="MDRules Coverage Results" MODIFIED="1474512202974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
+    <SUITE FILE_PATH="coverage/pythonCodes$gevent.coverage" NAME="gevent状态 Coverage Results" MODIFIED="1490972745595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/学习目录/gevent" />
+    <SUITE FILE_PATH="coverage/pythonCodes$Unittests_in_pythonCode.coverage" NAME="Unittests in pythonCode Coverage Results" MODIFIED="1476927724268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonCodes$Unittests_in_pythonCode__1_.coverage" NAME="Unittests in pythonCode (1) Coverage Results" MODIFIED="1473753652357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonCodes$TLGetDes.coverage" NAME="TLGetDes Coverage Results" MODIFIED="1481449148632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider/通联数据" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDStep2.coverage" NAME="MD格式化数据Step2 Coverage Results" MODIFIED="1484141794231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/官员数据修正" />
-    <SUITE FILE_PATH="coverage/pythonCodes$MDV4.coverage" NAME="MD格式化规则V4 Coverage Results" MODIFIED="1484141917779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入" />
-    <SUITE FILE_PATH="coverage/pythonCodes$spider.coverage" NAME="spider Coverage Results" MODIFIED="1476595892088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/出题工具" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDUrlretireve.coverage" NAME="MDUrlretireve Coverage Results" MODIFIED="1473424301674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDCIK.coverage" NAME="MD统计CIK Coverage Results" MODIFIED="1475941837417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork/XBRL补充10-5" />
     <SUITE FILE_PATH="coverage/pythonCodes$16.coverage" NAME="倒退16秒 Coverage Results" MODIFIED="1479707767843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
-    <SUITE FILE_PATH="coverage/pythonCodes$mergeExcelEHD.coverage" NAME="mergeExcelEHD Coverage Results" MODIFIED="1486604313849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/huijie" />
-    <SUITE FILE_PATH="coverage/pythonCodes$MDTest.coverage" NAME="MDTest Coverage Results" MODIFIED="1473600568122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$playground__2_.coverage" NAME="playground (2) Coverage Results" MODIFIED="1484740401411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/树" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDResumeWork.coverage" NAME="MDResumeWork Coverage Results" MODIFIED="1473953285793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
+    <SUITE FILE_PATH="coverage/pythonCodes$DownLoadXML.coverage" NAME="DownLoadXML Coverage Results" MODIFIED="1475501579716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/www.sec.gov" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDWords.coverage" NAME="MDWords Coverage Results" MODIFIED="1473041442499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDRemoveInputText.coverage" NAME="MDRemoveInputText Coverage Results" MODIFIED="1476861991291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MD.coverage" NAME="MD格式化数据 Coverage Results" MODIFIED="1484620128229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/官员数据修正" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDSqlPosition.coverage" NAME="MDSqlPosition Coverage Results" MODIFIED="1473152608434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDReTest.coverage" NAME="MDReTest Coverage Results" MODIFIED="1474166208600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDPraiseHtml.coverage" NAME="MDPraiseHtml Coverage Results" MODIFIED="1473068510599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDGetPosition.coverage" NAME="MDGetPosition Coverage Results" MODIFIED="1474009431300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDSql.coverage" NAME="MDSql Coverage Results" MODIFIED="1482224087248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDReverseDir.coverage" NAME="MDReverseDir Coverage Results" MODIFIED="1474513343692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDV4.coverage" NAME="MD格式化规则V4 Coverage Results" MODIFIED="1484141917779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入" />
+    <SUITE FILE_PATH="coverage/pythonCodes$.coverage" NAME="子进程 Coverage Results" MODIFIED="1491056812212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/学习目录/gevent" />
     <SUITE FILE_PATH="coverage/pythonCodes$MDFindUnDownLoad.coverage" NAME="MDFindUnDownLoad Coverage Results" MODIFIED="1474041887412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/pythonCodes$playground__3_.coverage" NAME="playground (3) Coverage Results" MODIFIED="1486990745475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonCodes$playground.coverage" NAME="playground Coverage Results" MODIFIED="1487571948722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi" />
+=======
+    <SUITE FILE_PATH="coverage/pythonCodes$playground__3_.coverage" NAME="playground (3) Coverage Results" MODIFIED="1486551858083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pythonCodes$mergeExcelEHD.coverage" NAME="mergeExcelEHD Coverage Results" MODIFIED="1486604313849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/huijie" />
+    <SUITE FILE_PATH="coverage/pythonCodes$group.coverage" NAME="group Coverage Results" MODIFIED="1490974259663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/学习目录/gevent" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDRename.coverage" NAME="MDRename Coverage Results" MODIFIED="1475134826638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDCompressFile.coverage" NAME="MDCompressFile Coverage Results" MODIFIED="1474513407192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
+    <SUITE FILE_PATH="coverage/pythonCodes$html.coverage" NAME="html抽取文字 Coverage Results" MODIFIED="1481178984775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider" />
+    <SUITE FILE_PATH="coverage/pythonCodes$spider.coverage" NAME="spider Coverage Results" MODIFIED="1476595892088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/出题工具" />
+    <SUITE FILE_PATH="coverage/pythonCodes$TLDownCsv.coverage" NAME="TLDownCsv Coverage Results" MODIFIED="1481441826974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Spider/通联数据" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDMySql.coverage" NAME="MDMySql Coverage Results" MODIFIED="1473155198202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDReDownLoadBD.coverage" NAME="MDReDownLoadBD Coverage Results" MODIFIED="1473748892420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDH2.coverage" NAME="MD统计百科H2标签 Coverage Results" MODIFIED="1474252168795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
+    <SUITE FILE_PATH="coverage/pythonCodes$DownLoadFiles.coverage" NAME="DownLoadFiles Coverage Results" MODIFIED="1473685645888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/www.sec.gov" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDcopy.coverage" NAME="MD路径列表copy指定地点 Coverage Results" MODIFIED="1474258305882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
+    <SUITE FILE_PATH="coverage/pythonCodes$sentenceModel.coverage" NAME="sentenceModel Coverage Results" MODIFIED="1482244339605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDTest.coverage" NAME="MDTest Coverage Results" MODIFIED="1473600568122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDCounter.coverage" NAME="MDCounter Coverage Results" MODIFIED="1473051897243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDWriteExcel.coverage" NAME="MDWriteExcel Coverage Results" MODIFIED="1473584857533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDConstructFile.coverage" NAME="MDConstructFile Coverage Results" MODIFIED="1482482320437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDshao.coverage" NAME="MD监控shao Coverage Results" MODIFIED="1477617073217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
+    <SUITE FILE_PATH="coverage/pythonCodes$playground.coverage" NAME="playground Coverage Results" MODIFIED="1491273086481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/学习目录/nltk" />
+    <SUITE FILE_PATH="coverage/pythonCodes$mergeExcelINVestigation.coverage" NAME="mergeExcelINVestigation Coverage Results" MODIFIED="1486604439202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/huijie" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDSort.coverage" NAME="MDSort Coverage Results" MODIFIED="1484629351611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/jiaqi/官员数据修正" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MDQ5.coverage" NAME="MDQ5查遗漏 Coverage Results" MODIFIED="1475990770743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/10KWork/XBRL补充10-5" />
+    <SUITE FILE_PATH="coverage/pythonCodes$MD10k.coverage" NAME="MD统计数据库中10k数目 Coverage Results" MODIFIED="1475557850345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/yinzhi/LetsDosomething" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -113,21 +188,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="palyground.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nerverStop/palyground.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
               <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+=======
+      <file leaf-file-name="playground.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/学习目录/nltk/playground.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="e#14#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="POSTagging.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/学习目录/nltk/第五章分类和标注词汇/POSTagging.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="pybloom.py" pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/var/pyenv/versions/2.7.12/lib/python2.7/site-packages/pybloom/pybloom.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="163">
               <caret line="94" column="68" lean-forward="false" selection-start-line="94" selection-start-column="68" selection-end-line="94" selection-end-column="68" />
+=======
+      <file leaf-file-name="文本相似度.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/学习目录/nltk/文本相似度.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="147" column="5" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
               <folding />
             </state>
           </provider>
@@ -211,6 +314,7 @@
         <option value="$PROJECT_DIR$/logging.config" />
         <option value="$PROJECT_DIR$/yinzhi/huijie/mergeExcelINVestigation.py" />
         <option value="$PROJECT_DIR$/yinzhi/huijie/mergeExcelEHD.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/yinzhi/jiaqi/utils/统计择城网省市区县数目.py" />
         <option value="$PROJECT_DIR$/yinzhi/jiaqi/utils/百度百科目录写入excel.py" />
         <option value="$PROJECT_DIR$/yinzhi/jiaqi/MD输出职位分词句子.py" />
@@ -233,6 +337,27 @@
         <option value="$PROJECT_DIR$/西刺国内普通代理.py" />
         <option value="$PROJECT_DIR$/yinzhi/playground.py" />
         <option value="$PROJECT_DIR$/nerverStop/palyground.py" />
+=======
+        <option value="$PROJECT_DIR$/学习目录/gevent/创建greenlet.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/子类化greenlet.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/gevent状态.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/程序停止.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/超时.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/事件.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/事件的拓展.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/Queue.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/maxsizeQueue.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/group.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/groupOtherSytle.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/pool.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/锁和信号量.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/线程局部变量.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/子进程.py" />
+        <option value="$PROJECT_DIR$/学习目录/gevent/gevent+multiprocessing.py" />
+        <option value="$PROJECT_DIR$/学习目录/nltk/文本相似度.py" />
+        <option value="$PROJECT_DIR$/学习目录/nltk/playground.py" />
+        <option value="$PROJECT_DIR$/学习目录/nltk/第五章分类和标注词汇/POSTagging.py" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       </list>
     </option>
   </component>
@@ -243,10 +368,27 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="46" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="773" />
+=======
+    <option name="x" value="719" />
+    <option name="y" value="43" />
+    <option name="width" value="1280" />
+    <option name="height" value="924" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -270,6 +412,12 @@
               <option name="myItemId" value="pythonCodes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pythonCodes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -285,7 +433,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="nerverStop" />
+=======
+              <option name="myItemId" value="学习目录" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="学习目录" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nltk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pythonCodes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="学习目录" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nltk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="第五章分类和标注词汇" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -298,12 +490,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="/usr/local/var/pyenv/versions/3.4.2/bin/python" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="SearchEverywhereHistoryKey" value="os.path.walk&#9;null&#9;null" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -313,57 +506,90 @@
       <recent name="$PROJECT_DIR$/yinzhi/jiaqi/官员数据修正" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python.palyground">
     <configuration default="false" name="西刺国内代理" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+  <component name="RunManager" selected="Python.POSTagging">
+    <configuration default="false" name="锁和信号量" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/学习目录/gevent" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonCodes" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/西刺国内代理.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/学习目录/gevent/锁和信号量.py" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
+<<<<<<< HEAD
     <configuration default="false" name="西刺国内普通代理" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration default="false" name="线程局部变量" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/学习目录/gevent" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonCodes" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/西刺国内普通代理.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/学习目录/gevent/线程局部变量.py" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
+<<<<<<< HEAD
     <configuration default="false" name="西刺国外代理" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration default="false" name="子进程" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/学习目录/gevent" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonCodes" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/西刺国外代理.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/学习目录/gevent/子进程.py" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -375,31 +601,51 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/yinzhi" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/学习目录/nltk" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonCodes" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/yinzhi/playground.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/学习目录/nltk/playground.py" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
+<<<<<<< HEAD
     <configuration default="false" name="palyground" type="PythonConfigurationType" factoryName="Python" temporary="true">
+=======
+    <configuration default="false" name="POSTagging" type="PythonConfigurationType" factoryName="Python" temporary="true">
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/nerverStop" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/学习目录/nltk/第五章分类和标注词汇" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pythonCodes" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nerverStop/palyground.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/学习目录/nltk/第五章分类和标注词汇/POSTagging.py" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -422,12 +668,6 @@
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -502,7 +742,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
+      <command value="run-script" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
@@ -619,6 +859,7 @@
       <method />
     </configuration>
     <list size="5">
+<<<<<<< HEAD
       <item index="0" class="java.lang.String" itemvalue="Python.西刺国内代理" />
       <item index="1" class="java.lang.String" itemvalue="Python.西刺国内普通代理" />
       <item index="2" class="java.lang.String" itemvalue="Python.西刺国外代理" />
@@ -632,6 +873,21 @@
         <item index="2" class="java.lang.String" itemvalue="Python.playground" />
         <item index="3" class="java.lang.String" itemvalue="Python.西刺国外代理" />
         <item index="4" class="java.lang.String" itemvalue="Python.西刺国内普通代理" />
+=======
+      <item index="0" class="java.lang.String" itemvalue="Python.锁和信号量" />
+      <item index="1" class="java.lang.String" itemvalue="Python.线程局部变量" />
+      <item index="2" class="java.lang.String" itemvalue="Python.子进程" />
+      <item index="3" class="java.lang.String" itemvalue="Python.playground" />
+      <item index="4" class="java.lang.String" itemvalue="Python.POSTagging" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.POSTagging" />
+        <item index="1" class="java.lang.String" itemvalue="Python.playground" />
+        <item index="2" class="java.lang.String" itemvalue="Python.子进程" />
+        <item index="3" class="java.lang.String" itemvalue="Python.线程局部变量" />
+        <item index="4" class="java.lang.String" itemvalue="Python.锁和信号量" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       </list>
     </recent_temporary>
   </component>
@@ -661,27 +917,43 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="46" y="23" width="1280" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3578352" sideWeight="0.8179669" order="0" side_tool="false" content_ui="combo" />
+=======
+    <frame x="719" y="43" width="1280" height="924" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23515625" sideWeight="0.8179669" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298193" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31464174" sideWeight="0.32429907" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32011747" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40675476" sideWeight="0.67570096" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32078314" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3754386" sideWeight="0.67570096" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28529412" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28109854" sideWeight="0.18203309" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43524095" sideWeight="0.6070312" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4350877" sideWeight="0.6070312" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14558823" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+<<<<<<< HEAD
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32599118" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -769,6 +1041,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/1_17统计数据形态/单独统计.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -787,11 +1060,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+=======
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD提取html文本.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2016.3/python_stubs/-1856293957/__builtin__.py">
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD择城处理年月.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD新增统计year个数.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD格式化规则V1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="122" column="23" selection-start-line="122" selection-start-column="23" selection-end-line="122" selection-end-column="23" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/择城数据库录入/MD格式化规则V3.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="162">
           <caret line="743" column="8" lean-forward="false" selection-start-line="743" selection-start-column="8" selection-end-line="743" selection-end-column="8" />
         </state>
@@ -861,11 +1162,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+=======
+        <state relative-caret-position="18">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/官员数据修正/MD过滤行数.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/官员数据修正/MD格式化数据Step2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/官员数据修正/MD格式化数据.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/1_17统计数据形态/补充街道办事处代码.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/1_17统计数据形态/脏数据.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/1_17统计数据形态/playground.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/1_17统计数据形态/单独统计.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/1_17统计数据形态/关联统计.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/jiaqi/1_17统计数据形态/nsNtNp补全.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="102" column="26" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
+          <folding>
+            <element signature="e#13#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/360代理.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/collections.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/types.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/logging/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/myapp.log" />
+    <entry file="file://$PROJECT_DIR$/logging.config">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="368">
           <caret line="70" column="11" lean-forward="false" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
         </state>
@@ -879,12 +1262,28 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scrapy/CSDNBlog/CSDNBlog/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="450">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/playground.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yinzhi/huijie/mergeExcelEHD.py">
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Scrapy/w3school/w3school_data_utf8.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1039,10 +1438,167 @@
           <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
           <folding>
             <element signature="e#14#55#0" expanded="false" />
+=======
+    <entry file="file://$PROJECT_DIR$/yinzhi/huijie/mergeExcelINVestigation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/创建greenlet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/子类化greenlet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/gevent状态.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2016.2/python_stubs/-1279246775/signal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/程序停止.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/var/pyenv/versions/3.4.2/lib/python3.4/site-packages/gevent/hub.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="168" column="0" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/超时.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/事件.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="23" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/事件的拓展.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/Queue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="24" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/maxsizeQueue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/groupOtherSytle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/pool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/var/pyenv/versions/3.4.2/lib/python3.4/site-packages/gevent/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1767">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/var/pyenv/versions/3.4.2/lib/python3.4/site-packages/gevent/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/var/pyenv/versions/3.4.2/lib/python3.4/site-packages/gevent/_semaphore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="245" column="22" selection-start-line="245" selection-start-column="6" selection-end-line="245" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/锁和信号量.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/线程局部变量.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/var/pyenv/versions/3.4.2/lib/python3.4/site-packages/gevent/subprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/子进程.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#13#0" expanded="false" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/yinzhi/sns.sseinfo.com/produceURL.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1071,10 +1627,44 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2375">
           <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+=======
+    <entry file="file:///usr/local/var/pyenv/versions/3.4.2/lib/python3.4/site-packages/gevent/_socket3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="491" column="43" selection-start-line="491" selection-start-column="39" selection-end-line="491" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/gevent/gevent+multiprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#13#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/var/pyenv/versions/3.4.2/lib/python3.4/site-packages/gevent/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="e#717#727#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/var/pyenv/versions/3.4.2/lib/python3.4/__future__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="56" column="21" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="21" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/yinzhi/sns/reverseDay.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1105,6 +1695,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+=======
+    <entry file="file://$PROJECT_DIR$/学习目录/nltk/文本相似度.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="147" column="5" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/nltk/playground.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/学习目录/nltk/第五章分类和标注词汇/POSTagging.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+>>>>>>> fafb95028fb58da18b26c9a4e87d643d2a570d33
           <folding />
         </state>
       </provider>
