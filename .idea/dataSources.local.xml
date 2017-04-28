@@ -9,7 +9,9 @@
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
+      <introspection-schemas>*:zeCheng</introspection-schemas>
       <resolve-scope>zeCheng:</resolve-scope>
+      <unqualified-resolve-schemas>zeCheng:</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>
