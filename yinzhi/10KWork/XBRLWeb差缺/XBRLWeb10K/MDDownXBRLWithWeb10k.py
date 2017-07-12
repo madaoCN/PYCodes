@@ -1,16 +1,14 @@
 #!/usr/bin/python
 #coding=utf8
 
-import requests
-import os
-import urllib
-from bs4 import BeautifulSoup
-import re
-from requests import Request, Session
-from multiprocessing import Pool,Process
-import time
-import MDCompressFile
 import codecs
+import os
+import re
+from multiprocessing import Pool
+
+import requests
+from bs4 import BeautifulSoup
+from requests import Session
 
 #BASE
 BASEURL = 'https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=%s&type=10-K&dateb=&owner=exclude&count=100'

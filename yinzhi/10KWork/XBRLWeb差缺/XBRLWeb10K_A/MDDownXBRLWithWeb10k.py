@@ -35,23 +35,7 @@ def downUrlRetrieve(url):
             'Content-Type': 'application/x-www-form-urlencoded',
             'Accept-Language': 'zh-CN,zh;q=0.8',
             }
-        # prepare = Request('GET', url, headers=header).prepare()
-        #
-        # # index = random.randint(0, len(IPANDPORT) - 1)
-        # # proxy = {'http': 'http://%s' % IPANDPORT[index].strip()}
-        # # print proxy
-        # result = session.send(prepare, timeout=10)
         r = requests.get(url, headers=header)
-
-        # fileDir = os.path.join(os.path.expanduser("~"), 'Desktop','test')
-        # if not os.path.exists(fileDir):
-        #     os.makedirs(fileDir)
-        #     print '创建目录。。', fileDir
-        # desktopPath = os.path.join(fileDir, 'baike_1.html')
-        # print '-------------' + desktopPath
-        # with open(desktopPath, "wb") as code:
-        #     # code.write(MDCompressFile.gzip_compress(r.content))
-        #     code.write(r.content)
         return r.content
     except Exception, e:
         print e
@@ -59,6 +43,7 @@ def downUrlRetrieve(url):
 
 
 def praisToGetDocumentsPage(content, year):
+    '''从文档中解析出10K文档的下载地址'''
     soup = BeautifulSoup(content, 'lxml')
     table = soup.find('table', {'summary': 'Results'})
     trs = table.find_all('tr')
@@ -90,7 +75,7 @@ def praisToGetDocumentsPage(content, year):
 
 def praisToGetCateDocDownLink(content, year):
     '''
-	获取分类文档下载地址
+	解析文档内容，并获取分类文档下载地址
 	'''
     soup = BeautifulSoup(content, 'lxml')
     aArr = soup.find_all('a')
@@ -105,43 +90,36 @@ def praisToGetCateDocDownLink(content, year):
     #		pass
     # 获取Accepted 和 Period
     formContent = soup.find('div', {'class': 'formContent'})
-    try:
-        for formGrouping in formContent:
-            # 尝试获取formGrouping
-            try:
-                for div in formGrouping.find_all('div', {'class': 'infoHead'}):
-                    divContent = div.text
-                    try:
-                        if re.search('Period', divContent):  # 寻找Period
-                            divBro = div.next_sibling.next_sibling
-                            if divBro:
-                                period = divBro.text
 
-                    except:
-                        pass
-                    try:
-                        if re.search('Accepted', divContent):  # 寻找Period
-                            divBro = div.next_sibling.next_sibling
-                            if divBro:
-                                accepted = divBro.text
-                    except:
-                        pass
+    for formGrouping in formContent:
+        # 尝试获取formGrouping
+        for div in formGrouping.find_all('div', {'class': 'infoHead'}):
+            divContent = div.text
+            try:
+                if re.search('Period', divContent):  # 寻找Period
+                    divBro = div.next_sibling.next_sibling
+                    if divBro:
+                        period = divBro.text
+
             except:
                 pass
-    except:
-        pass
+            try:
+                if re.search('Accepted', divContent):  # 寻找Period
+                    divBro = div.next_sibling.next_sibling
+                    if divBro:
+                        accepted = divBro.text
+            except:
+                pass
+
     if year != period[:4]:
         yield 'None'
     else:
-        flag = 0  # 为零则说明没有。xml类型的文档
+        flag = 0  # 为零则说明没有xml类型的文档
         for a in aArr:
-            try:
-                link = a['href']  # 获取下载链接
-                if re.search('\d.xml', link):
-                    yield (link, period, accepted)
-                    flag = 1
-            except:
-                pass
+            link = a['href']  # 获取下载链接
+            if re.search('\d.xml', link):
+                yield (link, period, accepted)
+                flag = 1
         if flag == 0:
             yield ('/n_a', period, accepted)
 
@@ -176,7 +154,7 @@ def downXBRLDoc(url, cik, params, tag):
 
 def getCategoryDoc(url, cik, year, tag):
     '''
-	获取分类文档
+	解析文档，并获取下载链接
 	'''
     targetURL = HOMEURL + url
     content = downUrlRetrieve(targetURL)
@@ -190,18 +168,17 @@ def getCategoryDoc(url, cik, year, tag):
 
 
 def main(cik, year):
+    '''构造文档下载链接'''
     content = downUrlRetrieve(BASEURL % cik)
-    for item in praisToGetDocumentsPage(content, year):
+    for item in (content, year):
         getCategoryDoc(item[0], cik, year, item[1])
 
 
 if __name__ == "__main__":
-    # getTheRemoteAgent()
-    #	main("0000320187", '2015')
     import codecs
 
     pool = Pool(5)
-    with codecs.open('target.txt') as file:
+    with codecs.open('target.txt') as file:#遍历下载文件列表
         for line in file.readlines():
             sp = line.strip().split('#')
             # print sp[0], sp[1]

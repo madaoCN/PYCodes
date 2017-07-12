@@ -173,7 +173,6 @@ def main(cik, year):
 		pool.apply_async(getCategoryDoc, args=(item, cik,))
 	pool.close()
 	pool.join()
-	
 
 if __name__ == "__main__":
 	# getTheRemoteAgent()

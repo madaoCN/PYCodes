@@ -76,13 +76,13 @@ def categoryXML(path,nsmap, itemArr):
     writeToXML(nsmap, itemArr, originPath)
 
     # 写入元素
-    base = []
-    baseSure = []
-    baseNotSure = []
+    base = []# 基本分类文档地址(基本待定)
+    baseSure = []# 基本分类文档地址(确认)
+    baseNotSure = []# 基本分类文档地址(未确认)
     # 拓展
-    extend = []
-    extendSure = []
-    extendNotSure = []
+    extend = []# 拓展分类文档地址(基本待定)
+    extendSure = []# 拓展分类文档地址(确认)
+    extendNotSure = []# 拓展分类文档地址(未确认)
     for item in itemArr:
         for key in item.keys():
             if key == None:
@@ -150,22 +150,10 @@ def praseXML(path):
         tree = etree.parse(StringIO.StringIO(MDCompressFile.uncompress_file(path)))
         root = tree.getroot()
         nsmap = root.nsmap
-        #nsmap双向映射
+        #nsmap 命名空间双向映射，进一步确认是否是拓展或者未确认
         pamsn = {v:k for k,v in nsmap.items()}
 
-        #xsd文件获取命名空间, xsd获取命名空间 为了进一步确认是否是拓展或者未确认
-        # xsdPath = path[:-4]+'.xsd'
-        # xsdNsmap = None
-        # xsdPamsn = None
-        # if os.path.exists(xsdPath):
-        #     xsdTree = etree.parse(xsdPath)
-        #     xsdRoot = xsdTree.getroot()
-        #     xsdNsmap = xsdRoot.nsmap
-        #     xsdPamsn = {v: k for k, v in xsdNsmap.items()}
-
-
-        #获取当前文件名年数
-        for child in root:
+        for child in root:#xml解析树
             # 去除辅助性元素
             try:
                 if child.tag.split('}')[-1] in SupportItem:
@@ -175,7 +163,7 @@ def praseXML(path):
 
             nameSpaceLink = str(child.tag).strip('{').split('}')[0]
 
-            #判断 tag前命名引用 是否是存在namespace中间的
+            #判断 tag前命名引用 是否是存在namespace中间
             if pamsn[nameSpaceLink] != None:
                 #规则过滤
                 attDic = child.attrib
@@ -187,7 +175,7 @@ def praseXML(path):
                     value['CONTENTTEXT'] = text
                 except Exception,e:
                     print e
-                    print  'something wrong to get <CONTENTTEXT> ============'
+                    print  'something wrong to get <CONTENTTEXT>'
                 #处理tag属性
                 for attTemp in attDic:
                     try:
@@ -214,7 +202,7 @@ def praseXML(path):
 
 def writeToXML(nameSpace, itemArr, path):
     '''
-    将内容写入xml文档
+    将内容写入xml文档文件
     :param nameSpace:
     :param itemArr:
     :param path:
@@ -241,17 +229,19 @@ def loadToDB(dic, collectionName):
         # 写入fileUrl地址
         col = secCom[collectionName]
         col.insert(dic)
-        print '录入数据库==============='
+        print '录入数据库'
     except Exception, e:
         print e
-        print '插入数据库失败==============='
+        print '插入数据库失败'
 
 def main(path):
     '''
     函数入口
     :return:
     '''
+    #解析xml
     nsmap, itemArr = praseXML(path)
+    #对xml进行分类
     categoryXML(path,nsmap, itemArr)
 
 if __name__ == '__main__':
@@ -274,12 +264,13 @@ if __name__ == '__main__':
     # pool.join()
 
     #@2:读路径列表
-    # find . -type f -name "*-*[0-9].xml"
+    #生成路径命令 find . -type f -name "*-*[0-9].xml"
     pool = Pool()
 #    folderPath = os.path.join(os.path.expanduser("~"), 'Desktop', 'XBRLTestData','folder.txt')
     folderPath = os.path.join(os.path.expanduser("/"), 'home', 'XBRL','folder.txt')
     dirPath = folderPath.strip('/folder.txt')
     idx = 0
+    #遍历xbrl-10k文件列表
     with codecs.open(folderPath, 'r', encoding='utf8') as file:
         for line in file.readlines():
             fileName = os.path.basename(line).strip()
@@ -289,7 +280,7 @@ if __name__ == '__main__':
     pool.close()
     pool.join()
 
-    print 'processed ============'
+    print 'processed done'
 
 
 

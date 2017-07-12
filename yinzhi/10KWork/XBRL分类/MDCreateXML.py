@@ -6,9 +6,8 @@ import MDCompressFile
 # FILE = '/Users/lixiaorong/Desktop/'
 
 def initalXML(nameSpace, tags):
+    '''初始化xml节点'''
     doc = Dom.Document()
-
-
     # 获取当前使用到的tag值
     try:
         # 生成根节点

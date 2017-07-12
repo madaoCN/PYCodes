@@ -48,11 +48,15 @@ def read_xml(in_path):
 	tree = etree.parse(StringIO(content), parser=etree.XMLParser(huge_tree=True))
 	return tree
 
-def countItem(path):
-
+def countItemWithPath(path):
+	'''
+	从文件路径读取文件，并统计tag数
+	:param path: 文件路径
+	:return: 
+	'''
 	print path
 	tree = read_xml(path)
-	inputs = tree.getroot().xpath("//*")
+	inputs = tree.getroot().xpath("//*")#获取根节点下所有子节点(路径无关)
 
 	# print  inputs
 	news_tags = []
@@ -67,19 +71,22 @@ def countItem(path):
 
 	return  result
 
-def dealFile(path):
+def countFileWithPath(path):
+	'''
+	从文件路径读取文件，并统计指定字段
+	:param path: 文件路径
+	:return: 统计字段字典集合
+	'''
 	dict = {}
 	if not os.path.exists(path):
 		return None
 		
 	for root, dire, files in os.walk(path):
 		for file in files :
-			if file.startswith(".DS_Store"):
+			if file.startswith(".DS_Store"):#特异文件，则略过
 				pass
-
-			elif file.endswith("_base.xml"):
-
-				list = countItem(path + "/"+file)
+			elif file.endswith("_base.xml"):#基本分类文档
+				list = countItemWithPath(path + "/"+file)
 				try:
 					dict.update({'baseSize':getsize(path + "/"+ file)})
 				except Exception, e:
@@ -87,23 +94,23 @@ def dealFile(path):
 				dict.update({"base_count": list[0]})
 				dict.update({"base_tag_count": list[1]})
 
-			elif file.endswith("_ext.xml"):
-				list = countItem(path + "/"+file)
+			elif file.endswith("_ext.xml"):#拓展分类文档
+				list = countItemWithPath(path + "/"+file)
 				try:
 					dict.update({'extSize':getsize(path + "/"+ file)})
 				except Exception, e:
 					dict.update({'extSize':'0'})
 				dict.update({"ext_count": list[0]})
 				dict.update({"ext_tag_count": list[1]})
-			else:
+			else:#源文档
 				sp = root.split('#')
-				dict.update({"aacceptanceDateTime": sp[0].strip('./')})
+				dict.update({"acceptanceDateTime": sp[0].strip('./')})
 				dict.update({'cik':sp[-1]})
 				try:
 					dict.update({'originSize':getsize(path + "/"+ file)})
 				except Exception, e:
 					dict.update({'originSize':'0'})
-				list = countItem(path + "/"+ file)
+				list = countItemWithPath(path + "/"+ file)
 				dict.update({"count": list[0]})
 				dict.update({"tag_count": list[1]})
 				# print dict
@@ -112,22 +119,20 @@ def dealFile(path):
 
 if __name__ == "__main__":
 
-	# find. - type d >> folder.txt
+	#生成目录索引命令 find. - type d >> folder.txt
 	file = open("folder.txt")
 	list = []
-	while 1:
+	while 1:#遍历目录索引，以访问分类后文件集合
 		line = file.readline()
 		if not line:
 			break
 		else:
 			try:
-			   	item =  dealFile(line[:-1])
+			   	item =  countFileWithPath(line[:-1])
 			   	if item != None:
 					list.append(item)
-			   # print dealFile(line[:-1])
 			except Exception, e:
 				print 'error..', e
 				pass
-		# print list
 	file.close()
 	createExcel(list)

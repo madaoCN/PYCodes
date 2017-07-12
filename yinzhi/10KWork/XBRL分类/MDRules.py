@@ -12,7 +12,7 @@ matchArr = ['xbrl', 'gaap', 'wc', 'w3c', 'sec', 'fasb']
 
 def matchBaseCategory(searchKey, nameSpace):
     '''
-    :return: 是否是基本分类文档
+    判断是否是基本分类文档
     '''
     link = None
     if not nameSpace.has_key(searchKey):
